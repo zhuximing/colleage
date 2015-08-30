@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     self.title=@"333";
    self.view.backgroundColor=[UIColor grayColor];
 }
 
