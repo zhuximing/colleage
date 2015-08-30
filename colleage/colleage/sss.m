@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  sss.m
 //  colleage
 //
 //  Created by Apple on 15/8/30.
 //  Copyright (c) 2015年 Apple. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "sss.h"
-@interface ViewController : UIViewController
 
+@implementation sss
 
 @end
-

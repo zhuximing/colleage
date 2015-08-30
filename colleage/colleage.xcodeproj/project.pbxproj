@@ -15,6 +15,7 @@
 		18D5C5A21B930E6D0074EEEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5A11B930E6D0074EEEC /* Images.xcassets */; };
 		18D5C5A51B930E6E0074EEEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5A31B930E6E0074EEEC /* LaunchScreen.xib */; };
 		18D5C5B11B930E6E0074EEEC /* colleageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5B01B930E6E0074EEEC /* colleageTests.m */; };
+		18D5C5CF1B9324440074EEEC /* sss.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5CE1B9324440074EEEC /* sss.m */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 		18D5C5AA1B930E6E0074EEEC /* colleageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colleageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D5C5AF1B930E6E0074EEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D5C5B01B930E6E0074EEEC /* colleageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colleageTests.m; sourceTree = "<group>"; };
+		18D5C5CD1B9324440074EEEC /* sss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sss.h; sourceTree = "<group>"; };
+		18D5C5CE1B9324440074EEEC /* sss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sss.m; sourceTree = "<group>"; };
 		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		18E66B5B1B9314F700E3136A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +89,9 @@
 		18D5C5901B930E6D0074EEEC /* colleage */ = {
 			isa = PBXGroup;
 			children = (
+				18D5C5BF1B9321AD0074EEEC /* model */,
+				18D5C5BE1B93219E0074EEEC /* view */,
+				18D5C5BD1B9321890074EEEC /* controller */,
 				18E66B5A1B9314F700E3136A /* TableViewController.h */,
 				18E66B5B1B9314F700E3136A /* TableViewController.m */,
 				18D5C5951B930E6D0074EEEC /* AppDelegate.h */,
@@ -125,6 +131,181 @@
 				18D5C5AF1B930E6E0074EEEC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18D5C5BD1B9321890074EEEC /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				18D5C5D61B9325370074EEEC /* 主题约会 */,
+				18D5C5D51B9325270074EEEC /* 约旅游 */,
+				18D5C5D41B93251C0074EEEC /* 约体育竞技 */,
+				18D5C5D31B93250B0074EEEC /* 约游戏竞技 */,
+				18D5C5D21B9324FF0074EEEC /* 约看电影 */,
+				18D5C5D11B9324F70074EEEC /* 约唱歌 */,
+				18D5C5D01B9324DD0074EEEC /* 约吃饭 */,
+				18D5C5CC1B93242A0074EEEC /* 我的作业 */,
+				18D5C5CB1B9323E40074EEEC /* 二手市场 */,
+				18D5C5CA1B9323DC0074EEEC /* 学生互帮 */,
+				18D5C5C91B9323D30074EEEC /* 拼车回家 */,
+				18D5C5C81B9323C70074EEEC /* 学生合租 */,
+				18D5C5C71B9323BE0074EEEC /* 食物招领 */,
+				18D5C5C51B93228D0074EEEC /* 校园兼职 */,
+				18D5C5C41B9322750074EEEC /* 用户中心 */,
+				18D5C5C31B93226C0074EEEC /* 朋友 */,
+				18D5C5C21B9322600074EEEC /* 生活 */,
+				18D5C5C11B9322490074EEEC /* 学习 */,
+				18D5C5C01B93222C0074EEEC /* 首页 */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		18D5C5BE1B93219E0074EEEC /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		18D5C5BF1B9321AD0074EEEC /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		18D5C5C01B93222C0074EEEC /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		18D5C5C11B9322490074EEEC /* 学习 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "学习";
+			sourceTree = "<group>";
+		};
+		18D5C5C21B9322600074EEEC /* 生活 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "生活";
+			sourceTree = "<group>";
+		};
+		18D5C5C31B93226C0074EEEC /* 朋友 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "朋友";
+			sourceTree = "<group>";
+		};
+		18D5C5C41B9322750074EEEC /* 用户中心 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "用户中心";
+			sourceTree = "<group>";
+		};
+		18D5C5C51B93228D0074EEEC /* 校园兼职 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "校园兼职";
+			sourceTree = "<group>";
+		};
+		18D5C5C71B9323BE0074EEEC /* 食物招领 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "食物招领";
+			sourceTree = "<group>";
+		};
+		18D5C5C81B9323C70074EEEC /* 学生合租 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "学生合租";
+			sourceTree = "<group>";
+		};
+		18D5C5C91B9323D30074EEEC /* 拼车回家 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "拼车回家";
+			sourceTree = "<group>";
+		};
+		18D5C5CA1B9323DC0074EEEC /* 学生互帮 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "学生互帮";
+			sourceTree = "<group>";
+		};
+		18D5C5CB1B9323E40074EEEC /* 二手市场 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "二手市场";
+			sourceTree = "<group>";
+		};
+		18D5C5CC1B93242A0074EEEC /* 我的作业 */ = {
+			isa = PBXGroup;
+			children = (
+				18D5C5CD1B9324440074EEEC /* sss.h */,
+				18D5C5CE1B9324440074EEEC /* sss.m */,
+			);
+			name = "我的作业";
+			sourceTree = "<group>";
+		};
+		18D5C5D01B9324DD0074EEEC /* 约吃饭 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "约吃饭";
+			sourceTree = "<group>";
+		};
+		18D5C5D11B9324F70074EEEC /* 约唱歌 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "约唱歌";
+			sourceTree = "<group>";
+		};
+		18D5C5D21B9324FF0074EEEC /* 约看电影 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "约看电影";
+			sourceTree = "<group>";
+		};
+		18D5C5D31B93250B0074EEEC /* 约游戏竞技 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "约游戏竞技";
+			sourceTree = "<group>";
+		};
+		18D5C5D41B93251C0074EEEC /* 约体育竞技 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "约体育竞技";
+			sourceTree = "<group>";
+		};
+		18D5C5D51B9325270074EEEC /* 约旅游 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "约旅游";
+			sourceTree = "<group>";
+		};
+		18D5C5D61B9325370074EEEC /* 主题约会 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "主题约会";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +411,7 @@
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
+				18D5C5CF1B9324440074EEEC /* sss.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 			);
