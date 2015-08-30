@@ -15,6 +15,7 @@
 		18D5C5A21B930E6D0074EEEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5A11B930E6D0074EEEC /* Images.xcassets */; };
 		18D5C5A51B930E6E0074EEEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5A31B930E6E0074EEEC /* LaunchScreen.xib */; };
 		18D5C5B11B930E6E0074EEEC /* colleageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5B01B930E6E0074EEEC /* colleageTests.m */; };
+		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		18D5C5AA1B930E6E0074EEEC /* colleageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colleageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D5C5AF1B930E6E0074EEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D5C5B01B930E6E0074EEEC /* colleageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colleageTests.m; sourceTree = "<group>"; };
+		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		18E66B5B1B9314F700E3136A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 		18D5C5901B930E6D0074EEEC /* colleage */ = {
 			isa = PBXGroup;
 			children = (
+				18E66B5A1B9314F700E3136A /* TableViewController.h */,
+				18E66B5B1B9314F700E3136A /* TableViewController.m */,
 				18D5C5951B930E6D0074EEEC /* AppDelegate.h */,
 				18D5C5961B930E6D0074EEEC /* AppDelegate.m */,
 				18D5C59B1B930E6D0074EEEC /* ViewController.h */,
@@ -225,6 +230,7 @@
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
+				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +426,7 @@
 				18D5C5B61B930E6E0074EEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D5C5B71B930E6E0074EEEC /* Build configuration list for PBXNativeTarget "colleageTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				18D5C5B91B930E6E0074EEEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
