@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		187690881B93D7FE005791E0 /* colleage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "colleage-Prefix.pch"; sourceTree = "<group>"; };
 		18D5C58E1B930E6D0074EEEC /* colleage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colleage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D5C5921B930E6D0074EEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D5C5931B930E6D0074EEEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -149,6 +150,7 @@
 				18D5C5EC1B93302E0074EEEC /* images */,
 				18D5C5921B930E6D0074EEEC /* Info.plist */,
 				18D5C5931B930E6D0074EEEC /* main.m */,
+				187690881B93D7FE005791E0 /* colleage-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
