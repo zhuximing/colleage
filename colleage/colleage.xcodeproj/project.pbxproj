@@ -15,7 +15,6 @@
 		18D5C5A21B930E6D0074EEEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5A11B930E6D0074EEEC /* Images.xcassets */; };
 		18D5C5A51B930E6E0074EEEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5A31B930E6E0074EEEC /* LaunchScreen.xib */; };
 		18D5C5B11B930E6E0074EEEC /* colleageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5B01B930E6E0074EEEC /* colleageTests.m */; };
-		18D5C5CF1B9324440074EEEC /* sss.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5CE1B9324440074EEEC /* sss.m */; };
 		18D5C5D91B9328CD0074EEEC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5D81B9328CD0074EEEC /* RootViewController.m */; };
 		18D5C5DF1B9329660074EEEC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5DE1B9329660074EEEC /* HomeViewController.m */; };
 		18D5C5E21B9329BD0074EEEC /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5E11B9329BD0074EEEC /* StudyViewController.m */; };
@@ -60,8 +59,6 @@
 		18D5C5AA1B930E6E0074EEEC /* colleageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colleageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D5C5AF1B930E6E0074EEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D5C5B01B930E6E0074EEEC /* colleageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = colleageTests.m; sourceTree = "<group>"; };
-		18D5C5CD1B9324440074EEEC /* sss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sss.h; sourceTree = "<group>"; };
-		18D5C5CE1B9324440074EEEC /* sss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sss.m; sourceTree = "<group>"; };
 		18D5C5D71B9328CD0074EEEC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ../../../../Downloads/BmobIM_1.0.2_Beta/BmobIMDemo/BmobIMDemo/RootViewController.h; sourceTree = "<group>"; };
 		18D5C5D81B9328CD0074EEEC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ../../../../Downloads/BmobIM_1.0.2_Beta/BmobIMDemo/BmobIMDemo/RootViewController.m; sourceTree = "<group>"; };
 		18D5C5DD1B9329660074EEEC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -312,8 +309,6 @@
 		18D5C5CC1B93242A0074EEEC /* 我的作业 */ = {
 			isa = PBXGroup;
 			children = (
-				18D5C5CD1B9324440074EEEC /* sss.h */,
-				18D5C5CE1B9324440074EEEC /* sss.m */,
 			);
 			name = "我的作业";
 			sourceTree = "<group>";
@@ -506,7 +501,6 @@
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */,
-				18D5C5CF1B9324440074EEEC /* sss.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
