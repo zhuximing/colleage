@@ -30,7 +30,6 @@
 		18D5C5FD1B93305C0074EEEC /* tab_icon3_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F41B93305C0074EEEC /* tab_icon3_@2x.png */; };
 		18D5C5FE1B93305C0074EEEC /* tab_icon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F51B93305C0074EEEC /* tab_icon3@2x.png */; };
 		18D5C5FF1B93305C0074EEEC /* foot_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F61B93305C0074EEEC /* foot_bar@2x.png */; };
-		18D736821B940CA0004F6847 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D736811B940CA0004F6847 /* BmobSDK.framework */; };
 		18D736851B940CC6004F6847 /* BmobIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D736831B940CC6004F6847 /* BmobIM.framework */; };
 		18D736861B940CC6004F6847 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D736841B940CC6004F6847 /* SDWebImage.framework */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
@@ -97,7 +96,6 @@
 			files = (
 				18D736851B940CC6004F6847 /* BmobIM.framework in Frameworks */,
 				18D736861B940CC6004F6847 /* SDWebImage.framework in Frameworks */,
-				18D736821B940CA0004F6847 /* BmobSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

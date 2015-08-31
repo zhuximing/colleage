@@ -9,7 +9,9 @@
 #import "RootViewController.h"
 
 
-@interface RootViewController ()<UITabBarControllerDelegate>
+@interface RootViewController ()<UITabBarControllerDelegate>{
+    int width;
+}
 @end
 
 @implementation RootViewController
@@ -43,10 +45,11 @@
 //
 //    self.delegate = self;
     
+    CGRect rect=self.tabBar.frame;
+    width=rect.size.width;
     
     
-    
-    UIImageView *barImageView = [[UIImageView alloc]  initWithFrame:CGRectMake(0, 0, 320, 49)];
+    UIImageView *barImageView = [[UIImageView alloc]  initWithFrame:CGRectMake(0, 0, width, 49)];
     barImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     barImageView.userInteractionEnabled = true;
     barImageView.backgroundColor = [UIColor blueColor];
@@ -66,8 +69,6 @@
 -(void)setUpViews{
     
     [self.tabBar setHidden:NO];
-    CGRect rect=self.tabBar.frame;
-    int width=rect.size.width;
     
     for (int i = 0; i < 5; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
