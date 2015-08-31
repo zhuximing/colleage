@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "sss.h"
+
 @interface ViewController : UIViewController
 
 

@@ -7,9 +7,7 @@
 //
 
 #import "RootViewController.h"
-#import "RecentViewController.h"
-#import "ContactsViewController.h"
-#import "SettingViewController.h"
+
 
 @interface RootViewController ()<UITabBarControllerDelegate>
 @end
@@ -68,14 +66,14 @@
 -(void)setUpViews{
     
     [self.tabBar setHidden:NO];
+    CGRect rect=self.tabBar.frame;
+    int width=rect.size.width;
     
-
-    
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 5; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(320/3*i, 0, 320/3, 49);
-        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon%d",(i+1)]] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon%d_",(i+1)]] forState:UIControlStateSelected];
+        btn.frame = CGRectMake(width/5*i, 0, width/5, 49);
+        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon1"]] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon_1"]] forState:UIControlStateSelected];
         btn.tag = i+100;
         
         btn.exclusiveTouch = true;
@@ -100,7 +98,7 @@
 
 -(void)didTapTabbar:(UIButton * )sender{
 
-    for (int i= 0; i<3; i++) {
+    for (int i= 0; i<5; i++) {
         UIButton  *btn = (UIButton*)[self.tabBar viewWithTag:100+i];
         btn.selected = NO;
         btn.userInteractionEnabled = YES;
