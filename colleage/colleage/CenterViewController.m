@@ -7,7 +7,7 @@
 //
 
 #import "CenterViewController.h"
-
+#import "CommonUtil.h"
 @interface CenterViewController ()
 
 @end
@@ -18,7 +18,12 @@
     [super viewDidLoad];
     self.title=@"个人中心";
     self.view.backgroundColor=[UIColor orangeColor];
-     
+    self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"个人中心"];
+    
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

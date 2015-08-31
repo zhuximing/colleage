@@ -7,7 +7,7 @@
 //
 
 #import "FriendViewController.h"
-
+#import "CommonUtil.h"
 @interface FriendViewController ()
 
 @end
@@ -16,9 +16,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.title=@"消息";
-   self.view.backgroundColor=[UIColor blackColor];
+    self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"朋友"];
+    self.title=@"朋友";
+    self.view.backgroundColor=[UIColor blackColor];
+    //self.navigationController.navigationBar.translucent = NO;
+    
+    
+    
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        if (IS_iOS7) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        
+        _chatsArray = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

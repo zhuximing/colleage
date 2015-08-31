@@ -24,16 +24,17 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsm-3z-6Gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1428" y="2103"/>
+            <point key="canvasLocation" x="-1178" y="2023"/>
         </scene>
-        <!--111-->
+        <!--Item-->
         <scene sceneID="XmZ-wU-HNp">
             <objects>
-                <navigationController title="111" id="b5c-Fw-HgK" sceneMemberID="viewController">
+                <navigationController id="b5c-Fw-HgK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="udk-HH-ezd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NC2-1k-tMk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="SFu-vc-daY" kind="relationship" relationship="rootViewController" id="nxD-nV-Ulw"/>
@@ -62,14 +63,15 @@
             </objects>
             <point key="canvasLocation" x="544" y="-56"/>
         </scene>
-        <!--2222-->
+        <!--Item-->
         <scene sceneID="MgZ-fn-Ql9">
             <objects>
-                <navigationController title="2222" id="URY-Y7-xsf" sceneMemberID="viewController">
+                <navigationController id="URY-Y7-xsf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="1jD-cg-K4E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L7a-gH-jv5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="wpA-dE-7qO" kind="relationship" relationship="rootViewController" id="oKH-lq-4VI"/>
@@ -87,6 +89,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjB-OA-1HE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="RCq-zr-S83" kind="relationship" relationship="rootViewController" id="S2A-8B-D0x"/>
@@ -104,6 +107,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9x-Qm-gWD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="0PA-kd-Hbj" kind="relationship" relationship="rootViewController" id="tia-M7-lbt"/>

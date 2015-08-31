@@ -7,7 +7,7 @@
 //
 
 #import "StudyViewController.h"
-
+#import "CommonUtil.h"
 @interface StudyViewController ()
 
 @end
@@ -18,7 +18,11 @@
     [super viewDidLoad];
     self.title=@"学习";
     self.view.backgroundColor=[UIColor greenColor];
-    
+     self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"学习"];
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
     
     
 }

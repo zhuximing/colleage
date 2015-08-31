@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "CommonUtil.h"
 @interface HomeViewController ()
 
 @end
@@ -18,6 +18,11 @@
     [super viewDidLoad];
     self.title=@"首页";
     self.view.backgroundColor=[UIColor redColor];
+    self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"首页"];
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

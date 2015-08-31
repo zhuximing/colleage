@@ -80,8 +80,8 @@
         btn.exclusiveTouch = true;
         btn.userInteractionEnabled = YES;
         [[btn titleLabel] setTextAlignment:1];
-        //[btn setTitleColor:RGB(142.0f, 146.0f, 148.0f, 1.0f) forState:UIControlStateNormal];
-       /// [btn setTitleColor:RGB(86.0f, 162.0f, 246.0f, 1.0f) forState:UIControlStateSelected];
+        [btn setTitleColor:RGB(142.0f, 146.0f, 148.0f, 1.0f) forState:UIControlStateNormal];
+        [btn setTitleColor:RGB(86.0f, 162.0f, 246.0f, 1.0f) forState:UIControlStateSelected];
         [[btn titleLabel] setFont:[UIFont systemFontOfSize:12]];
         [btn addTarget:self action:@selector(didTapTabbar:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -110,6 +110,18 @@
     
     [self setSelectedIndex:sender.tag -100];
 }
+
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+
+
+
+
+}
+
+
 
 
 

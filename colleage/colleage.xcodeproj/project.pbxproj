@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
 		18D5C5941B930E6D0074EEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5931B930E6D0074EEEC /* main.m */; };
 		18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5961B930E6D0074EEEC /* AppDelegate.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18544CE51B942F4100043D73 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		18544CE61B942F4100043D73 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		187690891B93D958005791E0 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				18544CE51B942F4100043D73 /* CommonUtil.h */,
+				18544CE61B942F4100043D73 /* CommonUtil.m */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
 				18D5C5DF1B9329660074EEEC /* HomeViewController.m in Sources */,
+				18544CE71B942F4100043D73 /* CommonUtil.m in Sources */,
 				18D5C5E21B9329BD0074EEEC /* StudyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

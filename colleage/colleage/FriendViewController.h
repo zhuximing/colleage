@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FriendViewController : UIViewController
+@interface FriendViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    
+    UITableView         *_chatTableView;
+    NSMutableArray      *_chatsArray;
+    BOOL                _isUpdateLocation;
+}
+
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "LifeViewController.h"
-
+#import "CommonUtil.h"
 @interface LifeViewController ()
 
 @end
@@ -18,6 +18,12 @@
     [super viewDidLoad];
      self.title=@"生活";
    self.view.backgroundColor=[UIColor grayColor];
+    self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"生活"];
+    
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
