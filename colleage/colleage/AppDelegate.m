@@ -16,8 +16,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
     //统一设置navigationbar的背景图片
-     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"top_bar"] forBarMetrics:UIBarMetricsDefault];
+    
+    if (IS_iOS7)
+    {
+       [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"top_bar"] forBarMetrics:UIBarMetricsDefault];
+    }else{
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"top_bar1"] forBarMetrics:UIBarMetricsDefault];
+    }
+    
+    
     
     
     return YES;

@@ -44,6 +44,50 @@
             </objects>
             <point key="canvasLocation" x="-161" y="-32"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7jo-an-cq9">
+            <objects>
+                <navigationController storyboardIdentifier="loginNav" id="ic8-Fc-2st" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gAp-ha-yf6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nSp-yP-VMS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="p1c-DP-iE5" kind="relationship" relationship="rootViewController" id="krB-MO-9n9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgI-EN-Ycd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1355" y="688"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="MJj-s8-wHb">
+            <objects>
+                <viewController storyboardIdentifier="login" id="p1c-DP-iE5" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IuC-mu-vqV"/>
+                        <viewControllerLayoutGuide type="bottom" id="nvh-OO-kMP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KHp-HG-AJj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71i-wb-1ud">
+                                <rect key="frame" x="230" y="126" width="30" height="30"/>
+                                <state key="normal" title="点击">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="03I-Zb-N6x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOf-85-c44" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2110" y="682"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="he9-cE-aM1">
             <objects>
@@ -61,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY3-l4-Zme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="-56"/>
+            <point key="canvasLocation" x="538" y="-66"/>
         </scene>
         <!--Item-->
         <scene sceneID="MgZ-fn-Ql9">
@@ -169,6 +213,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="M7P-ry-K6I"/>
+                    <connections>
+                        <segue destination="ic8-Fc-2st" kind="presentation" identifier="tologinNav" modalTransitionStyle="flipHorizontal" id="RfY-et-ojl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO2-4g-71x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

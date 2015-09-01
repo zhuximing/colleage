@@ -21,4 +21,33 @@
     titleLabel.textColor       = [UIColor whiteColor];
     return titleLabel;
 }
+//设置字体
++(UIFont*)setFontSize:(CGFloat)size{
+    return [UIFont systemFontOfSize:size];
+}
+
+//判断是否登陆，如果没有登陆直接跳到登陆界面
+
++(void)needLoginWithViewController:(UIViewController*)viewController animated:(BOOL)animated{
+    
+    
+    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"] boolValue]) {
+       
+        /**
+        //获取故事版
+        UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        //  获取登陆界面的视图控制器
+        UINavigationController *nav=[story instantiateViewControllerWithIdentifier:@"loginNav"];
+        
+        [viewController presentViewController:nav animated:YES completion:^{
+            
+        }];*/
+        
+        
+        [viewController performSegueWithIdentifier:@"tologinNav" sender:nil];
+      
+    }
+    
+}
+
 @end

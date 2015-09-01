@@ -31,8 +31,14 @@
 		18D5C5FD1B93305C0074EEEC /* tab_icon3_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F41B93305C0074EEEC /* tab_icon3_@2x.png */; };
 		18D5C5FE1B93305C0074EEEC /* tab_icon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F51B93305C0074EEEC /* tab_icon3@2x.png */; };
 		18D5C5FF1B93305C0074EEEC /* foot_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F61B93305C0074EEEC /* foot_bar@2x.png */; };
-		18D736851B940CC6004F6847 /* BmobIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D736831B940CC6004F6847 /* BmobIM.framework */; };
-		18D736861B940CC6004F6847 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D736841B940CC6004F6847 /* SDWebImage.framework */; };
+		18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DAAAB11B95439500B659CB /* LoginViewController.m */; };
+		18DAAAB41B954F1D00B659CB /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAAB31B954F1D00B659CB /* libsqlite3.dylib */; };
+		18DAAAB81B95531500B659CB /* BmobIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAAB61B95531500B659CB /* BmobIM.framework */; };
+		18DAAAB91B95531500B659CB /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAAB71B95531500B659CB /* SDWebImage.framework */; };
+		18DAAABB1B95551C00B659CB /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABA1B95551C00B659CB /* BmobSDK.framework */; };
+		18DAAABD1B9567E500B659CB /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */; };
+		18DAAABF1B95684500B659CB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABE1B95684500B659CB /* libicucore.dylib */; };
+		18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC72C51B949817009E3A85 /* RecentTableViewCell.m */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -85,9 +91,16 @@
 		18D5C5F41B93305C0074EEEC /* tab_icon3_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_icon3_@2x.png"; sourceTree = "<group>"; };
 		18D5C5F51B93305C0074EEEC /* tab_icon3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_icon3@2x.png"; sourceTree = "<group>"; };
 		18D5C5F61B93305C0074EEEC /* foot_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foot_bar@2x.png"; sourceTree = "<group>"; };
-		18D736811B940CA0004F6847 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BmobSDK.framework; path = ../../../Downloads/Bmob_SDK_iOS_v1.6.4/BmobSDK.framework; sourceTree = "<group>"; };
-		18D736831B940CC6004F6847 /* BmobIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BmobIM.framework; path = ../../../Downloads/BmobIM_1.0.2_Beta/BmobIMDemo/BmobIM.framework; sourceTree = "<group>"; };
-		18D736841B940CC6004F6847 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = ../../../Downloads/BmobIM_1.0.2_Beta/BmobIMDemo/SDWebImage.framework; sourceTree = "<group>"; };
+		18DAAAB01B95439500B659CB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		18DAAAB11B95439500B659CB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		18DAAAB31B954F1D00B659CB /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		18DAAAB61B95531500B659CB /* BmobIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobIM.framework; sourceTree = "<group>"; };
+		18DAAAB71B95531500B659CB /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		18DAAABA1B95551C00B659CB /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		18DAAABE1B95684500B659CB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		18DC72C41B949817009E3A85 /* RecentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewCell.h; sourceTree = "<group>"; };
+		18DC72C51B949817009E3A85 /* RecentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewCell.m; sourceTree = "<group>"; };
 		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		18E66B5B1B9314F700E3136A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,8 +110,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D736851B940CC6004F6847 /* BmobIM.framework in Frameworks */,
-				18D736861B940CC6004F6847 /* SDWebImage.framework in Frameworks */,
+				18DAAABF1B95684500B659CB /* libicucore.dylib in Frameworks */,
+				18DAAABD1B9567E500B659CB /* libz.1.2.5.dylib in Frameworks */,
+				18DAAABB1B95551C00B659CB /* BmobSDK.framework in Frameworks */,
+				18DAAAB81B95531500B659CB /* BmobIM.framework in Frameworks */,
+				18DAAAB91B95531500B659CB /* SDWebImage.framework in Frameworks */,
+				18DAAAB41B954F1D00B659CB /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +212,8 @@
 			children = (
 				1876908D1B93E01C005791E0 /* RootViewController.h */,
 				1876908E1B93E01C005791E0 /* RootViewController.m */,
+				18DAAAB01B95439500B659CB /* LoginViewController.h */,
+				18DAAAB11B95439500B659CB /* LoginViewController.m */,
 				18D5C5D61B9325370074EEEC /* 主题约会 */,
 				18D5C5D51B9325270074EEEC /* 约旅游 */,
 				18D5C5D41B93251C0074EEEC /* 约体育竞技 */,
@@ -221,6 +240,8 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				18DC72C41B949817009E3A85 /* RecentTableViewCell.h */,
+				18DC72C51B949817009E3A85 /* RecentTableViewCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -402,9 +423,12 @@
 		18D7367A1B940B54004F6847 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18D736831B940CC6004F6847 /* BmobIM.framework */,
-				18D736841B940CC6004F6847 /* SDWebImage.framework */,
-				18D736811B940CA0004F6847 /* BmobSDK.framework */,
+				18DAAABE1B95684500B659CB /* libicucore.dylib */,
+				18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */,
+				18DAAABA1B95551C00B659CB /* BmobSDK.framework */,
+				18DAAAB61B95531500B659CB /* BmobIM.framework */,
+				18DAAAB71B95531500B659CB /* SDWebImage.framework */,
+				18DAAAB31B954F1D00B659CB /* libsqlite3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -522,6 +546,8 @@
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
+				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
+				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
 				18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
@@ -655,12 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/apple/Downloads/BmobIM_1.0.2_Beta/BmobIMDemo,
-					/Users/apple/Downloads/Bmob_SDK_iOS_v1.6.4,
-					/Users/apple/Downloads/BmobIM_1.0.2_Beta,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "colleage/colleage-PrefixHeader.pch";
 				INFOPLIST_FILE = colleage/Info.plist;
@@ -674,12 +695,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/apple/Downloads/BmobIM_1.0.2_Beta/BmobIMDemo,
-					/Users/apple/Downloads/Bmob_SDK_iOS_v1.6.4,
-					/Users/apple/Downloads/BmobIM_1.0.2_Beta,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "colleage/colleage-PrefixHeader.pch";
 				INFOPLIST_FILE = colleage/Info.plist;

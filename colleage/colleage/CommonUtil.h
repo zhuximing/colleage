@@ -12,4 +12,9 @@
 
 //定义navigationItem的title
 +(UILabel*)navigationTitleViewWithTitle:(NSString *)title;
+//设置字体
++(UIFont*)setFontSize:(CGFloat)size;
+
+//判断是否登陆，如果没有登陆直接跳到登陆界面
++(void)needLoginWithViewController:(UIViewController*)viewController animated:(BOOL)animated ;
 @end
