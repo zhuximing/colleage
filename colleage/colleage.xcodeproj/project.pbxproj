@@ -50,7 +50,7 @@
 		18DB9EC71B969E32003D2EC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB9EC61B969E32003D2EC2 /* MapKit.framework */; };
 		18DB9ECC1B96D1FF003D2EC2 /* contact_add_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EC91B96D1FF003D2EC2 /* contact_add_@2x.png */; };
 		18DB9ECD1B96D1FF003D2EC2 /* contact_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9ECA1B96D1FF003D2EC2 /* contact_add@2x.png */; };
-		18DB9ED01B96DA95003D2EC2 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB9ECF1B96DA95003D2EC2 /* ContactViewController.m */; };
+		18DB9ED91B96EB09003D2EC2 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB9ED81B96EB09003D2EC2 /* ContactTableViewController.m */; };
 		18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC72C51B949817009E3A85 /* RecentTableViewCell.m */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -126,8 +126,8 @@
 		18DB9EC61B969E32003D2EC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		18DB9EC91B96D1FF003D2EC2 /* contact_add_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_add_@2x.png"; sourceTree = "<group>"; };
 		18DB9ECA1B96D1FF003D2EC2 /* contact_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_add@2x.png"; sourceTree = "<group>"; };
-		18DB9ECE1B96DA95003D2EC2 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
-		18DB9ECF1B96DA95003D2EC2 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		18DB9ED71B96EB09003D2EC2 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
+		18DB9ED81B96EB09003D2EC2 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
 		18DC72C41B949817009E3A85 /* RecentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewCell.h; sourceTree = "<group>"; };
 		18DC72C51B949817009E3A85 /* RecentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewCell.m; sourceTree = "<group>"; };
 		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -319,8 +319,8 @@
 			children = (
 				18D5C5E61B9329FC0074EEEC /* FriendViewController.h */,
 				18D5C5E71B9329FC0074EEEC /* FriendViewController.m */,
-				18DB9ECE1B96DA95003D2EC2 /* ContactViewController.h */,
-				18DB9ECF1B96DA95003D2EC2 /* ContactViewController.m */,
+				18DB9ED71B96EB09003D2EC2 /* ContactTableViewController.h */,
+				18DB9ED81B96EB09003D2EC2 /* ContactTableViewController.m */,
 			);
 			name = "朋友";
 			sourceTree = "<group>";
@@ -611,7 +611,6 @@
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
-				18DB9ED01B96DA95003D2EC2 /* ContactViewController.m in Sources */,
 				18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */,
 				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
@@ -619,6 +618,7 @@
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
+				18DB9ED91B96EB09003D2EC2 /* ContactTableViewController.m in Sources */,
 				18D5C5DF1B9329660074EEEC /* HomeViewController.m in Sources */,
 				18544CE71B942F4100043D73 /* CommonUtil.m in Sources */,
 				18D5C5E21B9329BD0074EEEC /* StudyViewController.m in Sources */,
