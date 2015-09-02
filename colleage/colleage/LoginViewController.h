@@ -11,5 +11,7 @@
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *loginTf;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTf;
+- (IBAction)login:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loginbtn;
 
 @end

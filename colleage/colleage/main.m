@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-
+#import <BmobIM/BmobChat.h>
 int main(int argc, char * argv[]) {
+     [BmobChat registerAppWithAppKey:@"9e2c3af6dd2e16148ff336f9926fd991"];
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

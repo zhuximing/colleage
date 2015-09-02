@@ -10,6 +10,7 @@
 #import "CommonUtil.h"
 #import <BmobIM/BmobDB.h>
 #import "LoginViewController.h"
+#import "RecentTableViewCell.h"
 @interface FriendViewController ()
 
 @end
@@ -18,21 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //头部标题
     self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"朋友"];
+    //tab标题
+    self.title=@"朋友";
+    
+    
+    
+    //右边的按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 50, 44);
+    [rightBtn setImage:[UIImage imageNamed:@"contact_add"] forState:UIControlStateNormal];
+    [rightBtn setImage:[UIImage imageNamed:@"contact_add_"] forState:UIControlStateHighlighted];
+    [rightBtn addTarget:self action:@selector(myContact) forControlEvents:UIControlEventTouchUpInside];
    
-    
-    
-    
-    
-    
-    
-    //self.navigationController.navigationBar.translucent = NO;
-    
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem=rightBarButtonItem;
     
     
     //NavigationBar与UIViewController 重叠的问题
     if( IS_iOS7) {
         self.edgesForExtendedLayout= UIRectEdgeNone;
+        [rightBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
     }
     
     //初始化tableview组件
@@ -48,11 +56,17 @@
     [self ifLoginloadRecent];
 }
 
-
+/**
+ *判断是否登陆
+ */
 -(void)ifLoginloadRecent{
     
     
     BmobUser *user = [BmobUser getCurrentUser];
+    
+    
+    
+    
     if (!user) {//没有登录
         [CommonUtil needLoginWithViewController:self animated:YES];
    
@@ -70,14 +84,24 @@
 -(void)search{
     NSArray *array = [[BmobDB currentDatabase] queryRecent];
     
-    if (array) {
+    if (array.count>0) {
         
         [_chatsArray setArray:array];
         [_chatTableView reloadData];
         
-        
+        NSLog(@"count%d",_chatsArray.count);
     }
+    NSLog(@"!!!count%d",array.count);
 }
+
+
+//联系人
+-(void)myContact{
+    
+    
+    
+}
+
 
 
 - (instancetype)init
@@ -89,7 +113,7 @@
             self.automaticallyAdjustsScrollViewInsets = NO;
         }
         
-        _chatsArray = [[NSMutableArray alloc] init];
+        _chatsArray = [[NSMutableArray alloc] init];//初始化s
     }
     return self;
 }
@@ -97,13 +121,19 @@
 #pragma mark - UITableView Datasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return _chatsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"Cell";
     
-    
-    return nil;
+    RecentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell=[[RecentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+    }
+    cell.recent=[_chatsArray objectAtIndex:indexPath.row];
+    return cell;
 }
 
 

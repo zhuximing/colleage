@@ -45,6 +45,12 @@
 		18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB31B95CB26003D2EC2 /* login_input@2x.png */; };
 		18DB9EBB1B95CB26003D2EC2 /* login_key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB41B95CB26003D2EC2 /* login_key@2x.png */; };
 		18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB51B95CB26003D2EC2 /* log@2x.png */; };
+		18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB9EBE1B968EA3003D2EC2 /* MBProgressHUD.m */; };
+		18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB9EC41B969D14003D2EC2 /* UserService.m */; };
+		18DB9EC71B969E32003D2EC2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB9EC61B969E32003D2EC2 /* MapKit.framework */; };
+		18DB9ECC1B96D1FF003D2EC2 /* contact_add_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EC91B96D1FF003D2EC2 /* contact_add_@2x.png */; };
+		18DB9ECD1B96D1FF003D2EC2 /* contact_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9ECA1B96D1FF003D2EC2 /* contact_add@2x.png */; };
+		18DB9ED01B96DA95003D2EC2 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB9ECF1B96DA95003D2EC2 /* ContactViewController.m */; };
 		18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC72C51B949817009E3A85 /* RecentTableViewCell.m */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -113,6 +119,15 @@
 		18DB9EB31B95CB26003D2EC2 /* login_input@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_input@2x.png"; sourceTree = "<group>"; };
 		18DB9EB41B95CB26003D2EC2 /* login_key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_key@2x.png"; sourceTree = "<group>"; };
 		18DB9EB51B95CB26003D2EC2 /* log@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log@2x.png"; sourceTree = "<group>"; };
+		18DB9EBD1B968EA3003D2EC2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		18DB9EBE1B968EA3003D2EC2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		18DB9EC31B969D14003D2EC2 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		18DB9EC41B969D14003D2EC2 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
+		18DB9EC61B969E32003D2EC2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		18DB9EC91B96D1FF003D2EC2 /* contact_add_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_add_@2x.png"; sourceTree = "<group>"; };
+		18DB9ECA1B96D1FF003D2EC2 /* contact_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contact_add@2x.png"; sourceTree = "<group>"; };
+		18DB9ECE1B96DA95003D2EC2 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		18DB9ECF1B96DA95003D2EC2 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		18DC72C41B949817009E3A85 /* RecentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewCell.h; sourceTree = "<group>"; };
 		18DC72C51B949817009E3A85 /* RecentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewCell.m; sourceTree = "<group>"; };
 		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -124,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DB9EC71B969E32003D2EC2 /* MapKit.framework in Frameworks */,
 				18DAAABF1B95684500B659CB /* libicucore.dylib in Frameworks */,
 				18DAAABD1B9567E500B659CB /* libz.1.2.5.dylib in Frameworks */,
 				18DAAABB1B95551C00B659CB /* BmobSDK.framework in Frameworks */,
@@ -146,6 +162,10 @@
 		187690891B93D958005791E0 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				18DB9EC31B969D14003D2EC2 /* UserService.h */,
+				18DB9EC41B969D14003D2EC2 /* UserService.m */,
+				18DB9EBD1B968EA3003D2EC2 /* MBProgressHUD.h */,
+				18DB9EBE1B968EA3003D2EC2 /* MBProgressHUD.m */,
 				18544CE51B942F4100043D73 /* CommonUtil.h */,
 				18544CE61B942F4100043D73 /* CommonUtil.m */,
 			);
@@ -299,6 +319,8 @@
 			children = (
 				18D5C5E61B9329FC0074EEEC /* FriendViewController.h */,
 				18D5C5E71B9329FC0074EEEC /* FriendViewController.m */,
+				18DB9ECE1B96DA95003D2EC2 /* ContactViewController.h */,
+				18DB9ECF1B96DA95003D2EC2 /* ContactViewController.m */,
 			);
 			name = "朋友";
 			sourceTree = "<group>";
@@ -413,6 +435,8 @@
 		18D5C5EC1B93302E0074EEEC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				18DB9EC91B96D1FF003D2EC2 /* contact_add_@2x.png */,
+				18DB9ECA1B96D1FF003D2EC2 /* contact_add@2x.png */,
 				18DB9EAE1B95CA8F003D2EC2 /* login */,
 				18D5C5ED1B9330420074EEEC /* root */,
 			);
@@ -438,6 +462,7 @@
 		18D7367A1B940B54004F6847 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18DB9EC61B969E32003D2EC2 /* MapKit.framework */,
 				18DAAABE1B95684500B659CB /* libicucore.dylib */,
 				18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */,
 				18DAAABA1B95551C00B659CB /* BmobSDK.framework */,
@@ -556,7 +581,9 @@
 				18D5C5FE1B93305C0074EEEC /* tab_icon3@2x.png in Resources */,
 				18D5C5A51B930E6E0074EEEC /* LaunchScreen.xib in Resources */,
 				18D5C5FD1B93305C0074EEEC /* tab_icon3_@2x.png in Resources */,
+				18DB9ECD1B96D1FF003D2EC2 /* contact_add@2x.png in Resources */,
 				18DB9EBB1B95CB26003D2EC2 /* login_key@2x.png in Resources */,
+				18DB9ECC1B96D1FF003D2EC2 /* contact_add_@2x.png in Resources */,
 				18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */,
 				18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */,
 				18D5C5FB1B93305C0074EEEC /* tab_icon2_@2x.png in Resources */,
@@ -584,7 +611,10 @@
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
+				18DB9ED01B96DA95003D2EC2 /* ContactViewController.m in Sources */,
 				18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */,
+				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
+				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,
