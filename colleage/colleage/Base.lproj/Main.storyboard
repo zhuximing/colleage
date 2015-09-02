@@ -71,23 +71,6 @@
             </objects>
             <point key="canvasLocation" x="1328" y="1276"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7jo-an-cq9">
-            <objects>
-                <navigationController storyboardIdentifier="loginNav" id="ic8-Fc-2st" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="gAp-ha-yf6"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nSp-yP-VMS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="p1c-DP-iE5" kind="relationship" relationship="rootViewController" id="krB-MO-9n9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bgI-EN-Ycd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1335" y="588"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="MJj-s8-wHb">
             <objects>
@@ -185,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOf-85-c44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2133" y="665"/>
+            <point key="canvasLocation" x="1307" y="1749"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="he9-cE-aM1">
@@ -313,8 +296,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="M7P-ry-K6I"/>
                     <connections>
-                        <segue destination="ic8-Fc-2st" kind="presentation" identifier="tologinNav" modalTransitionStyle="flipHorizontal" id="RfY-et-ojl"/>
                         <segue destination="AVH-og-DHp" kind="show" identifier="contact" id="nxI-4r-M0i"/>
+                        <segue destination="p1c-DP-iE5" kind="push" identifier="login" id="WCv-Vd-hBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JO2-4g-71x" userLabel="First Responder" sceneMemberID="firstResponder"/>
