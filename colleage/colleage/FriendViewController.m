@@ -11,6 +11,7 @@
 #import <BmobIM/BmobDB.h>
 #import "LoginViewController.h"
 #import "RecentTableViewCell.h"
+#import "ContactTableViewController.h"
 @interface FriendViewController ()
 
 @end
@@ -95,8 +96,10 @@
 }
 
 
-//联系人
+//跳转到联系人视图控制器
 -(void)myContact{
+    
+    [self performSegueWithIdentifier:@"contact" sender:nil];
     
     
     

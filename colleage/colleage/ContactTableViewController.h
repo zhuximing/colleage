@@ -1,5 +1,5 @@
 //
-//  ContactViewController.h
+//  ContactTableViewController.h
 //  colleage
 //
 //  Created by Apple on 15/9/2.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactViewController : UIViewController
+@interface ContactTableViewController : UITableViewController
 
 @end
