@@ -38,6 +38,13 @@
 		18DAAABB1B95551C00B659CB /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABA1B95551C00B659CB /* BmobSDK.framework */; };
 		18DAAABD1B9567E500B659CB /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */; };
 		18DAAABF1B95684500B659CB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABE1B95684500B659CB /* libicucore.dylib */; };
+		18DB9EB61B95CB26003D2EC2 /* login_btn_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */; };
+		18DB9EB71B95CB26003D2EC2 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */; };
+		18DB9EB81B95CB26003D2EC2 /* common_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */; };
+		18DB9EB91B95CB26003D2EC2 /* login_admin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB21B95CB26003D2EC2 /* login_admin@2x.png */; };
+		18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB31B95CB26003D2EC2 /* login_input@2x.png */; };
+		18DB9EBB1B95CB26003D2EC2 /* login_key@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB41B95CB26003D2EC2 /* login_key@2x.png */; };
+		18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB51B95CB26003D2EC2 /* log@2x.png */; };
 		18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC72C51B949817009E3A85 /* RecentTableViewCell.m */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -99,6 +106,13 @@
 		18DAAABA1B95551C00B659CB /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		18DAAABE1B95684500B659CB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn_@2x.png"; sourceTree = "<group>"; };
+		18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@2x.png"; sourceTree = "<group>"; };
+		18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_line@2x.png"; sourceTree = "<group>"; };
+		18DB9EB21B95CB26003D2EC2 /* login_admin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_admin@2x.png"; sourceTree = "<group>"; };
+		18DB9EB31B95CB26003D2EC2 /* login_input@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_input@2x.png"; sourceTree = "<group>"; };
+		18DB9EB41B95CB26003D2EC2 /* login_key@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_key@2x.png"; sourceTree = "<group>"; };
+		18DB9EB51B95CB26003D2EC2 /* log@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "log@2x.png"; sourceTree = "<group>"; };
 		18DC72C41B949817009E3A85 /* RecentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewCell.h; sourceTree = "<group>"; };
 		18DC72C51B949817009E3A85 /* RecentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewCell.m; sourceTree = "<group>"; };
 		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -399,6 +413,7 @@
 		18D5C5EC1B93302E0074EEEC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				18DB9EAE1B95CA8F003D2EC2 /* login */,
 				18D5C5ED1B9330420074EEEC /* root */,
 			);
 			name = images;
@@ -431,6 +446,20 @@
 				18DAAAB31B954F1D00B659CB /* libsqlite3.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18DB9EAE1B95CA8F003D2EC2 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */,
+				18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */,
+				18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */,
+				18DB9EB21B95CB26003D2EC2 /* login_admin@2x.png */,
+				18DB9EB31B95CB26003D2EC2 /* login_input@2x.png */,
+				18DB9EB41B95CB26003D2EC2 /* login_key@2x.png */,
+				18DB9EB51B95CB26003D2EC2 /* log@2x.png */,
+			);
+			name = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,9 +542,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DB9EB91B95CB26003D2EC2 /* login_admin@2x.png in Resources */,
 				18D5C5F81B93305C0074EEEC /* top_bar@2x.png in Resources */,
 				18D5C5F71B93305C0074EEEC /* top_bar1@2x.png in Resources */,
+				18DB9EB81B95CB26003D2EC2 /* common_line@2x.png in Resources */,
 				18D5C5FC1B93305C0074EEEC /* tab_icon2@2x.png in Resources */,
+				18DB9EB71B95CB26003D2EC2 /* login_btn@2x.png in Resources */,
+				18DB9EB61B95CB26003D2EC2 /* login_btn_@2x.png in Resources */,
 				18D5C5A01B930E6D0074EEEC /* Main.storyboard in Resources */,
 				18D5C5FF1B93305C0074EEEC /* foot_bar@2x.png in Resources */,
 				18D5C5FA1B93305C0074EEEC /* tab_icon1@2x.png in Resources */,
@@ -523,6 +556,9 @@
 				18D5C5FE1B93305C0074EEEC /* tab_icon3@2x.png in Resources */,
 				18D5C5A51B930E6E0074EEEC /* LaunchScreen.xib in Resources */,
 				18D5C5FD1B93305C0074EEEC /* tab_icon3_@2x.png in Resources */,
+				18DB9EBB1B95CB26003D2EC2 /* login_key@2x.png in Resources */,
+				18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */,
+				18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */,
 				18D5C5FB1B93305C0074EEEC /* tab_icon2_@2x.png in Resources */,
 				18D5C5A21B930E6D0074EEEC /* Images.xcassets in Resources */,
 			);

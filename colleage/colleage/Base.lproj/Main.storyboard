@@ -70,23 +70,57 @@
                         <viewControllerLayoutGuide type="bottom" id="nvh-OO-kMP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KHp-HG-AJj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71i-wb-1ud">
-                                <rect key="frame" x="230" y="126" width="30" height="30"/>
-                                <state key="normal" title="点击">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="log.png" translatesAutoresizingMaskIntoConstraints="NO" id="bDP-uV-dTb">
+                                <rect key="frame" x="87" y="115" width="239" height="65"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-6y-JNw">
+                                <rect key="frame" x="122" y="211" width="168" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oi5-fm-57h">
+                                <rect key="frame" x="122" y="329" width="168" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="登陆" backgroundImage="login_btn.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRv-ZN-8cY">
+                                <rect key="frame" x="122" y="269" width="168" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oi5-fm-57h" firstAttribute="width" secondItem="yRv-ZN-8cY" secondAttribute="width" id="0lH-uN-jiB"/>
+                            <constraint firstItem="Oi5-fm-57h" firstAttribute="width" secondItem="bDP-uV-dTb" secondAttribute="width" id="7Az-xM-WOe"/>
+                            <constraint firstAttribute="centerX" secondItem="LJ9-6y-JNw" secondAttribute="centerX" id="9Rt-f3-4xb"/>
+                            <constraint firstAttribute="centerX" secondItem="yRv-ZN-8cY" secondAttribute="centerX" id="BSP-6N-fIY"/>
+                            <constraint firstItem="Oi5-fm-57h" firstAttribute="top" secondItem="yRv-ZN-8cY" secondAttribute="bottom" constant="15" id="F37-BZ-V1D"/>
+                            <constraint firstItem="yRv-ZN-8cY" firstAttribute="top" secondItem="LJ9-6y-JNw" secondAttribute="bottom" constant="10" id="HRO-5L-NvP"/>
+                            <constraint firstAttribute="centerX" secondItem="bDP-uV-dTb" secondAttribute="centerX" id="Jzb-jh-K6y"/>
+                            <constraint firstItem="bDP-uV-dTb" firstAttribute="top" secondItem="IuC-mu-vqV" secondAttribute="bottom" constant="40" id="Nfj-N4-olz"/>
+                            <constraint firstItem="LJ9-6y-JNw" firstAttribute="top" secondItem="bDP-uV-dTb" secondAttribute="bottom" constant="40" id="PdH-Kh-OCh"/>
+                            <constraint firstAttribute="trailing" secondItem="Oi5-fm-57h" secondAttribute="trailing" constant="30" id="iss-T5-2iH"/>
+                            <constraint firstItem="Oi5-fm-57h" firstAttribute="leading" secondItem="KHp-HG-AJj" secondAttribute="leading" constant="30" id="oV9-Ue-OzR"/>
+                            <constraint firstItem="Oi5-fm-57h" firstAttribute="width" secondItem="LJ9-6y-JNw" secondAttribute="width" id="xoD-uH-r8d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="03I-Zb-N6x"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="loginTf" destination="LJ9-6y-JNw" id="Cao-iL-AOm"/>
+                        <outlet property="pwdTf" destination="yRv-ZN-8cY" id="NSv-co-4FD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOf-85-c44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="682"/>
+            <point key="canvasLocation" x="2109" y="681"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="he9-cE-aM1">
@@ -258,4 +292,8 @@
             <point key="canvasLocation" x="-180" y="2580"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="log.png" width="130" height="27"/>
+        <image name="login_btn.png" width="294" height="44"/>
+    </resources>
 </document>

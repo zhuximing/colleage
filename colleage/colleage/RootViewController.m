@@ -10,7 +10,7 @@
 
 
 @interface RootViewController ()<UITabBarControllerDelegate>{
-    int width;
+    
 }
 @end
 
@@ -45,11 +45,9 @@
 //
 //    self.delegate = self;
     
-    CGRect rect=self.tabBar.frame;
-    width=rect.size.width;
     
     
-    UIImageView *barImageView = [[UIImageView alloc]  initWithFrame:CGRectMake(0, 0, width, 49)];
+    UIImageView *barImageView = [[UIImageView alloc]  initWithFrame:CGRectMake(0, 0, ScreenWidth, 49)];
     barImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     barImageView.userInteractionEnabled = true;
     barImageView.backgroundColor = [UIColor blueColor];
@@ -72,7 +70,7 @@
     
     for (int i = 0; i < 5; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(width/5*i, 0, width/5, 49);
+        btn.frame = CGRectMake(ScreenWidth/5*i, 0, ScreenWidth/5, 49);
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon1"]] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon_1"]] forState:UIControlStateSelected];
         btn.tag = i+100;

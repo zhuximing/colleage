@@ -19,6 +19,24 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"登陆"];
+    
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
+    
+    //用户名输入框的左边图片
+    UIImage *image=[UIImage imageNamed:@"login_admin"];
+    UIImageView *imageView=[[UIImageView alloc ] initWithImage:image];
+    _loginTf.leftView=imageView;
+    _loginTf.leftViewMode=UITextFieldViewModeAlways;
+    
+    //密码输入框的左边图片
+    UIImage *image1=[UIImage imageNamed:@"login_key"];
+    UIImageView *imageView1=[[UIImageView alloc ] initWithImage:image1];
+    _pwdTf.leftView=imageView1;
+    _pwdTf.leftViewMode=UITextFieldViewModeAlways;
+    
 }
 
 - (void)didReceiveMemoryWarning {
