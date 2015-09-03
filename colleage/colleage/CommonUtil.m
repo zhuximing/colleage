@@ -21,6 +21,33 @@
     titleLabel.textColor       = [UIColor whiteColor];
     return titleLabel;
 }
+
+
+//自定义返回按钮,以及点击事件
+-(void)customBack:(UIViewController*)controller{
+  
+    
+    UIView *homeButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 55, 40)];
+    
+    UIButton *homeButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 55, 40)];
+    [homeButton setTitle:@"返回" forState:UIControlStateNormal];
+    // homeButton.backgroundColor = [UIColor blackColor];
+    [homeButton addTarget:controller action:@selector(returnAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    [homeButtonView addSubview:homeButton];
+    
+    
+    UIBarButtonItem *uiBarButton=[[UIBarButtonItem alloc] initWithCustomView:homeButtonView];
+    controller.navigationItem.leftBarButtonItem=uiBarButton;
+  
+    
+}
+
+
+
+
 //设置字体
 +(UIFont*)setFontSize:(CGFloat)size{
     return [UIFont systemFontOfSize:size];

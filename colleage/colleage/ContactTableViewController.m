@@ -22,19 +22,8 @@
     
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"联系人"];
    
-    UIView *homeButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 55, 40)];
-   
-    UIButton *homeButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 55, 40)];
-    [homeButton setTitle:@"返回" forState:UIControlStateNormal];
-   // homeButton.backgroundColor = [UIColor blackColor];
-    [homeButton addTarget:self action:@selector(returnAction) forControlEvents:UIControlEventTouchUpInside];
-    
-    [homeButtonView addSubview:homeButton];
-    
-    
-    UIBarButtonItem *uiBarButton=[[UIBarButtonItem alloc] initWithCustomView:homeButtonView];
-    self.navigationItem.leftBarButtonItem=uiBarButton;
-
+    //返回按钮
+    [[[CommonUtil alloc] init] customBack:self];
     
     
     
@@ -46,11 +35,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-- (void)returnAction{
+
+//返回按钮的点击事件
+-(void)returnAction{
 
     [self.navigationController popViewControllerAnimated:YES];
 }
