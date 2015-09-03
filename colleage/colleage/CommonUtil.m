@@ -44,7 +44,7 @@
         }];*/
         
         
-        [viewController performSegueWithIdentifier:@"tologinNav" sender:nil];
+        [viewController performSegueWithIdentifier:@"login" sender:nil];
       
     }
     
