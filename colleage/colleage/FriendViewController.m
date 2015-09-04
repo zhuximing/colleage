@@ -29,9 +29,8 @@
     
     //右边的按钮
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.frame = CGRectMake(0, 0, 50, 44);
-    [rightBtn setImage:[UIImage imageNamed:@"contact_add"] forState:UIControlStateNormal];
-    [rightBtn setImage:[UIImage imageNamed:@"contact_add_"] forState:UIControlStateHighlighted];
+    rightBtn.frame = CGRectMake(0, 0, 60, 44);
+    [rightBtn setTitle:@"联系人" forState:(UIControlStateNormal)];
     [rightBtn addTarget:self action:@selector(myContact) forControlEvents:UIControlEventTouchUpInside];
    
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];

@@ -108,8 +108,8 @@
     self.libLabel.frame = CGRectMake(22, 73, 54, 15);
     self.takeButton.frame = CGRectMake(96, 16, 54, 54);
     self.takeLabel.frame = CGRectMake(96, 73, 54, 15);
-    self.locationButton.frame = CGRectMake(170, 16, 54, 54);
-    self.locationLabel.frame = CGRectMake(170, 73, 54, 15);
+   // self.locationButton.frame = CGRectMake(170, 16, 54, 54);
+   // self.locationLabel.frame = CGRectMake(170, 73, 54, 15);
 }
 
 @end

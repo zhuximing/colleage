@@ -13,7 +13,7 @@
 #import "RecentTableViewCell.h"
 #import "ContactHeaderView.h"
 #import "ChatViewController.h"
-
+#import "SearchViewController.h"
 @implementation ContactTableViewController
 
 //初始化
@@ -43,7 +43,20 @@
     //返回按钮
     [[[CommonUtil alloc] init] customBack:self];
     
+    //右边添加联系人的按钮
+    UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame = CGRectMake(0, 0, 50, 44);
+    [rightBtn setImage:[UIImage imageNamed:@"contact_add"] forState:UIControlStateNormal];
+    [rightBtn setImage:[UIImage imageNamed:@"contact_add_"] forState:UIControlStateHighlighted];
+    [rightBtn addTarget:self action:@selector(addContact) forControlEvents:UIControlEventTouchUpInside];
+    if (IS_iOS7) {
+        [rightBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 30, 0, 0)];
+    }
     
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+
     //tableview的头部
      [self performSelector:@selector(initTableViewHeaderView) withObject:nil afterDelay:0.1f];
     
@@ -87,7 +100,11 @@
     [self.tableView setTableHeaderView:headerView];
 }
 
-
+//添加联系人，跳转到SearchViewController页面去
+-(void)addContact{
+    SearchViewController *svc = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:svc animated:YES];
+}
 
 
 

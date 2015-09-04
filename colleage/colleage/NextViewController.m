@@ -2,10 +2,14 @@
 //  NextViewController.m
 //  BmobIMDemo
 //
-//  Created by Bmob on 14-6-25.
+//  Created by zhuximing on 14-6-25.
 //  Copyright (c) 2014年 bmob. All rights reserved.
-//
-
+/**
+ 本类是很多视图控制器共有的东西抽出来放在这里
+ 比如：自定义返回按钮以及点击事件
+ 
+ 
+ */
 #import "NextViewController.h"
 
 @interface NextViewController ()
@@ -27,6 +31,7 @@
 {
     self = [super init];
     if (self) {
+        //自定义返回按钮
         self.navigationItem.hidesBackButton   = YES;
         UIButton *leftBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
         leftBtn.frame                         = CGRectMake(0, 0, 50, 44);
@@ -55,7 +60,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-
+//返回
 -(void)goback{
     [self.navigationController popViewControllerAnimated:YES];
 }

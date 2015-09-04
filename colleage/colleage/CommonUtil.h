@@ -30,4 +30,8 @@
 +(NSString *)decodeUnicodeBytes:(char *)stringEncoded;
 + (NSString*) unescapeUnicodeString:(NSString*)string;
 + (NSString*) escapeUnicodeString:(NSString*)string;
+//获取沙盒docuent路径
++(NSString *)filepath;
+//保存图片到沙盒路径下
++(BOOL)saveImage:(UIImage*)image filepath:(NSString *)path;
 @end

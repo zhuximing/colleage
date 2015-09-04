@@ -83,7 +83,7 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor        =  [CommonUtil setColorByR:241 G:242 B:246];
-    _chatTableView                = [[UITableView alloc] initWithFrame:CGRectMake(0, ViewOriginY, 320, ScreenHeight-64-44) style:UITableViewStylePlain];
+    _chatTableView                = [[UITableView alloc] initWithFrame:CGRectMake(0, ViewOriginY, ScreenWidth, ScreenHeight-64-44) style:UITableViewStylePlain];
     _chatTableView.dataSource     = self;
     _chatTableView.delegate       = self;
     _chatTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -179,7 +179,7 @@
 }
 
 
-
+//聊天视图的布局
 -(void)setupViews{
     CGFloat bottomViewOrginY = 0.0f;
     
@@ -189,10 +189,10 @@
         bottomViewOrginY = ScreenHeight -64-44;
     }
     
-    _bottomView                           = [[UIView alloc] initWithFrame:CGRectMake(0, bottomViewOrginY, 320, 144)];
+    _bottomView                           = [[UIView alloc] initWithFrame:CGRectMake(0, bottomViewOrginY, ScreenWidth, 144)];
     [self.view addSubview:_bottomView];
 
-    UIImageView *backgroundImageView      = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    UIImageView *backgroundImageView      = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     backgroundImageView.image             = [UIImage imageNamed:@"chat_db_bar"];
     [_bottomView addSubview:backgroundImageView];
 
@@ -216,7 +216,7 @@
 
     UIImageView *inputBackgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(95, 8, 170, 30)];
     inputBackgroundImageView.image        = [UIImage imageNamed:@"chat_input"];
-    [_bottomView addSubview:inputBackgroundImageView];
+   [_bottomView addSubview:inputBackgroundImageView];
 
     //输入框
     _chatTextField                        = [[UITextField alloc] initWithFrame:CGRectMake(98, 13, 150, 25)];
@@ -235,26 +235,26 @@
     [_bottomView addSubview:voiceButton];
     
     //表情
-    _emojiView                            = [[EmojiView alloc] initWithFrame:CGRectMake(0, 44, 320, 100)];
+    _emojiView                            = [[EmojiView alloc] initWithFrame:CGRectMake(0, 44, ScreenWidth, 100)];
     _emojiView.backgroundColor            = [UIColor whiteColor];
     _emojiView.delegate                   = self;
     [_emojiView createEmojiView];
     [_bottomView addSubview:_emojiView];
 
     //选项
-    _footbarView                          = [[ChatFootbarView alloc] initWithFrame:CGRectMake(0, 44, 320, 100)];
+    _footbarView                          = [[ChatFootbarView alloc] initWithFrame:CGRectMake(0, 44, ScreenWidth, 100)];
     _footbarView.backgroundColor          = [UIColor whiteColor];
     [_bottomView addSubview:_footbarView];
     [_footbarView.libButton addTarget:self action:@selector(photoLib) forControlEvents:UIControlEventTouchUpInside];
     _footbarView.libLabel.text            = @"相册";
     [_footbarView.takeButton addTarget:self action:@selector(takePhoto) forControlEvents:UIControlEventTouchUpInside];
     _footbarView.takeLabel.text           = @"照相";
-    [_footbarView.locationButton addTarget:self action:@selector(sendPosition) forControlEvents:UIControlEventTouchUpInside];
-    _footbarView.locationLabel.text       = @"位置";
+    //[_footbarView.locationButton addTarget:self action:@selector(sendPosition) forControlEvents:UIControlEventTouchUpInside];
+   // _footbarView.locationLabel.text       = @"位置";
 
     //隐藏
     UIButton *hideKeyBoardButton          = [UIButton buttonWithType:UIButtonTypeCustom];
-    hideKeyBoardButton.frame              = CGRectMake(0, ViewOriginY, 320, _bottomView.frame.origin.y-ViewOriginY);
+    hideKeyBoardButton.frame              = CGRectMake(0, ViewOriginY, ScreenWidth, _bottomView.frame.origin.y-ViewOriginY);
     hideKeyBoardButton.tag                = kHideButtonTag;
     hideKeyBoardButton.alpha              = 0.0f;
     [hideKeyBoardButton addTarget:self action:@selector(hideBottomView) forControlEvents:UIControlEventTouchUpInside];
@@ -294,12 +294,12 @@
     }
     
     [UIView animateWithDuration:0.4f animations:^{
-        [_bottomView setFrame:CGRectMake(0, bottomViewOrginY, 320, 144)];
+        [_bottomView setFrame:CGRectMake(0, bottomViewOrginY, ScreenWidth, 144)];
     }];
 
     UIButton *hideKeyBoardButton =(UIButton*) [self.view viewWithTag:kHideButtonTag];
     hideKeyBoardButton.alpha = 1.0f;
-    hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, 320, _bottomView.frame.origin.y-ViewOriginY);
+    hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, ScreenWidth, _bottomView.frame.origin.y-ViewOriginY);
 }
 
 -(void)hideBottomView{
@@ -311,12 +311,12 @@
         bottomViewOrginY = ScreenHeight - 64-44;
     }
     [UIView animateWithDuration:0.4f animations:^{
-        [_bottomView setFrame:CGRectMake(0, bottomViewOrginY, 320, 144)];
+        [_bottomView setFrame:CGRectMake(0, bottomViewOrginY, ScreenWidth, 144)];
     }];
     
     UIButton *hideKeyBoardButton =(UIButton*) [self.view viewWithTag:kHideButtonTag];
     hideKeyBoardButton.alpha = 0.0f;
-    hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, 320, _bottomView.frame.origin.y-ViewOriginY);
+    hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, ScreenWidth, _bottomView.frame.origin.y-ViewOriginY);
 }
 
 //浮动编辑框
@@ -334,12 +334,12 @@
         }
         
         [UIView animateWithDuration:0.4f animations:^{
-            [_bottomView setFrame:CGRectMake(0, bottomViewOrginY, 320, 200)];
+            [_bottomView setFrame:CGRectMake(0, bottomViewOrginY, ScreenWidth, 200)];
         }];
         
         UIButton *hideKeyBoardButton =(UIButton*) [self.view viewWithTag:kHideButtonTag];
         hideKeyBoardButton.alpha = 1.0f;
-        hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, 320, _bottomView.frame.origin.y-ViewOriginY);
+        hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, ScreenWidth, _bottomView.frame.origin.y-ViewOriginY);
     }
     
 }
@@ -453,7 +453,7 @@
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     UIButton *hideKeyBoardButton =(UIButton*) [self.view viewWithTag:kHideButtonTag];
     hideKeyBoardButton.alpha = 1.0f;
-    hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, 320, _bottomView.frame.origin.y-ViewOriginY);
+    hideKeyBoardButton.frame = CGRectMake(0, ViewOriginY, ScreenWidth, _bottomView.frame.origin.y-ViewOriginY);
     
     return YES;
 }
@@ -573,7 +573,7 @@
 }*/
 
 #pragma mark imagePickerController delegate
-/**-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
    
     [picker dismissViewControllerAnimated:YES completion:^{
     }];
@@ -595,7 +595,7 @@
                                                                        
                                                                    }];
     }
-}*/
+}
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES completion:^{
