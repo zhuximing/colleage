@@ -44,11 +44,20 @@
         _recent=recent;
        
     }
+    _flag=@"recent";
     //告诉系统调用，layoutSubviews方法
      [self setNeedsDisplay];
 }
+//联系人的set方法,
+-(void)setChatUser:(BmobChatUser *)chatUser{
+    if (!_chatUser) {
+        _chatUser=chatUser;
+    }
+    _flag=@"chatUser";
+    //告诉系统调用，layoutSubviews方法
+    [self setNeedsDisplay];
 
-
+}
 
 
 
@@ -111,13 +120,29 @@
 -(void)layoutSubviews{
     [super layoutSubviews];//attention
     
-    //赋值
-    if (_recent.avatar) {
-        [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:_recent.avatar] placeholderImage:[UIImage imageNamed:@"setting_head"]];
+    if ([_flag isEqualToString:@"recent"]) {
+        //赋值
+        if (_recent.avatar) {
+            [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:_recent.avatar] placeholderImage:[UIImage imageNamed:@"setting_head"]];
+        }
+        
+        self.nameLabel.text      = _recent.targetName;
+        self.messageLabel.text   = _recent.message;
+
+    }else{
+        //赋值
+        if (_chatUser.avatar) {
+            [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:_chatUser.avatar] placeholderImage:[UIImage imageNamed:@"setting_head"]];
+        }
+        
+        self.nameLabel.text      = _chatUser.username;
     }
     
-    self.nameLabel.text      = _recent.targetName;
-    self.messageLabel.text   = _recent.message;
+    
+    
+    
+    
+    
     self.lineImageView.image = [UIImage imageNamed:@"common_line"];
     
     

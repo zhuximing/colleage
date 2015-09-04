@@ -8,12 +8,30 @@
 
 #import "ContactTableViewController.h"
 #import "CommonUtil.h"
-@interface ContactTableViewController ()
-
-@end
+#import <BmobSDK/Bmob.h>
+#import <BmobIM/BmobIM.h>
+#import "RecentTableViewCell.h"
+#import "ContactHeaderView.h"
+#import "ChatViewController.h"
 
 @implementation ContactTableViewController
 
+//初始化
+-(instancetype)init{
+    self=[super init];
+    if (self) {
+        if (IS_iOS7) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        
+        _friendsArray = [[NSMutableArray alloc] init];
+    }
+
+    return self;
+}
+
+
+//加载
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -26,14 +44,77 @@
     [[[CommonUtil alloc] init] customBack:self];
     
     
+    //tableview的头部
+     [self performSelector:@selector(initTableViewHeaderView) withObject:nil afterDelay:0.1f];
     
-    
+    //设置tableview的相关属性
+    self.tableView.rowHeight=80;
     
     
    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+//初始化tableview的头部
+-(void)initTableViewHeaderView{
+    //消息头部
+    UIView *headerView                    = [[UIView alloc] init];
+    headerView.frame                      = CGRectMake(0, 0, ScreenWidth, 140);
+    //好友通知
+    ContactHeaderView *friendView         = [[ContactHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 70)];
+    friendView.iconImageView.image        = [UIImage imageNamed:@"message_icon"];
+    friendView.titleLabel.text            = @"好友通知";
+    friendView.lineImageView.image        = [UIImage imageNamed:@"common_line"];
+    friendView.arrowImageView.image =[UIImage imageNamed:@"common_jt"];
+    [headerView addSubview:friendView];
+    friendView.userInteractionEnabled     = YES;
+    //UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goNewFriends:)];
+    //[friendView addGestureRecognizer:tapRecognizer];
+    
+    //附近的人
+    ContactHeaderView *nearbyView         = [[ContactHeaderView alloc] initWithFrame:CGRectMake(0, 70, 320, 70)];
+    nearbyView.iconImageView.image        = [UIImage imageNamed:@"message_icon"];
+    nearbyView.titleLabel.text            = @"附近的人";
+    nearbyView.lineImageView.image        = [UIImage imageNamed:@"common_line"];
+    nearbyView.arrowImageView.image       =[UIImage imageNamed:@"common_jt"];
+    [headerView addSubview:nearbyView];
+    nearbyView.userInteractionEnabled     = YES;
+    //UITapGestureRecognizer *tapNearbyRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goNearby:)];
+    //[nearbyView addGestureRecognizer:tapNearbyRecognizer];
+    
+    
+    [self.tableView setTableHeaderView:headerView];
+}
+
+
+
+
+
+
+
+//视图出现了
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self performSelector:@selector(search) withObject:nil afterDelay:0.5f];
+}
+
+//查找联系人
+-(void)search{
+    NSArray *array = [[BmobDB currentDatabase] contaclList];
+    
+    if (array) {
+        _friendsArray=array;
+        
+        [self.tableView reloadData];
+        
+    }
+   }
+
+
+
+
+
 
 
 //返回按钮的点击事件
@@ -47,24 +128,63 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _friendsArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"Cell";
     
-    // Configure the cell...
+    RecentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(cell == nil) {
+        cell = [[RecentTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.chatUser=[_friendsArray objectAtIndex:indexPath.row];
     
     return cell;
 }
-*/
+
+//条目点击事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //点击返回来的时候该条目不被选中，当然uitableviewcontroller似乎默认不选中。
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self chatWithSB:indexPath];
+
+
+
+}
+
+
+//进入聊天界面
+-(void)chatWithSB:(NSIndexPath *)indexPath{
+    
+    NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
+    BmobChatUser *user = (BmobChatUser *)[_friendsArray objectAtIndex:indexPath.row];
+    [infoDic setObject:user.objectId forKey:@"uid"];
+    [infoDic setObject:user.username forKey:@"name"];
+    if (user.avatar) {
+        [infoDic setObject:user.avatar forKey:@"avatar"];
+    }
+    if (user.nick) {
+        [infoDic setObject:user.nick forKey:@"nick"];
+    }
+    ChatViewController *cvc = [[ChatViewController alloc] initWithUserDictionary:infoDic];
+    [self.navigationController pushViewController:cvc animated:YES];
+    
+}
+
+
+
 
 /*
 // Override to support conditional editing of the table view.

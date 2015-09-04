@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <BmobIM/BmobDB.h>
 
-@interface RecentTableViewCell : UITableViewCell
+@interface RecentTableViewCell : UITableViewCell{
+    NSString *_flag;
+}
 @property (nonatomic,strong) UIImageView *avatarImageView;
 @property (nonatomic,strong) UILabel     *nameLabel;
 @property (nonatomic,strong) UILabel     *messageLabel;
 @property (nonatomic,strong) UIImageView *lineImageView;
 @property(nonatomic,strong)  BmobRecent  *recent;
+@property(nonatomic,strong)  BmobChatUser  *chatUser;
+
 
 
 

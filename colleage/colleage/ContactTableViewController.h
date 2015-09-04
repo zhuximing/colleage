@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactTableViewController : UITableViewController
+@interface ContactTableViewController : UITableViewController{
+
+    NSMutableArray  *_friendsArray;
+
+}
+
 
 @end
