@@ -54,6 +54,10 @@
 		18DC31131B99461100184151 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC31121B99461100184151 /* ChatViewController.m */; };
 		18DC31161B9946A800184151 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC31151B9946A800184151 /* NextViewController.m */; };
 		18DC31191B99474100184151 /* BubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC31181B99474100184151 /* BubbleTableViewCell.m */; };
+		18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC311C1B999AB600184151 /* NSDate+TimeAgo.m */; };
+		18DC311F1B999AB600184151 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18DC311D1B999AB600184151 /* NSDateTimeAgo.bundle */; };
+		18DC31221B999AE100184151 /* EmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC31211B999AE100184151 /* EmojiView.m */; };
+		18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC31241B999B1A00184151 /* ChatFootbarView.m */; };
 		18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC72C51B949817009E3A85 /* RecentTableViewCell.m */; };
 		18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCFA071B9881BC00D8D12A /* ContactHeaderView.m */; };
 		18DCFA0D1B9884B100D8D12A /* message_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DCFA091B9884B100D8D12A /* message_icon@2x.png */; };
@@ -146,6 +150,13 @@
 		18DC31151B9946A800184151 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		18DC31171B99474100184151 /* BubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleTableViewCell.h; sourceTree = "<group>"; };
 		18DC31181B99474100184151 /* BubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleTableViewCell.m; sourceTree = "<group>"; };
+		18DC311B1B999AB600184151 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		18DC311C1B999AB600184151 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		18DC311D1B999AB600184151 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
+		18DC31201B999AE100184151 /* EmojiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiView.h; sourceTree = "<group>"; };
+		18DC31211B999AE100184151 /* EmojiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmojiView.m; sourceTree = "<group>"; };
+		18DC31231B999B1A00184151 /* ChatFootbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatFootbarView.h; sourceTree = "<group>"; };
+		18DC31241B999B1A00184151 /* ChatFootbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatFootbarView.m; sourceTree = "<group>"; };
 		18DC72C41B949817009E3A85 /* RecentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentTableViewCell.h; sourceTree = "<group>"; };
 		18DC72C51B949817009E3A85 /* RecentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentTableViewCell.m; sourceTree = "<group>"; };
 		18DCFA061B9881BC00D8D12A /* ContactHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactHeaderView.h; sourceTree = "<group>"; };
@@ -191,6 +202,7 @@
 		187690891B93D958005791E0 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				18DC311A1B999A8200184151 /* NSDate+timeage */,
 				18DB9EC31B969D14003D2EC2 /* UserService.h */,
 				18DB9EC41B969D14003D2EC2 /* UserService.m */,
 				18DB9EBD1B968EA3003D2EC2 /* MBProgressHUD.h */,
@@ -306,6 +318,10 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				18DC31231B999B1A00184151 /* ChatFootbarView.h */,
+				18DC31241B999B1A00184151 /* ChatFootbarView.m */,
+				18DC31201B999AE100184151 /* EmojiView.h */,
+				18DC31211B999AE100184151 /* EmojiView.m */,
 				18DC31171B99474100184151 /* BubbleTableViewCell.h */,
 				18DC31181B99474100184151 /* BubbleTableViewCell.m */,
 				18DCFA061B9881BC00D8D12A /* ContactHeaderView.h */,
@@ -531,6 +547,16 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		18DC311A1B999A8200184151 /* NSDate+timeage */ = {
+			isa = PBXGroup;
+			children = (
+				18DC311B1B999AB600184151 /* NSDate+TimeAgo.h */,
+				18DC311C1B999AB600184151 /* NSDate+TimeAgo.m */,
+				18DC311D1B999AB600184151 /* NSDateTimeAgo.bundle */,
+			);
+			name = "NSDate+timeage";
+			sourceTree = "<group>";
+		};
 		18DCFA151B989D0500D8D12A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -647,6 +673,7 @@
 				18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */,
 				18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */,
 				18D5C5FB1B93305C0074EEEC /* tab_icon2_@2x.png in Resources */,
+				18DC311F1B999AB600184151 /* NSDateTimeAgo.bundle in Resources */,
 				18D5C5A21B930E6D0074EEEC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,15 +692,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18DC31191B99474100184151 /* BubbleTableViewCell.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
+				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
 				18DC31161B9946A800184151 /* NextViewController.m in Sources */,
 				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
+				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */,
 				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,

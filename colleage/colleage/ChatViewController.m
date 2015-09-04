@@ -16,8 +16,7 @@
 #import "NSDate+TimeAgo.h"
 #import "EmojiView.h"
 #import "ChatFootbarView.h"
-#import "LocationViewController.h"
-#import "LocateViewController.h"
+
 
 
 @interface ChatViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,EmojiViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
@@ -419,9 +418,9 @@
 }
 //发送位置
 -(void)sendPosition{
-    LocateViewController *lvc = [[LocateViewController alloc] init];
-    [self.navigationController pushViewController:lvc animated:YES];
-    [self hideBottomView];
+    //LocateViewController *lvc = [[LocateViewController alloc] init];
+    //[self.navigationController pushViewController:lvc animated:YES];
+    //[self hideBottomView];
 }
 
 
@@ -548,7 +547,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self gotoLocationViewController:indexPath];
+   // [self gotoLocationViewController:indexPath];
     
 }
 
@@ -561,7 +560,7 @@
     }
 }
 
-
+/**
 -(void)gotoLocationViewController:(NSIndexPath *)indexPath{
     BmobMsg *message = ( BmobMsg *)[_chatArray objectAtIndex:indexPath.row];
     if (message.msgType == MessageTypeLocation) {
@@ -571,10 +570,10 @@
             [self.navigationController pushViewController:lvc animated:YES];
         }
     }
-}
+}*/
 
 #pragma mark imagePickerController delegate
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+/**-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
    
     [picker dismissViewControllerAnimated:YES completion:^{
     }];
@@ -596,7 +595,7 @@
                                                                        
                                                                    }];
     }
-}
+}*/
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [picker dismissViewControllerAnimated:YES completion:^{
