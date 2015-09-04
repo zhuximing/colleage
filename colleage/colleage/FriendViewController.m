@@ -12,12 +12,25 @@
 #import "LoginViewController.h"
 #import "RecentTableViewCell.h"
 #import "ContactTableViewController.h"
+#import "ChatViewController.h"
 @interface FriendViewController ()
 
 @end
 
 @implementation FriendViewController
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+        if (IS_iOS7) {
+            self.automaticallyAdjustsScrollViewInsets = NO;
+        }
+        
+        _chatsArray = [[NSMutableArray alloc] init];//初始化s
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     //头部标题
@@ -84,9 +97,9 @@
 -(void)search{
     NSArray *array = [[BmobDB currentDatabase] queryRecent];
     
-    if (array.count>0) {
+    if (array) {
         
-        [_chatsArray setArray:array];
+        _chatsArray=array;
         [_chatTableView reloadData];
         
         NSLog(@"count%d",_chatsArray.count);
@@ -106,19 +119,7 @@
 
 
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-        if (IS_iOS7) {
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
-        
-        _chatsArray = [[NSMutableArray alloc] init];//初始化s
-    }
-    return self;
-}
+
 
 #pragma mark - UITableView Datasource
 
@@ -138,6 +139,61 @@
     return cell;
 }
 
+#pragma mark - UITableView Delegate methods
 
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewCellEditingStyleDelete;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self deleteChat:indexPath];
+    }
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self chatWithSB:indexPath];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+
+-(void)chatWithSB:(NSIndexPath *)indexPath{
+    BmobRecent *recent = (BmobRecent *)[_chatsArray objectAtIndex:indexPath.row];
+    
+    NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
+    
+    [infoDic setObject:recent.targetId forKey:@"uid"];
+    [infoDic setObject:recent.targetName forKey:@"name"];
+    
+    if (recent.nick) {
+        [infoDic setObject:recent.nick forKey:@"nick"];
+    }
+    
+    if (recent.avatar) {
+        [infoDic setObject:recent.avatar forKey:@"avatar"];
+    }
+    
+    
+    ChatViewController *cvc = [[ChatViewController alloc] initWithUserDictionary:infoDic];
+    [self.navigationController pushViewController:cvc animated:YES];
+    
+}
+
+
+-(void)deleteChat:(NSIndexPath *)indexPath{
+    
+    BmobRecent *recent = (BmobRecent *)[_chatsArray objectAtIndex:indexPath.row];
+    
+    [[BmobDB currentDatabase] deleteRecentWithUid:recent.targetId];
+    
+    [_chatsArray removeObject:recent];
+    [_chatTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    
+    
+}
 
 @end
