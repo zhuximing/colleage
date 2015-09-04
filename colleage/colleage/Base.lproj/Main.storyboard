@@ -168,7 +168,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOf-85-c44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1307" y="1749"/>
+            <point key="canvasLocation" x="1225" y="1993"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="0aR-hG-NMj">
+            <objects>
+                <viewController id="Dmz-rr-v9P" customClass="ChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xad-Nx-4fr"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTy-jR-vRd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gDO-g3-gc1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqd-6t-unh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="2707"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="he9-cE-aM1">
