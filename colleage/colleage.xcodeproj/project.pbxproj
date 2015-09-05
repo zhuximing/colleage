@@ -21,7 +21,6 @@
 		18D5C5E21B9329BD0074EEEC /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5E11B9329BD0074EEEC /* StudyViewController.m */; };
 		18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5E41B9329DF0074EEEC /* LifeViewController.m */; };
 		18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5E71B9329FC0074EEEC /* FriendViewController.m */; };
-		18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5EA1B932A150074EEEC /* CenterViewController.m */; };
 		18D5C5F71B93305C0074EEEC /* top_bar1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5EE1B93305C0074EEEC /* top_bar1@2x.png */; };
 		18D5C5F81B93305C0074EEEC /* top_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5EF1B93305C0074EEEC /* top_bar@2x.png */; };
 		18D5C5F91B93305C0074EEEC /* tab_icon1_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D5C5F01B93305C0074EEEC /* tab_icon1_@2x.png */; };
@@ -131,8 +130,6 @@
 		18D5C5E41B9329DF0074EEEC /* LifeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeViewController.m; sourceTree = "<group>"; };
 		18D5C5E61B9329FC0074EEEC /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
 		18D5C5E71B9329FC0074EEEC /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
-		18D5C5E91B932A150074EEEC /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
-		18D5C5EA1B932A150074EEEC /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		18D5C5EE1B93305C0074EEEC /* top_bar1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar1@2x.png"; sourceTree = "<group>"; };
 		18D5C5EF1B93305C0074EEEC /* top_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar@2x.png"; sourceTree = "<group>"; };
 		18D5C5F01B93305C0074EEEC /* tab_icon1_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_icon1_@2x.png"; sourceTree = "<group>"; };
@@ -432,8 +429,6 @@
 		18D5C5C41B9322750074EEEC /* 用户中心 */ = {
 			isa = PBXGroup;
 			children = (
-				18D5C5E91B932A150074EEEC /* CenterViewController.h */,
-				18D5C5EA1B932A150074EEEC /* CenterViewController.m */,
 			);
 			name = "用户中心";
 			sourceTree = "<group>";
@@ -804,7 +799,6 @@
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				18DC31541B99D30400184151 /* ContactTableViewCell.m in Sources */,
 				18DC31511B99D29E00184151 /* SearchViewController.m in Sources */,
-				18D5C5EB1B932A150074EEEC /* CenterViewController.m in Sources */,
 				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
