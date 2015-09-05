@@ -37,6 +37,7 @@
 		18DAAABB1B95551C00B659CB /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABA1B95551C00B659CB /* BmobSDK.framework */; };
 		18DAAABD1B9567E500B659CB /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */; };
 		18DAAABF1B95684500B659CB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABE1B95684500B659CB /* libicucore.dylib */; };
+		18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */; };
 		18DB9EB61B95CB26003D2EC2 /* login_btn_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */; };
 		18DB9EB71B95CB26003D2EC2 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */; };
 		18DB9EB81B95CB26003D2EC2 /* common_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */; };
@@ -147,6 +148,8 @@
 		18DAAABA1B95551C00B659CB /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		18DAAABE1B95684500B659CB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		18DABC771B9AB85400CB792C /* UsercenterNoLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterNoLogin.h; sourceTree = "<group>"; };
+		18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterNoLogin.m; sourceTree = "<group>"; };
 		18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn_@2x.png"; sourceTree = "<group>"; };
 		18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@2x.png"; sourceTree = "<group>"; };
 		18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_line@2x.png"; sourceTree = "<group>"; };
@@ -429,6 +432,8 @@
 		18D5C5C41B9322750074EEEC /* 用户中心 */ = {
 			isa = PBXGroup;
 			children = (
+				18DABC771B9AB85400CB792C /* UsercenterNoLogin.h */,
+				18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */,
 			);
 			name = "用户中心";
 			sourceTree = "<group>";
@@ -801,6 +806,7 @@
 				18DC31511B99D29E00184151 /* SearchViewController.m in Sources */,
 				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
+				18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,

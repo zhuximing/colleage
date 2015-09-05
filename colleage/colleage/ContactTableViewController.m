@@ -75,7 +75,7 @@
     UIView *headerView                    = [[UIView alloc] init];
     headerView.frame                      = CGRectMake(0, 0, ScreenWidth, 140);
     //好友通知
-    ContactHeaderView *friendView         = [[ContactHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, 70)];
+    ContactHeaderView *friendView         = [[ContactHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 70)];
     friendView.iconImageView.image        = [UIImage imageNamed:@"message_icon"];
     friendView.titleLabel.text            = @"好友通知";
     friendView.lineImageView.image        = [UIImage imageNamed:@"common_line"];

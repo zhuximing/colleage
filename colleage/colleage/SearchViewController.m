@@ -47,7 +47,7 @@
     self.navigationItem.titleView          = [CommonUtil navigationTitleViewWithTitle:@"搜索联系人"];
 
     UIImageView  *loginBackgroundImageView = [[UIImageView alloc] init];
-    loginBackgroundImageView.frame         = CGRectMake(0,  ViewOriginY+10, 320, 40);
+    loginBackgroundImageView.frame         = CGRectMake(0,  ViewOriginY+10, ScreenWidth, 40);
     loginBackgroundImageView.image         = [[UIImage imageNamed:@"login_input"] stretchableImageWithLeftCapWidth:10 topCapHeight:10];
     [self.view addSubview:loginBackgroundImageView];
 
@@ -57,7 +57,7 @@
     searchTextField.returnKeyType          = UIReturnKeySearch;
     [self.view addSubview:searchTextField];
 
-    _contactsTableView                      = [[UITableView alloc] initWithFrame:CGRectMake(0, ViewOriginY+50, 320, ScreenHeight-ViewOriginY-50)];
+    _contactsTableView                      = [[UITableView alloc] initWithFrame:CGRectMake(0, ViewOriginY+50, ScreenWidth, ScreenHeight-ViewOriginY-50)];
     _contactsTableView.delegate             = self;
     _contactsTableView.dataSource           = self;
     _contactsTableView.rowHeight            = 45;

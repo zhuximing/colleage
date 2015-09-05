@@ -141,9 +141,9 @@
     
     
     
+    //这根背景线太短了   无法适配  干脆不显示了
     
-    
-    self.lineImageView.image = [UIImage imageNamed:@"common_line"];
+   // self.lineImageView.image = [UIImage imageNamed:@"common_line"];
     
     
     //尺寸

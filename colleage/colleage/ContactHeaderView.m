@@ -65,8 +65,8 @@
     [super layoutSubviews];
     self.iconImageView.frame = CGRectMake(20, 11, 50, 50);
     self.titleLabel.frame    = CGRectMake(73, 27, 70, 17);
-    self.lineImageView.frame = CGRectMake(0, 69, 320, 1);
-    self.arrowImageView.frame= CGRectMake(301, 28, 9, 15);
+    self.lineImageView.frame = CGRectMake(0, 69, ScreenWidth, 1);
+    self.arrowImageView.frame= CGRectMake(ScreenWidth-30, 28, 9, 15);
 }
 
 @end

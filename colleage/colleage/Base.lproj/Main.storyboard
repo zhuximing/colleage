@@ -304,10 +304,10 @@
             </objects>
             <point key="canvasLocation" x="508" y="1908"/>
         </scene>
-        <!--Center View Controller-->
+        <!--Usercenter No Login-->
         <scene sceneID="te8-r0-rd6">
             <objects>
-                <viewController id="5on-zu-nkg" customClass="CenterViewController" sceneMemberID="viewController">
+                <viewController id="5on-zu-nkg" customClass="UsercenterNoLogin" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iuh-VQ-7xa"/>
                         <viewControllerLayoutGuide type="bottom" id="07S-ud-WPO"/>
@@ -315,31 +315,45 @@
                     <view key="view" contentMode="scaleToFill" id="ZzE-hl-G6R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCA-rS-eSV">
+                                <rect key="frame" x="0.0" y="64" width="600" height="171"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="setting_head.png" translatesAutoresizingMaskIntoConstraints="NO" id="4V6-to-AOf">
+                                        <rect key="frame" x="236" y="8" width="128" height="83"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XZ-jy-FFg">
+                                        <rect key="frame" x="247" y="106" width="106" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Oxi-Rt-4Ig"/>
+                                        </constraints>
+                                        <state key="normal" title="点击登陆" backgroundImage="login_btn.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="p1c-DP-iE5" kind="push" id="lb7-r7-NKa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64313727617263794" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3XZ-jy-FFg" firstAttribute="top" secondItem="4V6-to-AOf" secondAttribute="bottom" constant="15" id="Q9j-a5-ssu"/>
+                                    <constraint firstAttribute="centerX" secondItem="4V6-to-AOf" secondAttribute="centerX" id="qAU-zZ-fvg"/>
+                                    <constraint firstAttribute="centerX" secondItem="3XZ-jy-FFg" secondAttribute="centerX" id="wDc-U0-VD6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hCA-rS-eSV" secondAttribute="centerX" id="ghE-VB-rzh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iS2-Ib-yTh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvb-cU-P5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="498" y="2596"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Jzk-hQ-a3b">
-            <objects>
-                <viewController id="GPD-60-3Mg" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cbJ-qC-7Wd"/>
-                        <viewControllerLayoutGuide type="bottom" id="oQU-UX-8vz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fpM-iR-Ec0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NyX-by-zfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1214" y="2596"/>
         </scene>
         <!--Item-->
         <scene sceneID="3SC-Fx-bQF">
@@ -362,5 +376,9 @@
     <resources>
         <image name="log.png" width="130" height="27"/>
         <image name="login_btn.png" width="294" height="44"/>
+        <image name="setting_head.png" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lb7-r7-NKa"/>
+    </inferredMetricsTieBreakers>
 </document>
