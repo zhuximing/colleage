@@ -7,12 +7,10 @@
 //
 
 #import "RootViewController.h"
+#import <BmobIM/BmobIM.h>
+#import "UsercenterLogin.h"
 
 
-@interface RootViewController ()<UITabBarControllerDelegate>{
-    
-}
-@end
 
 @implementation RootViewController
 
@@ -43,7 +41,7 @@
    
 //    [self.tabBar setHidden:YES];
 //
-//    self.delegate = self;
+    self.delegate = self;
     
     
     
@@ -103,10 +101,44 @@
         btn.userInteractionEnabled = YES;
     }
     
+    //如果点击的事个人中心
+//    if (sender.tag==104) {
+//        BmobUser *user = [BmobUser getCurrentUser];
+//        
+//        //获取故事版
+//        UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//        //获取用户中心的导航控制器
+//        UINavigationController *nav=[story instantiateViewControllerWithIdentifier:@"usercenternav"];
+//        
+//        
+//        //  获取登陆后的个人中心的视图控制器
+//        UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
+//        //  获取没有登陆的个人中心的视图控制器
+//        UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
+//       
+//        if (!user) {//没有登录
+//           // [(UINavigationController*)self.selectedViewController pushViewController:notlogin animated:NO];
+//            [nav setViewControllers:@[notlogin]];
+//            NSLog(@"NO%@",nav);
+//            
+//           
+//            
+//        }else{
+//            [nav setViewControllers:@[login]];
+//             //[(UINavigationController*)self.selectedViewController pushViewController:login animated:NO];
+//            NSLog(@"YES");
+//            NSLog(@"NO%@",nav);
+//        }
+//    }
+//
+//    
+//    
+//    
     sender.selected = YES;
     sender.userInteractionEnabled = NO;
     
-    [self setSelectedIndex:sender.tag -100];
+   [self setSelectedIndex:sender.tag -100];
+   
 }
 
 
@@ -119,15 +151,69 @@
 
 }
 
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    NSLog(@"!!!!!");
+    //if(viewController==self.viewControllers[4])
+    
+    if ([viewController.tabBarItem.title isEqualToString:@"个人中心"]) {
+        
+        BmobUser *user = [BmobUser getCurrentUser];
+        
+        NSLog(@">>>>%@",user);
+        if (!user) {//未登陆
+//            //获取故事版
+//            UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//            
+//            
+//            
+//            //  获取登陆后的个人中心的视图控制器
+//            //UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
+//            //  获取没有登陆的个人中心的视图控制器
+//            UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
+//            
+//            
+//            [(UINavigationController *)tabBarController.selectedViewController pushViewController:notlogin animated:NO];
+            return YES;
+
+          
+        }else{//已经登陆
+            //获取故事版
+            UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            
+            
+            
+            //  获取登陆后的个人中心的视图控制器
+            UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
+            //  获取没有登陆的个人中心的视图控制器
+            // UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
+
+            
+            [(UINavigationController *)tabBarController.selectedViewController pushViewController:login animated:NO];
+            return NO;
+        }
+        
+    }else{
+    
+        return YES;
+    }
+    
+    
+    
+
+    
+}
 
 
 
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
 
-//-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-//   
-//    
-//    
-//    UINavigationController *navigationViewController = (UINavigationController*)viewController;
+   
+   
+    NSLog(@"####");
+    
+    
+   
+    
 //    
 //    for (int i= 0; i<3; i++) {
 //        UIButton  *btn = (UIButton*)[self.tabBar viewWithTag:100+i];
@@ -151,5 +237,5 @@
 //    }
 //    
 //    
-//}
+}
 @end

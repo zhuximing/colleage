@@ -8,16 +8,71 @@
 
 #import "UsercenterNoLogin.h"
 #import "CommonUtil.h"
+#import <BmobIM/BmobIM.h>
+#import "UsercenterLogin.h"
 @interface UsercenterNoLogin ()
 
 @end
-
 @implementation UsercenterNoLogin
+
+
+//-(void) loadView {
+//    [super loadView];
+//    
+//}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"个人中心"];
     self.title=@"个人中心";
+   BmobUser *user = [BmobUser getCurrentUser];
+    if (!user) {//未登陆
+        
+        NSLog(@"notlogin");
+    }else{//已经登陆
+        NSLog(@"login");
+        
+        
+                //获取故事版
+                UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        
+        
+                //  获取登陆后的个人中心的视图控制器
+                UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
+                //  获取没有登陆的个人中心的视图控制器
+               // UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
+
+        
+         [self.navigationController initWithRootViewController:login];
+        
+        
+       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeRoot) name:@"changeRoot" object:nil];
+    }
+    
+    
+   
+    
+}
+
+-(void)changeRoot{
+    
+    NSLog(@"ok");
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    
+    
+    //  获取登陆后的个人中心的视图控制器
+    UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
+    //  获取没有登陆的个人中心的视图控制器
+    // UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
+    
+    
+    [self.navigationController initWithRootViewController:login];
+
 }
 
 - (void)didReceiveMemoryWarning {

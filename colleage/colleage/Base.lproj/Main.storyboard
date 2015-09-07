@@ -69,7 +69,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5k-UW-TNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1328" y="1276"/>
+            <point key="canvasLocation" x="2202" y="1256"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="MJj-s8-wHb">
@@ -80,7 +80,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nvh-OO-kMP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KHp-HG-AJj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="19" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-6y-JNw">
@@ -129,7 +129,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="log.png" translatesAutoresizingMaskIntoConstraints="NO" id="bDP-uV-dTb">
-                                <rect key="frame" x="87" y="117" width="239" height="65"/>
+                                <rect key="frame" x="180" y="117" width="239" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="239" id="mxV-hn-Drg"/>
                                 </constraints>
@@ -159,7 +159,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="03I-Zb-N6x"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="loginTf" destination="LJ9-6y-JNw" id="Cao-iL-AOm"/>
                         <outlet property="loginbtn" destination="Oi5-fm-57h" id="XUE-dh-vsI"/>
@@ -168,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOf-85-c44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="1993"/>
+            <point key="canvasLocation" x="2202" y="2001"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="he9-cE-aM1">
@@ -307,7 +306,7 @@
         <!--Usercenter No Login-->
         <scene sceneID="te8-r0-rd6">
             <objects>
-                <viewController id="5on-zu-nkg" customClass="UsercenterNoLogin" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notloginvc" id="5on-zu-nkg" customClass="UsercenterNoLogin" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iuh-VQ-7xa"/>
                         <viewControllerLayoutGuide type="bottom" id="07S-ud-WPO"/>
@@ -332,13 +331,15 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="p1c-DP-iE5" kind="push" id="lb7-r7-NKa"/>
+                                            <segue destination="p1c-DP-iE5" kind="presentation" id="lb7-r7-NKa"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.64313727617263794" green="0.0" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="F2n-Ky-oMx"/>
                                     <constraint firstItem="3XZ-jy-FFg" firstAttribute="top" secondItem="4V6-to-AOf" secondAttribute="bottom" constant="15" id="Q9j-a5-ssu"/>
+                                    <constraint firstAttribute="bottom" secondItem="3XZ-jy-FFg" secondAttribute="bottom" constant="10" id="Rb4-RK-MPs"/>
                                     <constraint firstAttribute="centerX" secondItem="4V6-to-AOf" secondAttribute="centerX" id="qAU-zZ-fvg"/>
                                     <constraint firstAttribute="centerX" secondItem="3XZ-jy-FFg" secondAttribute="centerX" id="wDc-U0-VD6"/>
                                 </constraints>
@@ -353,19 +354,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvb-cU-P5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="2596"/>
+            <point key="canvasLocation" x="646" y="2580"/>
+        </scene>
+        <!--Usercenter Login-->
+        <scene sceneID="ed1-a9-YPd">
+            <objects>
+                <viewController storyboardIdentifier="loginvc" id="AQS-q3-qQJ" customClass="UsercenterLogin" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Evn-7R-2EA"/>
+                        <viewControllerLayoutGuide type="bottom" id="oBb-Eh-dbd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="beX-Cj-Ako">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X1x-f2-juQ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="208"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="setting_head.png" translatesAutoresizingMaskIntoConstraints="NO" id="bZW-mw-oD5">
+                                        <rect key="frame" x="184" y="0.0" width="233" height="110"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.6784313917" green="0.0" blue="0.99607849120000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="3Bd-4N-YDT"/>
+                                    <constraint firstAttribute="centerX" secondItem="bZW-mw-oD5" secondAttribute="centerX" constant="-0.5" id="pNi-P1-00a"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhi-Sb-7aa">
+                                <rect key="frame" x="209" y="274" width="182" height="30"/>
+                                <state key="normal" title="退出登录" backgroundImage="logout_btn.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="AQS-q3-qQJ" eventType="touchUpInside" id="7wg-ra-lXL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jhi-Sb-7aa" firstAttribute="leading" secondItem="beX-Cj-Ako" secondAttribute="leading" id="STw-ke-weX"/>
+                            <constraint firstAttribute="trailing" secondItem="Jhi-Sb-7aa" secondAttribute="trailing" id="Vgf-uP-yum"/>
+                            <constraint firstItem="Jhi-Sb-7aa" firstAttribute="top" secondItem="X1x-f2-juQ" secondAttribute="bottom" constant="4" id="eu5-Wn-bUJ"/>
+                            <constraint firstAttribute="centerX" secondItem="X1x-f2-juQ" secondAttribute="centerX" id="nbD-e4-PEp"/>
+                            <constraint firstItem="X1x-f2-juQ" firstAttribute="width" secondItem="Jhi-Sb-7aa" secondAttribute="width" id="yX2-yf-Ngs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UlV-5r-f9D"/>
+                    <connections>
+                        <outlet property="logout_btn" destination="Jhi-Sb-7aa" id="GbI-Ay-o8z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhN-Cg-I54" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="704" y="3270"/>
         </scene>
         <!--Item-->
         <scene sceneID="3SC-Fx-bQF">
             <objects>
-                <navigationController id="OM1-GD-RqT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="usercenternav" id="OM1-GD-RqT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="bWt-bm-bQp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9UE-v4-VFz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="5on-zu-nkg" kind="relationship" relationship="rootViewController" id="zgN-Ql-bo1"/>
+                        <segue destination="5on-zu-nkg" kind="relationship" relationship="rootViewController" id="yDD-kk-Qjl"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tko-E2-9Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,6 +431,7 @@
     <resources>
         <image name="log.png" width="130" height="27"/>
         <image name="login_btn.png" width="294" height="44"/>
+        <image name="logout_btn.png" width="294" height="44"/>
         <image name="setting_head.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>

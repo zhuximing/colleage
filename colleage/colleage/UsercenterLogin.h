@@ -1,5 +1,5 @@
 //
-//  UsercenterNoLogin.h
+//  UsercenterLogin.h
 //  colleage
 //
 //  Created by Apple on 15/9/5.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UsercenterNoLogin : UIViewController
-
+@interface UsercenterLogin : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *logout_btn;
 
 @end

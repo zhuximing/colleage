@@ -10,9 +10,7 @@
 #import "CommonUtil.h"
 #import "MBProgressHUD.h"
 #import "UserService.h"
-@interface LoginViewController ()
 
-@end
 
 @implementation LoginViewController
 
@@ -89,6 +87,7 @@
             [self dismissViewControllerAnimated:YES completion:^{
                 
             }];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"changeRoot" object:nil];
         }
     }];
     

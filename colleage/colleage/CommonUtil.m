@@ -65,18 +65,18 @@
     
     if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"] boolValue]) {
        
-        /**
+        
         //获取故事版
         UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
         //  获取登陆界面的视图控制器
-        UINavigationController *nav=[story instantiateViewControllerWithIdentifier:@"loginNav"];
+        UIViewController *login=[story instantiateViewControllerWithIdentifier:@"login"];
         
-        [viewController presentViewController:nav animated:YES completion:^{
+        [viewController presentViewController:login animated:YES completion:^{
             
-        }];*/
+        }];
         
         
-        [viewController performSegueWithIdentifier:@"login" sender:nil];
+        //[viewController performSegueWithIdentifier:@"login" sender:nil];
       
     }
     
