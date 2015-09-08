@@ -27,7 +27,29 @@
     [super viewDidLoad];
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"个人中心"];
     self.title=@"个人中心";
-   BmobUser *user = [BmobUser getCurrentUser];
+    
+    
+    
+    //获取数据
+    MKNetworkEngine *engine=[[MKNetworkEngine alloc]
+                             initWithHostName:@"121.40.130.169/colleage/index.php"
+                             customHeaderFields:nil];
+    MKNetworkOperation *op=[engine operationWithPath:@"welcome/isupdate" params:nil httpMethod:@"GET"];
+    
+    [op onCompletion:^(MKNetworkOperation *completedOperation) {
+         NSLog(@"request string: %@",[op responseString]);
+        
+        
+        
+    } onError:^(NSError *error) {
+        
+    }];
+    [engine enqueueOperation:op];
+    
+    
+    
+    
+   /**BmobUser *user = [BmobUser getCurrentUser];
     if (!user) {//未登陆
         
         NSLog(@"notlogin");
@@ -51,7 +73,7 @@
         
        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeRoot) name:@"changeRoot" object:nil];
     }
-    
+    */
     
    
     

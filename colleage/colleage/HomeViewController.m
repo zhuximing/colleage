@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "CommonUtil.h"
+#import "LostTableViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -23,6 +24,10 @@
     if( IS_iOS7) {
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
+}
+- (IBAction)lost:(id)sender {
+    LostTableViewController *lost=[[LostTableViewController alloc] init];
+    [self.navigationController pushViewController:lost animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
