@@ -58,12 +58,40 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    //初始化加载器
+    hud = [[MBProgressHUD alloc] initWithView:self.view];
+    
+    [self.view addSubview:hud];
 }
 
 //返回
 -(void)goback{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+//显示加载器
+-(void) showProgressing:(NSString*)info{
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = info;
+    [hud show:YES];
+    //[hud hide:YES afterDelay:10.0f];
+}
+
+//显示吐司
+-(void) showToast:(NSString*)info{
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = info;
+    [hud show:YES];
+    [hud hide:YES afterDelay:0.7f];
+}
+
+//隐藏
+-(void)hide{
+    [hud hide:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

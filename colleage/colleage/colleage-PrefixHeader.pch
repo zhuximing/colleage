@@ -14,7 +14,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #endif
-
+#define BASEHOME @"121.40.130.169/colleage/index.php"
+#define BASEURL @"http://121.40.130.169/colleage/index.php"
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 

@@ -64,7 +64,7 @@
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = info;
     [hud show:YES];
-    [hud hide:YES afterDelay:10.0f];
+    //[hud hide:YES afterDelay:10.0f];
 }
 
 //显示吐司

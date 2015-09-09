@@ -9,6 +9,7 @@
 #import "LostTableViewController.h"
 #import "CommonUtil.h"
 #import "LostTableViewCell.h"
+#import "LostDetail.h"
 @implementation LostTableViewController
 
 
@@ -24,7 +25,7 @@
     [self showProgressing:@"加载中..."];
     //获取数据
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
-                             initWithHostName:@"121.40.130.169/colleage/index.php"
+                             initWithHostName:BASEHOME
                              customHeaderFields:nil];
     
     //请求参数
@@ -39,7 +40,7 @@
          [self.tableView reloadData];
         
     } onError:^(NSError *error) {
-         [self hide];
+        [self showToast:@"网络异常"];
     }];
     [engine enqueueOperation:op];
 
@@ -80,7 +81,7 @@
         cell=[[LostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
     }
-    
+    //赋值
     cell.lost_name.text=[losts[indexPath.row] objectForKey:@"lost_name"];
     
     cell.school.text=[losts[indexPath.row] objectForKey:@"user_school"];
@@ -91,6 +92,16 @@
     return cell;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //获取登陆后的个人中心的视图控制器
+    LostDetail *lost=[story instantiateViewControllerWithIdentifier:@"LostDetail"];
+
+    lost.lost_id=[losts[indexPath.row] objectForKey:@"lost_id"];
+    [self.navigationController pushViewController:lost animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.
