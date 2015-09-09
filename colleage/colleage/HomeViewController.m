@@ -183,7 +183,7 @@
     //失物招领
     if (cell.tag ==1) {
         LostTableViewController *lostTBVC=[[LostTableViewController alloc] init];
-        //LostViewController *lostVC=[[LostViewController alloc] init];
+        LostViewController *lostVC=[[LostViewController alloc] init];
         [self.navigationController pushViewController:lostTBVC animated:YES];
     }
     //学生合租
