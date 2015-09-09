@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bQ4-tN-yXK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bQ4-tN-yXK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -54,8 +55,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sf1-mD-9B6">
+                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sf1-mD-9B6" id="KtO-E7-nJI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -181,8 +184,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="PzT-S9-CQy" secondAttribute="centerY" constant="-44" id="711-j1-lop"/>
+                            <constraint firstAttribute="centerX" secondItem="sff-TJ-x3J" secondAttribute="centerX" id="ECk-vz-Mvy"/>
+                            <constraint firstItem="d4d-SI-i2Y" firstAttribute="top" secondItem="S0l-yi-ywP" secondAttribute="top" id="FVB-BK-X0Q"/>
+                            <constraint firstItem="sff-TJ-x3J" firstAttribute="top" secondItem="d4d-SI-i2Y" secondAttribute="bottom" constant="-40" id="H9M-XQ-5iD"/>
+                            <constraint firstAttribute="centerX" secondItem="PzT-S9-CQy" secondAttribute="centerX" constant="14" id="MED-8E-OSJ"/>
+                            <constraint firstAttribute="centerX" secondItem="d4d-SI-i2Y" secondAttribute="centerX" constant="19" id="mxz-oE-YSh"/>
+                            <constraint firstItem="PzT-S9-CQy" firstAttribute="width" secondItem="d4d-SI-i2Y" secondAttribute="width" id="qKS-xc-JIc"/>
+                            <constraint firstItem="PzT-S9-CQy" firstAttribute="top" secondItem="d4d-SI-i2Y" secondAttribute="bottom" constant="2" id="u0O-hv-uDm"/>
+                            <constraint firstAttribute="centerY" secondItem="PzT-S9-CQy" secondAttribute="centerY" constant="-44" id="u16-3S-IZe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fj7-Kf-IUM"/>
+                    <connections>
+                        <outlet property="collectionView" destination="PzT-S9-CQy" id="p00-yi-4hG"/>
+                        <outlet property="pageControl" destination="sff-TJ-x3J" id="doe-ti-kUm"/>
+                        <outlet property="scrollview" destination="d4d-SI-i2Y" id="Kup-ut-SCl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FY3-l4-Zme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
