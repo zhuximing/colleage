@@ -25,10 +25,7 @@
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
 }
-- (IBAction)lost:(id)sender {
-    LostTableViewController *lost=[[LostTableViewController alloc] init];
-    [self.navigationController pushViewController:lost animated:YES];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
