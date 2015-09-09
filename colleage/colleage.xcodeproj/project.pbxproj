@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
-		18B69E221B9FE37F00E8E73C /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E211B9FE37F00E8E73C /* LostViewController.m */; };
 		18B69E251B9FE38D00E8E73C /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E241B9FE38D00E8E73C /* JobViewController.m */; };
 		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
 		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
@@ -137,8 +136,6 @@
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
-		18B69E201B9FE37F00E8E73C /* LostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostViewController.h; sourceTree = "<group>"; };
-		18B69E211B9FE37F00E8E73C /* LostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostViewController.m; sourceTree = "<group>"; };
 		18B69E231B9FE38D00E8E73C /* JobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobViewController.h; sourceTree = "<group>"; };
 		18B69E241B9FE38D00E8E73C /* JobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobViewController.m; sourceTree = "<group>"; };
 		18B69E261B9FE3A000E8E73C /* HourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourseViewController.h; sourceTree = "<group>"; };
@@ -546,8 +543,6 @@
 		18D5C5C71B9323BE0074EEEC /* 失物招领 */ = {
 			isa = PBXGroup;
 			children = (
-				18B69E201B9FE37F00E8E73C /* LostViewController.h */,
-				18B69E211B9FE37F00E8E73C /* LostViewController.m */,
 				18DDFB351B9ECB4B000995B1 /* LostTableViewController.h */,
 				18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */,
 				18DC83161B9FF3760072B35C /* LostDetail.h */,
@@ -951,7 +946,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B69E221B9FE37F00E8E73C /* LostViewController.m in Sources */,
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,

@@ -11,7 +11,6 @@
 #import "LostTableViewController.h"
 #import "HomeCollectionViewCell.h"
 #import "JobViewController.h"
-#import "LostViewController.h"
 #import "HourseViewController.h"
 #import "CarViewController.h"
 #import "HelpViewController.h"
@@ -82,6 +81,25 @@
     textArr=[[NSArray alloc] initWithObjects:@"校园兼职",@"失物招领",@"学生合租",@"拼车回家",@"同学互帮",@"二手市场", nil];
 }
 
+
+
+#pragma mark - UIScrollView
+
+- (void)nextImage
+{
+    int page = (int)self.pageControl.currentPage;
+    NSLog(@"当前第%d页",page);
+    if (page == 3) {
+        page = 0;
+    }else
+    {
+        page++;
+    }
+    
+    //  滚动scrollview
+    CGFloat x = page * self.scrollview.frame.size.width;
+    self.scrollview.contentOffset = CGPointMake(x, 0);
+}
 
 // scrollview滚动的时候调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -163,8 +181,11 @@
     }
     //失物招领
     if (cell.tag ==1) {
-        LostTableViewController *lostTBVC=[[LostTableViewController alloc] init];
-        LostViewController *lostVC=[[LostViewController alloc] init];
+        //获取故事版
+        UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        //获取登陆后的个人中心的视图控制器
+        LostTableViewController *lostTBVC=[story instantiateViewControllerWithIdentifier:@"LostTableViewController"];
+      
         [self.navigationController pushViewController:lostTBVC animated:YES];
     }
     //学生合租
