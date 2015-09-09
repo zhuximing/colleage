@@ -41,7 +41,7 @@
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"联系人"];
    
     //返回按钮
-    [[[CommonUtil alloc] init] customBack:self];
+    // [[[CommonUtil alloc] init] customBack:self];
     
     //右边添加联系人的按钮
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];

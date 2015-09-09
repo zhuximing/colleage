@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ContactTableViewController : UITableViewController{
+#import "NextTableViewController.h"
+@interface ContactTableViewController :NextTableViewController {
 
     NSMutableArray  *_friendsArray;
 
