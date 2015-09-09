@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
+		18B69E221B9FE37F00E8E73C /* LostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E211B9FE37F00E8E73C /* LostViewController.m */; };
+		18B69E251B9FE38D00E8E73C /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E241B9FE38D00E8E73C /* JobViewController.m */; };
+		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
+		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
+		18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */; };
+		18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E301B9FE3BD00E8E73C /* MarketViewController.m */; };
+		18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */; };
+		18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E351B9FE3F700E8E73C /* HomeCollectionViewCell.m */; };
 		18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D358E81B9D864D0012ADF9 /* UsercenterNavViewController.m */; };
 		18D5C5941B930E6D0074EEEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5931B930E6D0074EEEC /* main.m */; };
 		18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5C5961B930E6D0074EEEC /* AppDelegate.m */; };
@@ -127,6 +135,22 @@
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
+		18B69E201B9FE37F00E8E73C /* LostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostViewController.h; sourceTree = "<group>"; };
+		18B69E211B9FE37F00E8E73C /* LostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostViewController.m; sourceTree = "<group>"; };
+		18B69E231B9FE38D00E8E73C /* JobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobViewController.h; sourceTree = "<group>"; };
+		18B69E241B9FE38D00E8E73C /* JobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobViewController.m; sourceTree = "<group>"; };
+		18B69E261B9FE3A000E8E73C /* HourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourseViewController.h; sourceTree = "<group>"; };
+		18B69E271B9FE3A000E8E73C /* HourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseViewController.m; sourceTree = "<group>"; };
+		18B69E291B9FE3AA00E8E73C /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
+		18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
+		18B69E2C1B9FE3B400E8E73C /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		18B69E2F1B9FE3BD00E8E73C /* MarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketViewController.h; sourceTree = "<group>"; };
+		18B69E301B9FE3BD00E8E73C /* MarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketViewController.m; sourceTree = "<group>"; };
+		18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
+		18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
+		18B69E341B9FE3F700E8E73C /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		18B69E351B9FE3F700E8E73C /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		18D358E71B9D864D0012ADF9 /* UsercenterNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterNavViewController.h; sourceTree = "<group>"; };
 		18D358E81B9D864D0012ADF9 /* UsercenterNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterNavViewController.m; sourceTree = "<group>"; };
 		18D5C58E1B930E6D0074EEEC /* colleage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colleage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -422,6 +446,10 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */,
+				18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */,
+				18B69E341B9FE3F700E8E73C /* HomeCollectionViewCell.h */,
+				18B69E351B9FE3F700E8E73C /* HomeCollectionViewCell.m */,
 				18DC31521B99D30400184151 /* ContactTableViewCell.h */,
 				18DC31531B99D30400184151 /* ContactTableViewCell.m */,
 				18DC31231B999B1A00184151 /* ChatFootbarView.h */,
@@ -501,6 +529,8 @@
 		18D5C5C51B93228D0074EEEC /* 校园兼职 */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E231B9FE38D00E8E73C /* JobViewController.h */,
+				18B69E241B9FE38D00E8E73C /* JobViewController.m */,
 			);
 			name = "校园兼职";
 			sourceTree = "<group>";
@@ -508,6 +538,8 @@
 		18D5C5C71B9323BE0074EEEC /* 食物招领 */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E201B9FE37F00E8E73C /* LostViewController.h */,
+				18B69E211B9FE37F00E8E73C /* LostViewController.m */,
 				18DDFB351B9ECB4B000995B1 /* LostTableViewController.h */,
 				18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */,
 			);
@@ -517,6 +549,8 @@
 		18D5C5C81B9323C70074EEEC /* 学生合租 */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E261B9FE3A000E8E73C /* HourseViewController.h */,
+				18B69E271B9FE3A000E8E73C /* HourseViewController.m */,
 			);
 			name = "学生合租";
 			sourceTree = "<group>";
@@ -524,6 +558,8 @@
 		18D5C5C91B9323D30074EEEC /* 拼车回家 */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E291B9FE3AA00E8E73C /* CarViewController.h */,
+				18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */,
 			);
 			name = "拼车回家";
 			sourceTree = "<group>";
@@ -531,6 +567,8 @@
 		18D5C5CA1B9323DC0074EEEC /* 学生互帮 */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E2C1B9FE3B400E8E73C /* HelpViewController.h */,
+				18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */,
 			);
 			name = "学生互帮";
 			sourceTree = "<group>";
@@ -538,6 +576,8 @@
 		18D5C5CB1B9323E40074EEEC /* 二手市场 */ = {
 			isa = PBXGroup;
 			children = (
+				18B69E2F1B9FE3BD00E8E73C /* MarketViewController.h */,
+				18B69E301B9FE3BD00E8E73C /* MarketViewController.m */,
 			);
 			name = "二手市场";
 			sourceTree = "<group>";
@@ -901,6 +941,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B69E221B9FE37F00E8E73C /* LostViewController.m in Sources */,
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,
@@ -911,9 +952,12 @@
 				18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
 				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
+				18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */,
 				18D662A11B9DDEAC000AA1E1 /* NSDate+RFC1123.m in Sources */,
 				18D662A81B9DDEAC000AA1E1 /* Reachability.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
+				18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */,
+				18B69E251B9FE38D00E8E73C /* JobViewController.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18D662A21B9DDEAC000AA1E1 /* NSDictionary+RequestEncoding.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
@@ -921,12 +965,15 @@
 				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
 				18D662A61B9DDEAC000AA1E1 /* MKNetworkEngine.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
+				18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */,
+				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				18DC31541B99D30400184151 /* ContactTableViewCell.m in Sources */,
 				18DC31511B99D29E00184151 /* SearchViewController.m in Sources */,
 				18D662A71B9DDEAC000AA1E1 /* MKNetworkOperation.m in Sources */,
 				18D662A01B9DDEAC000AA1E1 /* NSData+MKBase64.m in Sources */,
 				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
+				18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
 				18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */,
 				18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */,
@@ -939,6 +986,7 @@
 				18D662A51B9DDEAC000AA1E1 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				18D5C5DF1B9329660074EEEC /* HomeViewController.m in Sources */,
 				18544CE71B942F4100043D73 /* CommonUtil.m in Sources */,
+				18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */,
 				18D5C5E21B9329BD0074EEEC /* StudyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

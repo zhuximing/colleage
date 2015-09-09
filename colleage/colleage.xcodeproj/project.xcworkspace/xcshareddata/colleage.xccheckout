@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6ABF0840-43EC-41FB-AFC4-E469968FFF8C</string>
 	<key>IDESourceControlProjectName</key>
-	<string>colleage</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E7FE4E3ABBE11047096A6EACE8F6F6DB6AAEB746</key>
 		<string>https://github.com/zhuximing/colleage.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>colleage/colleage.xcodeproj</string>
+	<string>colleage/colleage.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E7FE4E3ABBE11047096A6EACE8F6F6DB6AAEB746</key>
