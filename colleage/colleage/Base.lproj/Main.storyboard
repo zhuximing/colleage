@@ -298,33 +298,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5U-Es-Vf7">
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T5U-Es-Vf7">
                                 <rect key="frame" x="0.0" y="28" width="613" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzU-ez-b46">
-                                <rect key="frame" x="0.0" y="537" width="169" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-BA-D7Y">
+                                <rect key="frame" x="0.0" y="538" width="216" height="62"/>
                                 <color key="backgroundColor" red="1" green="0.47843140360000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.31764706969261169" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVL-AR-AbN">
-                                <rect key="frame" x="343" y="537" width="257" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="电话">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dial:" destination="rL6-dx-3kJ" eventType="touchUpInside" id="OfY-DY-DT9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-IL-BvB">
+                                <rect key="frame" x="218" y="538" width="187" height="61"/>
                                 <color key="backgroundColor" red="1" green="0.47843140360000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="at6-gZ-rSa">
-                                <rect key="frame" x="168" y="537" width="175" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="短信">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="send:" destination="rL6-dx-3kJ" eventType="touchUpInside" id="FuI-JD-wYt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wp5-Jd-nPC">
+                                <rect key="frame" x="407" y="538" width="186" height="62"/>
                                 <color key="backgroundColor" red="1" green="0.47843140360000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="聊天">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chat:" destination="rL6-dx-3kJ" eventType="touchUpInside" id="iyt-y3-82v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wp5-Jd-nPC" firstAttribute="top" secondItem="T5U-Es-Vf7" secondAttribute="bottom" id="8sq-NN-v76"/>
+                            <constraint firstItem="8Eo-IL-BvB" firstAttribute="leading" secondItem="FSR-BA-D7Y" secondAttribute="trailing" constant="1" id="Amn-2g-3Uk"/>
+                            <constraint firstItem="Wp5-Jd-nPC" firstAttribute="width" secondItem="8Eo-IL-BvB" secondAttribute="width" id="FQc-H6-pcU"/>
+                            <constraint firstItem="Wp5-Jd-nPC" firstAttribute="leading" secondItem="8Eo-IL-BvB" secondAttribute="trailing" constant="1" id="IMK-S0-1nh"/>
+                            <constraint firstItem="T5U-Es-Vf7" firstAttribute="top" secondItem="Sfb-Dp-atc" secondAttribute="top" id="IhR-Sk-7AO"/>
+                            <constraint firstAttribute="trailing" secondItem="Wp5-Jd-nPC" secondAttribute="trailing" id="M7b-uh-nfu"/>
+                            <constraint firstAttribute="trailing" secondItem="T5U-Es-Vf7" secondAttribute="trailing" id="QuC-dB-Wsv"/>
+                            <constraint firstItem="Wp5-Jd-nPC" firstAttribute="width" secondItem="FSR-BA-D7Y" secondAttribute="width" id="Vmg-TZ-cOZ"/>
+                            <constraint firstAttribute="bottom" secondItem="8Eo-IL-BvB" secondAttribute="bottom" id="Xgl-yB-EFf"/>
+                            <constraint firstAttribute="bottom" secondItem="T5U-Es-Vf7" secondAttribute="bottom" constant="60" id="Y3M-wi-ILr"/>
+                            <constraint firstItem="8Eo-IL-BvB" firstAttribute="top" secondItem="T5U-Es-Vf7" secondAttribute="bottom" id="fAj-l5-JIF"/>
+                            <constraint firstItem="FSR-BA-D7Y" firstAttribute="leading" secondItem="Sfb-Dp-atc" secondAttribute="leading" id="hpW-nF-bdh"/>
+                            <constraint firstAttribute="bottom" secondItem="FSR-BA-D7Y" secondAttribute="bottom" id="n61-pL-kQv"/>
+                            <constraint firstItem="T5U-Es-Vf7" firstAttribute="leading" secondItem="Sfb-Dp-atc" secondAttribute="leading" id="w0Y-Zm-luP"/>
+                            <constraint firstAttribute="bottom" secondItem="Wp5-Jd-nPC" secondAttribute="bottom" id="xW6-mw-a60"/>
+                            <constraint firstItem="FSR-BA-D7Y" firstAttribute="top" secondItem="T5U-Es-Vf7" secondAttribute="bottom" id="y7O-DU-Qwd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1os-3W-qIq"/>
                     <connections>

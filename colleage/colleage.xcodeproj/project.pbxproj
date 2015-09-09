@@ -117,6 +117,7 @@
 		18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */; };
 		18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */; };
 		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
+		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
 		18E66B5C1B9314F700E3136A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E66B5B1B9314F700E3136A /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -292,6 +293,7 @@
 		18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextTableViewController.m; sourceTree = "<group>"; };
 		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
 		18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterLogin.m; sourceTree = "<group>"; };
+		18E4B7E21BA078C00059EF75 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		18E66B5A1B9314F700E3136A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		18E66B5B1B9314F700E3136A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,6 +303,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */,
 				18D662AE1B9DDF16000AA1E1 /* Security.framework in Frameworks */,
 				18D662AC1B9DDF08000AA1E1 /* SystemConfiguration.framework in Frameworks */,
 				18D662AA1B9DDEF3000AA1E1 /* CFNetwork.framework in Frameworks */,
@@ -723,6 +726,7 @@
 		18D7367A1B940B54004F6847 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18E4B7E21BA078C00059EF75 /* MessageUI.framework */,
 				18D662AD1B9DDF16000AA1E1 /* Security.framework */,
 				18D662AB1B9DDF08000AA1E1 /* SystemConfiguration.framework */,
 				18D662A91B9DDEF3000AA1E1 /* CFNetwork.framework */,

@@ -56,6 +56,10 @@
     }
     
     self.hidesBottomBarWhenPushed = YES;
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
 
 //返回
@@ -84,7 +88,19 @@
 -(void)hide{
     [hud hide:YES];
 }
-
+//一般性的弹出框，不带事件的
+- (void) alertWithTitle:(NSString *)title msg:(NSString *)msg {
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:msg
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"确定", nil];
+    
+    [alert show];  
+    
+}
 
 
 - (void)didReceiveMemoryWarning

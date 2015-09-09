@@ -52,6 +52,10 @@
     }
     
     self.hidesBottomBarWhenPushed = YES;
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
 }
 //显示加载器
 -(void) showProgressing:(NSString*)info{
