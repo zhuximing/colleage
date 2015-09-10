@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+@interface NextTableViewController : UITableViewController{
 
-@interface NextTableViewController : UITableViewController
-
+    MBProgressHUD *hud;
+}
+//显示加载器
+-(void) showProgressing:(NSString*)info;
+//显示吐司
+-(void) showToast:(NSString*)info;
+//隐藏
+-(void)hide;
 @end

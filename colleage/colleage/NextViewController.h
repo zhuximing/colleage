@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+#import <MessageUI/MessageUI.h>
+@interface NextViewController : UIViewController<UIAlertViewDelegate,MFMailComposeViewControllerDelegate>{
+    
+    MBProgressHUD *hud;
+}
 
-@interface NextViewController : UIViewController
 
 -(void)goback;
-
+//显示加载器
+-(void) showProgressing:(NSString*)info;
+//显示吐司
+-(void) showToast:(NSString*)info;
+//隐藏
+-(void)hide;
+//没有事件响应的弹出框
+- (void) alertWithTitle:(NSString *)title msg:(NSString *)msg;
 @end

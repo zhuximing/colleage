@@ -102,9 +102,9 @@
         _chatsArray=array;
         [_chatTableView reloadData];
         
-        NSLog(@"count%d",_chatsArray.count);
+       
     }
-    NSLog(@"!!!count%d",array.count);
+   
 }
 
 

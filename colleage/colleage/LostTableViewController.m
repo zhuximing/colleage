@@ -8,21 +8,24 @@
 
 #import "LostTableViewController.h"
 #import "CommonUtil.h"
-
+#import "LostTableViewCell.h"
+#import "LostDetail.h"
 @implementation LostTableViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"失物招领"];
-    //加载数据
+   
     [self loadData];
 }
 //加载数据
 -(void)loadData{
+    [self showProgressing:@"加载中..."];
     //获取数据
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
-                             initWithHostName:@"121.40.130.169/colleage/index.php"
+                             initWithHostName:BASEHOME
                              customHeaderFields:nil];
     
     //请求参数
@@ -30,12 +33,14 @@
     MKNetworkOperation *op=[engine operationWithPath:@"lost/get_lost_by_offset" params:parames httpMethod:@"POST"];
     
     [op onCompletion:^(MKNetworkOperation *completedOperation) {
-        NSLog(@"request string: %@",[op responseString]);
-        
-        
+      
+        [self hide];
+         id json=[completedOperation responseJSON];
+         losts=(NSArray*)json;
+         [self.tableView reloadData];
         
     } onError:^(NSError *error) {
-        
+        [self showToast:@"网络异常"];
     }];
     [engine enqueueOperation:op];
 
@@ -59,24 +64,45 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+      return losts.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"LostTableViewCell";
     
-    // Configure the cell...
+    LostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell=[[LostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+    }
+    //赋值
+    cell.lost_name.text=[losts[indexPath.row] objectForKey:@"lost_name"];
+    
+    cell.school.text=[losts[indexPath.row] objectForKey:@"user_school"];
+    
+    cell.lost_address.text=[losts[indexPath.row] objectForKey:@"lost_address"];
+    cell.publish_time.text=[losts[indexPath.row] objectForKey:@"lost_time"];
     
     return cell;
 }
-*/
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //获取登陆后的个人中心的视图控制器
+    LostDetail *lost=[story instantiateViewControllerWithIdentifier:@"LostDetail"];
+
+    lost.lost_id=[losts[indexPath.row] objectForKey:@"lost_id"];
+    lost.user_phone=[losts[indexPath.row] objectForKey:@"user_phone"];
+    [self.navigationController pushViewController:lost animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.

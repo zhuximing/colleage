@@ -23,37 +23,59 @@
     return self;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        //自定义返回按钮
-        self.navigationItem.hidesBackButton   = YES;
-        UIButton *leftBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
-        leftBtn.frame                         = CGRectMake(0, 0, 50, 44);
-        leftBtn.showsTouchWhenHighlighted     = YES;
-        [leftBtn addTarget:self action:@selector(goback) forControlEvents:UIControlEventTouchUpInside];
-        [leftBtn setImage:[UIImage imageNamed:@"common_back"] forState:UIControlStateNormal];
-        
-        UIBarButtonItem *leftBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
-        self.navigationItem.leftBarButtonItem = leftBarButtonItem;
-        
-        if (IS_iOS7) {
-            [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -30, 0, 0)];
-            
-            self.automaticallyAdjustsScrollViewInsets = NO;
-        }
-        
-        self.hidesBottomBarWhenPushed = YES;
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //背景颜色
     self.view.backgroundColor = [UIColor whiteColor];
+    //初始化加载器
+    hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    
+    //自定义返回按钮
+    self.navigationItem.hidesBackButton   = YES;
+    UIButton *leftBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame                         = CGRectMake(0, 0, 50, 44);
+    leftBtn.showsTouchWhenHighlighted     = YES;
+    [leftBtn addTarget:self action:@selector(goback) forControlEvents:UIControlEventTouchUpInside];
+    [leftBtn setImage:[UIImage imageNamed:@"common_back"] forState:UIControlStateNormal];
+    
+    UIBarButtonItem *leftBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftBarButtonItem;
+    
+    if (IS_iOS7) {
+        [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -30, 0, 0)];
+        
+        // self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
+    self.hidesBottomBarWhenPushed = YES;
+    //NavigationBar与UIViewController 重叠的问题
+    if( IS_iOS7) {
+        self.edgesForExtendedLayout= UIRectEdgeNone;
+    }
+}
+//显示加载器
+-(void) showProgressing:(NSString*)info{
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.labelText = info;
+    [hud show:YES];
+    //[hud hide:YES afterDelay:10.0f];
+}
+
+//显示吐司
+-(void) showToast:(NSString*)info{
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = info;
+    [hud show:YES];
+    [hud hide:YES afterDelay:0.7f];
+}
+
+//隐藏
+-(void)hide{
+    [hud hide:YES];
 }
 
 //返回
