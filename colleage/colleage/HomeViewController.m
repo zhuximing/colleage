@@ -10,7 +10,7 @@
 #import "CommonUtil.h"
 #import "LostTableViewController.h"
 #import "HomeCollectionViewCell.h"
-#import "JobViewController.h"
+#import "JobTableViewController.h"
 #import "HourseViewController.h"
 #import "CarViewController.h"
 #import "HelpViewController.h"
@@ -33,7 +33,18 @@
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
     
-    
+    [self createLunBo];
+   
+    //加载collectionview的数据 放在dic中
+    imgArr=[[NSArray alloc] initWithObjects:@"a.png",@"b.png",@"c.png",@"a.png",@"b.png",@"c.png", nil];
+    textArr=[[NSArray alloc] initWithObjects:@"校园兼职",@"失物招领",@"学生合租",@"拼车回家",@"同学互帮",@"二手市场", nil];
+}
+
+
+
+#pragma mark - UIScrollView
+
+-(void)createLunBo{
     //    图片的宽
     CGFloat imageW = self.scrollview.frame.size.width;
     
@@ -76,14 +87,7 @@
     
     self.pageControl.numberOfPages=totalCount;
     [self addTimer];
-    //加载collectionview的数据 放在dic中
-    imgArr=[[NSArray alloc] initWithObjects:@"a.png",@"b.png",@"c.png",@"a.png",@"b.png",@"c.png", nil];
-    textArr=[[NSArray alloc] initWithObjects:@"校园兼职",@"失物招领",@"学生合租",@"拼车回家",@"同学互帮",@"二手市场", nil];
 }
-
-
-
-#pragma mark - UIScrollView
 
 - (void)nextImage
 {
@@ -174,15 +178,16 @@
 {
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     [cell setBackgroundColor:[UIColor greenColor]];
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //校园兼职
     if (cell.tag ==0) {
-        JobViewController *jobVC=[[JobViewController alloc] init];
-        [self.navigationController pushViewController:jobVC animated:YES];
+        JobTableViewController *jobTBVC=[[JobTableViewController alloc] init];
+        [self.navigationController pushViewController:jobTBVC animated:YES];
     }
     //失物招领
     if (cell.tag ==1) {
-        //获取故事版
-        UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+       
         //获取登陆后的个人中心的视图控制器
         LostTableViewController *lostTBVC=[story instantiateViewControllerWithIdentifier:@"LostTableViewController"];
       

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
+		186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5AC1BA1062700891BAF /* JobTableViewController.m */; };
+		186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5B01BA10A9000891BAF /* JobTableViewCell.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
-		18B69E251B9FE38D00E8E73C /* JobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E241B9FE38D00E8E73C /* JobViewController.m */; };
 		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
 		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
 		18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */; };
@@ -134,11 +135,13 @@
 /* Begin PBXFileReference section */
 		18544CE51B942F4100043D73 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
 		18544CE61B942F4100043D73 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		186CB5AB1BA1062700891BAF /* JobTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewController.h; sourceTree = "<group>"; };
+		186CB5AC1BA1062700891BAF /* JobTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewController.m; sourceTree = "<group>"; };
+		186CB5AF1BA10A9000891BAF /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
+		186CB5B01BA10A9000891BAF /* JobTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewCell.m; sourceTree = "<group>"; };
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
-		18B69E231B9FE38D00E8E73C /* JobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobViewController.h; sourceTree = "<group>"; };
-		18B69E241B9FE38D00E8E73C /* JobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobViewController.m; sourceTree = "<group>"; };
 		18B69E261B9FE3A000E8E73C /* HourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourseViewController.h; sourceTree = "<group>"; };
 		18B69E271B9FE3A000E8E73C /* HourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseViewController.m; sourceTree = "<group>"; };
 		18B69E291B9FE3AA00E8E73C /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
@@ -328,6 +331,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186CB5AE1BA10A5800891BAF /* 校园兼职 */ = {
+			isa = PBXGroup;
+			children = (
+				186CB5AF1BA10A9000891BAF /* JobTableViewCell.h */,
+				186CB5B01BA10A9000891BAF /* JobTableViewCell.m */,
+			);
+			name = "校园兼职";
+			sourceTree = "<group>";
+		};
 		187690891B93D958005791E0 /* util */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +464,7 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				186CB5AE1BA10A5800891BAF /* 校园兼职 */,
 				18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */,
 				18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */,
 				18B69E341B9FE3F700E8E73C /* HomeCollectionViewCell.h */,
@@ -537,8 +550,8 @@
 		18D5C5C51B93228D0074EEEC /* 校园兼职 */ = {
 			isa = PBXGroup;
 			children = (
-				18B69E231B9FE38D00E8E73C /* JobViewController.h */,
-				18B69E241B9FE38D00E8E73C /* JobViewController.m */,
+				186CB5AB1BA1062700891BAF /* JobTableViewController.h */,
+				186CB5AC1BA1062700891BAF /* JobTableViewController.m */,
 			);
 			name = "校园兼职";
 			sourceTree = "<group>";
@@ -955,8 +968,10 @@
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,
 				18DC31191B99474100184151 /* BubbleTableViewCell.m in Sources */,
 				18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */,
+				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */,
+				186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */,
 				18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
 				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
@@ -965,7 +980,6 @@
 				18D662A81B9DDEAC000AA1E1 /* Reachability.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */,
-				18B69E251B9FE38D00E8E73C /* JobViewController.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18D662A21B9DDEAC000AA1E1 /* NSDictionary+RequestEncoding.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
