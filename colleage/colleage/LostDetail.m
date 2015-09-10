@@ -90,10 +90,9 @@
 //聊天
 - (IBAction)chat:(id)sender {
     NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
-  
     [[BmobUserManager alloc] queryUserByName:self.user_phone block:^(NSArray *array, NSError *error) {
         if (array) {
-            BmobChatUser *user=(BmobUser*)[array objectAtIndex:0];
+            BmobChatUser *user=(BmobChatUser*)[array objectAtIndex:0];
             [infoDic setObject:user.username forKey:@"name"];
             if (user.avatar) {
                 [infoDic setObject:user.avatar forKey:@"avatar"];
@@ -118,7 +117,7 @@
         UIWebView * callWebview = [[UIWebView alloc] init];
         [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
         [self.view addSubview:callWebview];
-        NSLog(@"???????????????????");
+       
     }
    
 

@@ -10,6 +10,8 @@
 
 @interface LostTableViewController : NextTableViewController
 {
-    NSArray *losts;
+    NSMutableArray *losts;
+    int pageNow;
+    int pageSize;
 }
 @end
