@@ -22,7 +22,7 @@
     pageSize=4;
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"失物招领"];
    
-    [self loadData:@"refresh"];
+    
     
     //弱引用
     __weak LostTableViewController *weakSelf = self;
