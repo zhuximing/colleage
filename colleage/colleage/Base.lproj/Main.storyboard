@@ -287,24 +287,6 @@
             </objects>
             <point key="canvasLocation" x="1292" y="61"/>
         </scene>
-        <!--Job Detail-->
-        <scene sceneID="BTk-pE-IaU">
-            <objects>
-                <viewController storyboardIdentifier="JobDetail" id="ZdE-xf-ppr" customClass="JobDetail" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8BC-Iy-4K8"/>
-                        <viewControllerLayoutGuide type="bottom" id="aeh-pd-Qkh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3DQ-ew-KDv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z0E-5J-bY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1971" y="-599"/>
-        </scene>
         <!--Job Table View Controller-->
         <scene sceneID="FLi-yN-aOW">
             <objects>

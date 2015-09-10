@@ -12,7 +12,7 @@
 #import "LostTableViewCell.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
-#import "JobDetail.h"
+#import "LostDetail.h"
 
 @interface JobTableViewController ()
 
@@ -170,7 +170,7 @@
     //获取故事版
     UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //获取登陆后的个人中心的视图控制器
-    JobDetail *job=[story instantiateViewControllerWithIdentifier:@"LostDetail"];
+    LostDetail *job=[story instantiateViewControllerWithIdentifier:@"LostDetail"];
     
     job.lost_id=[jobArr[indexPath.row] objectForKey:@"job_id"];
     job.user_phone=[jobArr[indexPath.row] objectForKey:@"job_phone"];
