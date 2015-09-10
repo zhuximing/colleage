@@ -27,24 +27,25 @@
     //弱引用
     __weak LostTableViewController *weakSelf = self;
     
-    // setup pull-to-refresh
+    // 设置下拉刷新
     [self.tableView addPullToRefreshWithActionHandler:^{
         [weakSelf refresh];
     }];
     
-    // setup infinite scrolling
+    // 设置上拉加载
     [self.tableView addInfiniteScrollingWithActionHandler:^{
         [weakSelf load];
     }];
-    //刚开始隐藏上拉加载
+    
+    //刚开始隐藏上拉加载，因为不知道能加载到多少条
     self.tableView.showsInfiniteScrolling = NO;
     //self.tableView.showsPullToRefresh = NO;
-    //刚开始直接下拉刷新
+    //进入该视图控制器自动下拉刷新
     [self.tableView triggerPullToRefresh];
     
     
 }
-//加载数据 告诉它是下啦加载数据还是上拉加载数据
+//加载数据 flag参数是告诉它是下啦加载数据还是上拉加载数据
 -(void)loadData:(NSString*)flag{
     if ([@"refresh" isEqualToString:flag]) {
         //刷新 当前页归零，也就是第一页
@@ -59,7 +60,7 @@
    //将pagesize转变成字符场
     NSString *pageSizeStr=[NSString stringWithFormat:@"%d",pageSize];
     
-    NSLog(@"pagenow%d",pageNow);
+    // NSLog(@"pagenow%d",pageNow);
     
     
     //[self showProgressing:@"加载中..."];
@@ -92,7 +93,7 @@
         
         
         
-        
+        //选择性开启上拉加载
         if (losts.count<pageSize) {
             //如果加载的数据小于于pageSize条 不让他可以上拉加载
             self.tableView.showsInfiniteScrolling=NO;
@@ -100,7 +101,7 @@
             //如果加载的数据大于pageSize条 让他可以上拉加载
             self.tableView.showsInfiniteScrolling=YES;
         }
-        //刷新到表格里面去
+        //数据刷新到表格里面去
         [self.tableView reloadData];
         
         //隐藏动画
@@ -112,6 +113,7 @@
          [self.tableView.pullToRefreshView stopAnimating ];
          [self.tableView.infiniteScrollingView stopAnimating];
     }];
+    
     [engine enqueueOperation:op];
 
 
