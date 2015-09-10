@@ -8,8 +8,10 @@
 
 #import "NextTableViewController.h"
 #import <UIKit/UIKit.h>
+#import "JobTableViewCell.h"
 
 @interface JobTableViewController : NextTableViewController{
     NSArray *jobArr;
 }
+
 @end

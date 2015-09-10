@@ -182,7 +182,8 @@
     UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //校园兼职
     if (cell.tag ==0) {
-        JobTableViewController *jobTBVC=[[JobTableViewController alloc] init];
+        JobTableViewController *jobTBVC=[story instantiateViewControllerWithIdentifier:@"JobTableViewController"];
+        
         [self.navigationController pushViewController:jobTBVC animated:YES];
     }
     //失物招领

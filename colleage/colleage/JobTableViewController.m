@@ -16,15 +16,12 @@
 @end
 
 @implementation JobTableViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"校园兼职"];
     [self loadData];
 //    static NSString *cellIdentifier = @"JobTableViewCell";
-//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-
-    
+//    [self.tableView registerClass:[JobTableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
 //加载数据
