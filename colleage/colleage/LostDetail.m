@@ -28,10 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //标题
+    
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"详情"];
     
     
-    NSString *url=[NSString stringWithFormat:@"%@/lost/lost_detail/%@",BASEURL,self.lost_id];
+    NSString *url=[NSString stringWithFormat:@"%@/%@/%@",BASEURL,self.HttpPath,self.lost_id];
       NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     _wb.delegate=self;
     

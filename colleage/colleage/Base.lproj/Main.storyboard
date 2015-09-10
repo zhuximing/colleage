@@ -287,6 +287,24 @@
             </objects>
             <point key="canvasLocation" x="1292" y="61"/>
         </scene>
+        <!--Job Detail-->
+        <scene sceneID="BTk-pE-IaU">
+            <objects>
+                <viewController storyboardIdentifier="JobDetail" id="ZdE-xf-ppr" customClass="JobDetail" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8BC-Iy-4K8"/>
+                        <viewControllerLayoutGuide type="bottom" id="aeh-pd-Qkh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3DQ-ew-KDv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0E-5J-bY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1971" y="-599"/>
+        </scene>
         <!--Job Table View Controller-->
         <scene sceneID="FLi-yN-aOW">
             <objects>
@@ -313,7 +331,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="lable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3C-nC-RMv">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="lable" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3C-nC-RMv">
                                             <rect key="frame" x="542" y="110" width="42" height="23"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -339,6 +357,8 @@
                                         <constraint firstItem="ZN6-d6-KpC" firstAttribute="leading" secondItem="yFy-Nk-TUn" secondAttribute="leadingMargin" constant="10" id="5uJ-xe-PQw"/>
                                         <constraint firstItem="Llv-Xi-w3s" firstAttribute="leading" secondItem="yFy-Nk-TUn" secondAttribute="leadingMargin" constant="10" id="6VN-jt-FI6"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="R3C-nC-RMv" secondAttribute="bottom" constant="10" id="Gap-Lp-0Yt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="R3C-nC-RMv" secondAttribute="bottom" constant="10" id="Gwt-Kb-WaB"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="R3C-nC-RMv" secondAttribute="bottom" constant="4" id="IyS-3o-VVg"/>
                                         <constraint firstItem="Llv-Xi-w3s" firstAttribute="top" secondItem="yFy-Nk-TUn" secondAttribute="topMargin" constant="10" id="R87-Cy-mcz"/>
                                         <constraint firstItem="ZN6-d6-KpC" firstAttribute="top" secondItem="Llv-Xi-w3s" secondAttribute="bottom" constant="10" id="f12-9o-Mhe"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="R3C-nC-RMv" secondAttribute="trailing" constant="10" id="hGX-fS-vfU"/>
@@ -349,6 +369,7 @@
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="Gap-Lp-0Yt"/>
+                                            <exclude reference="IyS-3o-VVg"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

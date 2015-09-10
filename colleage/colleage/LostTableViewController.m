@@ -180,6 +180,7 @@
 
     lost.lost_id=[losts[indexPath.row] objectForKey:@"lost_id"];
     lost.user_phone=[losts[indexPath.row] objectForKey:@"user_phone"];
+    lost.HttpPath=@"lost/lost_detail";
     [self.navigationController pushViewController:lost animated:YES];
 }
 

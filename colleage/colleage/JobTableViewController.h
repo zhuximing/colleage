@@ -11,7 +11,9 @@
 #import "JobTableViewCell.h"
 
 @interface JobTableViewController : NextTableViewController{
-    NSArray *jobArr;
+    NSMutableArray *jobArr;
+    int pageNow;
+    int pageSize;
 }
 
 @end

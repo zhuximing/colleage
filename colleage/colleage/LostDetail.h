@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIWebView *wb;
 @property(weak, nonatomic)  NSString *user_phone;//发布本条信息的用户的电话
 @property(weak, nonatomic) NSString *lost_id;   //本条信息的id
+@property(weak, nonatomic) NSString *HttpPath; //请求地址
 
 @end
