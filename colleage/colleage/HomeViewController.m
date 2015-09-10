@@ -88,7 +88,7 @@
 - (void)nextImage
 {
     int page = (int)self.pageControl.currentPage;
-    NSLog(@"当前第%d页",page);
+   // NSLog(@"当前第%d页",page);
     if (page == 3) {
         page = 0;
     }else
@@ -104,7 +104,7 @@
 // scrollview滚动的时候调用
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"滚动中");
+    //NSLog(@"滚动中");
     //    计算页码
     //    页码 = (contentoffset.x + scrollView一半宽度)/scrollView宽度
     CGFloat scrollviewW =  scrollView.frame.size.width;
