@@ -11,6 +11,14 @@
 		186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5AC1BA1062700891BAF /* JobTableViewController.m */; };
 		186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5B01BA10A9000891BAF /* JobTableViewCell.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
+		18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E41BA284DB00B6D5BB /* SDCollectionViewCell.m */; };
+		18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E61BA284DB00B6D5BB /* SDCycleScrollView.m */; };
+		18B4E3ED1BA284DB00B6D5BB /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E81BA284DB00B6D5BB /* UIView+SDExtension.m */; };
+		18B4E3EE1BA284DB00B6D5BB /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3EA1BA284DB00B6D5BB /* NSData+SDDataCache.m */; };
+		18B4E3F81BA2859000B6D5BB /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F11BA2859000B6D5BB /* TAAbstractDotView.m */; };
+		18B4E3F91BA2859000B6D5BB /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F31BA2859000B6D5BB /* TAAnimatedDotView.m */; };
+		18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F51BA2859000B6D5BB /* TADotView.m */; };
+		18B4E3FB1BA2859000B6D5BB /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F71BA2859000B6D5BB /* TAPageControl.m */; };
 		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
 		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
 		18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */; };
@@ -144,6 +152,22 @@
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
+		18B4E3E31BA284DB00B6D5BB /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		18B4E3E41BA284DB00B6D5BB /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		18B4E3E51BA284DB00B6D5BB /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		18B4E3E61BA284DB00B6D5BB /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		18B4E3E71BA284DB00B6D5BB /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		18B4E3E81BA284DB00B6D5BB /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		18B4E3E91BA284DB00B6D5BB /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
+		18B4E3EA1BA284DB00B6D5BB /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
+		18B4E3F01BA2859000B6D5BB /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		18B4E3F11BA2859000B6D5BB /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		18B4E3F21BA2859000B6D5BB /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		18B4E3F31BA2859000B6D5BB /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		18B4E3F41BA2859000B6D5BB /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		18B4E3F51BA2859000B6D5BB /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		18B4E3F61BA2859000B6D5BB /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		18B4E3F71BA2859000B6D5BB /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
 		18B69E261B9FE3A000E8E73C /* HourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourseViewController.h; sourceTree = "<group>"; };
 		18B69E271B9FE3A000E8E73C /* HourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseViewController.m; sourceTree = "<group>"; };
 		18B69E291B9FE3AA00E8E73C /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
@@ -361,6 +385,37 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		18B4E3E21BA2848F00B6D5BB /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				18B4E3EF1BA2857F00B6D5BB /* PageControl */,
+				18B4E3E31BA284DB00B6D5BB /* SDCollectionViewCell.h */,
+				18B4E3E41BA284DB00B6D5BB /* SDCollectionViewCell.m */,
+				18B4E3E51BA284DB00B6D5BB /* SDCycleScrollView.h */,
+				18B4E3E61BA284DB00B6D5BB /* SDCycleScrollView.m */,
+				18B4E3E71BA284DB00B6D5BB /* UIView+SDExtension.h */,
+				18B4E3E81BA284DB00B6D5BB /* UIView+SDExtension.m */,
+				18B4E3E91BA284DB00B6D5BB /* NSData+SDDataCache.h */,
+				18B4E3EA1BA284DB00B6D5BB /* NSData+SDDataCache.m */,
+			);
+			name = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		18B4E3EF1BA2857F00B6D5BB /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				18B4E3F01BA2859000B6D5BB /* TAAbstractDotView.h */,
+				18B4E3F11BA2859000B6D5BB /* TAAbstractDotView.m */,
+				18B4E3F21BA2859000B6D5BB /* TAAnimatedDotView.h */,
+				18B4E3F31BA2859000B6D5BB /* TAAnimatedDotView.m */,
+				18B4E3F41BA2859000B6D5BB /* TADotView.h */,
+				18B4E3F51BA2859000B6D5BB /* TADotView.m */,
+				18B4E3F61BA2859000B6D5BB /* TAPageControl.h */,
+				18B4E3F71BA2859000B6D5BB /* TAPageControl.m */,
+			);
+			name = PageControl;
+			sourceTree = "<group>";
+		};
 		18D5C5851B930E6D0074EEEC = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +439,7 @@
 		18D5C5901B930E6D0074EEEC /* colleage */ = {
 			isa = PBXGroup;
 			children = (
+				18B4E3E21BA2848F00B6D5BB /* SDCycleScrollView */,
 				18DA201F1BA145BB00A9CA90 /* SVPullToRefresh */,
 				18D662871B9DDEAC000AA1E1 /* MKNetworkKit */,
 				18D5C5BF1B9321AD0074EEEC /* model */,
@@ -984,12 +1040,15 @@
 			files = (
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
+				18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */,
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,
 				18DC31191B99474100184151 /* BubbleTableViewCell.m in Sources */,
 				18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */,
 				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
+				18B4E3F91BA2859000B6D5BB /* TAAnimatedDotView.m in Sources */,
 				18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */,
+				18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */,
 				186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */,
 				18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
@@ -998,16 +1057,19 @@
 				18D662A11B9DDEAC000AA1E1 /* NSDate+RFC1123.m in Sources */,
 				18D662A81B9DDEAC000AA1E1 /* Reachability.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
+				18B4E3FB1BA2859000B6D5BB /* TAPageControl.m in Sources */,
 				18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18D662A21B9DDEAC000AA1E1 /* NSDictionary+RequestEncoding.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
 				18DC31161B9946A800184151 /* NextViewController.m in Sources */,
 				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
+				18B4E3ED1BA284DB00B6D5BB /* UIView+SDExtension.m in Sources */,
 				18D662A61B9DDEAC000AA1E1 /* MKNetworkEngine.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
 				18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */,
 				18DA20251BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m in Sources */,
+				18B4E3EE1BA284DB00B6D5BB /* NSData+SDDataCache.m in Sources */,
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				18DC31541B99D30400184151 /* ContactTableViewCell.m in Sources */,
@@ -1015,6 +1077,7 @@
 				18D662A71B9DDEAC000AA1E1 /* MKNetworkOperation.m in Sources */,
 				18D662A01B9DDEAC000AA1E1 /* NSData+MKBase64.m in Sources */,
 				18DB9EBF1B968EA3003D2EC2 /* MBProgressHUD.m in Sources */,
+				18B4E3F81BA2859000B6D5BB /* TAAbstractDotView.m in Sources */,
 				18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
 				18DC83181B9FF3760072B35C /* LostDetail.m in Sources */,
@@ -1024,6 +1087,7 @@
 				18DC31131B99461100184151 /* ChatViewController.m in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
 				18D662A41B9DDEAC000AA1E1 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */,
 				18DB9ED91B96EB09003D2EC2 /* ContactTableViewController.m in Sources */,
 				18D480311B9F248300A128D4 /* LostTableViewCell.m in Sources */,
 				18DA20261BA145D300A9CA90 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
