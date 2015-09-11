@@ -142,6 +142,73 @@
             </objects>
             <point key="canvasLocation" x="2202" y="2000.9999999999998"/>
         </scene>
+        <!--Publish Lost-->
+        <scene sceneID="eBo-Me-TeW">
+            <objects>
+                <viewController storyboardIdentifier="PublishLost" id="vXa-ue-avV" customClass="PublishLost" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rSt-Sh-v1F"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXi-9t-VPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mbg-O1-vgl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入捡到的物品名称" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G1u-Xa-7oo">
+                                <rect key="frame" x="0.0" y="20" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QqH-Vd-pVF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="请输入捡到地址或者其他信息" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tfn-uV-Q29">
+                                <rect key="frame" x="3" y="95" width="595" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="cx3-22-aTT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRz-0f-630">
+                                <rect key="frame" x="3" y="197" width="587" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="i4M-9y-PeV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="确定发布" backgroundImage="login_btn.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="publish_lost:" destination="vXa-ue-avV" eventType="touchUpInside" id="10m-R7-zjI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vRz-0f-630" firstAttribute="top" secondItem="Tfn-uV-Q29" secondAttribute="bottom" constant="20" id="1TY-Up-JW1"/>
+                            <constraint firstItem="Tfn-uV-Q29" firstAttribute="leading" secondItem="mbg-O1-vgl" secondAttribute="leading" constant="4" id="7lU-Zp-EsO"/>
+                            <constraint firstAttribute="trailing" secondItem="G1u-Xa-7oo" secondAttribute="trailing" constant="4" id="DEA-J3-WjV"/>
+                            <constraint firstAttribute="trailing" secondItem="vRz-0f-630" secondAttribute="trailing" constant="4" id="FHl-bf-qh7"/>
+                            <constraint firstAttribute="trailing" secondItem="Tfn-uV-Q29" secondAttribute="trailing" constant="4" id="WBe-RZ-mNP"/>
+                            <constraint firstItem="vRz-0f-630" firstAttribute="leading" secondItem="mbg-O1-vgl" secondAttribute="leading" constant="4" id="cyc-4W-1TM"/>
+                            <constraint firstItem="G1u-Xa-7oo" firstAttribute="leading" secondItem="mbg-O1-vgl" secondAttribute="leading" constant="4" id="hg9-UT-VHy"/>
+                            <constraint firstItem="Tfn-uV-Q29" firstAttribute="top" secondItem="G1u-Xa-7oo" secondAttribute="bottom" constant="15" id="hsz-Wo-mXu"/>
+                            <constraint firstItem="G1u-Xa-7oo" firstAttribute="top" secondItem="mbg-O1-vgl" secondAttribute="top" constant="4" id="z4E-el-83b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lost_address" destination="Tfn-uV-Q29" id="TVZ-Ww-kDC"/>
+                        <outlet property="lost_name" destination="G1u-Xa-7oo" id="dCL-HN-6iy"/>
+                        <outlet property="submit_brn" destination="vRz-0f-630" id="aJ9-3M-epw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMG-LO-Xmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="-713"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="he9-cE-aM1">
             <objects>
@@ -182,7 +249,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5u-WA-hTF">
-                                                    <rect key="frame" x="0.0" y="60" width="80" height="21"/>
+                                                    <rect key="frame" x="14" y="63" width="80" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

@@ -18,4 +18,6 @@
 -(void) showToast:(NSString*)info;
 //隐藏
 -(void)hide;
+//通过故事版获取视图控制器
+-(id)getViewController:(NSString *) identify;
 @end

@@ -83,7 +83,15 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+//通过故事版获取视图控制器
+-(id)getViewController:(NSString *) identify{
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //获取登陆后的个人中心的视图控制器
+    return [story instantiateViewControllerWithIdentifier:identify];
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

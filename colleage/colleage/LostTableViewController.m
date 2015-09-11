@@ -12,6 +12,7 @@
 #import "LostDetail.h"
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
+#import "PublishLost.h"
 @implementation LostTableViewController
 
 - (void)viewDidLoad {
@@ -20,8 +21,20 @@
     losts=[[NSMutableArray alloc] init];
     //初始化每页显示的数量
     pageSize=4;
+    
+    
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"失物招领"];
-   
+    
+    
+    //右边的添加按钮
+    UIButton *rightBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame                         = CGRectMake(0, 0, 50, 44);
+    rightBtn.showsTouchWhenHighlighted     = YES;
+    [rightBtn addTarget:self action:@selector(addlost) forControlEvents:UIControlEventTouchUpInside];
+    //[rightBtn setImage:[UIImage imageNamed:@"common_back"] forState:UIControlStateNormal];
+    [rightBtn setTitle:@"发布" forState:UIControlStateNormal];
+    UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     
     //弱引用
@@ -136,7 +149,11 @@
 
 }
 
-
+//发布失物招领
+-(void)addlost{
+    PublishLost *publish=[self getViewController:@"PublishLost"];
+    [self.navigationController pushViewController:publish animated:YES];
+}
 
 #pragma mark - Table view data source
 

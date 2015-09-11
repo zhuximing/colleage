@@ -102,22 +102,16 @@
     
 }
 
+//通过故事版获取视图控制器
+-(id)getViewController:(NSString *) identify{
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //获取登陆后的个人中心的视图控制器
+    return [story instantiateViewControllerWithIdentifier:identify];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

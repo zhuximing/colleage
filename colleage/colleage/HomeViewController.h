@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UIViewController
+//承载scrollview的空视图
 @property (weak, nonatomic) IBOutlet UIView *viewOfScrollView;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
+
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 

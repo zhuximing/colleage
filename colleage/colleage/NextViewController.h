@@ -24,4 +24,6 @@
 -(void)hide;
 //没有事件响应的弹出框
 - (void) alertWithTitle:(NSString *)title msg:(NSString *)msg;
+//通过故事版获取视图控制器
+-(id)getViewController:(NSString *) identify;
 @end

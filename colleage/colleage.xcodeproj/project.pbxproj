@@ -19,6 +19,7 @@
 		18B4E3F91BA2859000B6D5BB /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F31BA2859000B6D5BB /* TAAnimatedDotView.m */; };
 		18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F51BA2859000B6D5BB /* TADotView.m */; };
 		18B4E3FB1BA2859000B6D5BB /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3F71BA2859000B6D5BB /* TAPageControl.m */; };
+		18B4E3FE1BA2A74B00B6D5BB /* PublishLost.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3FD1BA2A74B00B6D5BB /* PublishLost.m */; };
 		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
 		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
 		18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */; };
@@ -168,6 +169,8 @@
 		18B4E3F51BA2859000B6D5BB /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
 		18B4E3F61BA2859000B6D5BB /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
 		18B4E3F71BA2859000B6D5BB /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		18B4E3FC1BA2A74B00B6D5BB /* PublishLost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishLost.h; sourceTree = "<group>"; };
+		18B4E3FD1BA2A74B00B6D5BB /* PublishLost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishLost.m; sourceTree = "<group>"; };
 		18B69E261B9FE3A000E8E73C /* HourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourseViewController.h; sourceTree = "<group>"; };
 		18B69E271B9FE3A000E8E73C /* HourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseViewController.m; sourceTree = "<group>"; };
 		18B69E291B9FE3AA00E8E73C /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
@@ -625,6 +628,8 @@
 				18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */,
 				18DC83161B9FF3760072B35C /* LostDetail.h */,
 				18DC83171B9FF3760072B35C /* LostDetail.m */,
+				18B4E3FC1BA2A74B00B6D5BB /* PublishLost.h */,
+				18B4E3FD1BA2A74B00B6D5BB /* PublishLost.m */,
 			);
 			name = "失物招领";
 			sourceTree = "<group>";
@@ -1081,6 +1086,7 @@
 				18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
 				18DC83181B9FF3760072B35C /* LostDetail.m in Sources */,
+				18B4E3FE1BA2A74B00B6D5BB /* PublishLost.m in Sources */,
 				18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,
