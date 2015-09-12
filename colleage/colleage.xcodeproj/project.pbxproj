@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
+		185634B31BA44AA800FF77C3 /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185634B21BA44AA800FF77C3 /* HelpCell.m */; };
 		186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5AC1BA1062700891BAF /* JobTableViewController.m */; };
 		186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5B01BA10A9000891BAF /* JobTableViewCell.m */; };
 		187117B61BA2C4200061B9D5 /* HourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B51BA2C4200061B9D5 /* HourseTableViewCell.m */; };
@@ -132,7 +133,6 @@
 		18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */; };
 		18DF3CDA1BA3B41E007F9BE4 /* module.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DF3CD91BA3B41E007F9BE4 /* module.plist */; };
 		18DF3CDD1BA3E0F2007F9BE4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */; };
-		18DF3CE41BA41562007F9BE4 /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CE31BA41562007F9BE4 /* HelpCell.m */; };
 		18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */; };
 		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
 		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
@@ -151,6 +151,8 @@
 /* Begin PBXFileReference section */
 		18544CE51B942F4100043D73 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
 		18544CE61B942F4100043D73 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		185634B11BA44AA800FF77C3 /* HelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
+		185634B21BA44AA800FF77C3 /* HelpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCell.m; sourceTree = "<group>"; };
 		186CB5AB1BA1062700891BAF /* JobTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewController.h; sourceTree = "<group>"; };
 		186CB5AC1BA1062700891BAF /* JobTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewController.m; sourceTree = "<group>"; };
 		186CB5AF1BA10A9000891BAF /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
@@ -339,8 +341,6 @@
 		18DF3CD91BA3B41E007F9BE4 /* module.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = module.plist; sourceTree = "<group>"; };
 		18DF3CDB1BA3E0F2007F9BE4 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
-		18DF3CE21BA41562007F9BE4 /* HelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
-		18DF3CE31BA41562007F9BE4 /* HelpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCell.m; sourceTree = "<group>"; };
 		18DF3CE51BA41D07007F9BE4 /* PublishHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHelp.h; sourceTree = "<group>"; };
 		18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHelp.m; sourceTree = "<group>"; };
 		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
@@ -379,6 +379,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185634B01BA44A6500FF77C3 /* 同学互帮 */ = {
+			isa = PBXGroup;
+			children = (
+				185634B11BA44AA800FF77C3 /* HelpCell.h */,
+				185634B21BA44AA800FF77C3 /* HelpCell.m */,
+			);
+			name = "同学互帮";
+			sourceTree = "<group>";
+		};
 		186CB5AE1BA10A5800891BAF /* 校园兼职 */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +561,7 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				185634B01BA44A6500FF77C3 /* 同学互帮 */,
 				187117B31BA2C3F50061B9D5 /* 校园合租 */,
 				186CB5AE1BA10A5800891BAF /* 校园兼职 */,
 				18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */,
@@ -924,15 +934,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		18DF3CDE1BA410C5007F9BE4 /* 学生互助 */ = {
-			isa = PBXGroup;
-			children = (
-				18DF3CE21BA41562007F9BE4 /* HelpCell.h */,
-				18DF3CE31BA41562007F9BE4 /* HelpCell.m */,
-			);
-			name = "学生互助";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1094,7 +1095,6 @@
 				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				18B4E3F91BA2859000B6D5BB /* TAAnimatedDotView.m in Sources */,
-				18DF3CE41BA41562007F9BE4 /* HelpCell.m in Sources */,
 				18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */,
 				18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */,
 				186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */,
@@ -1138,6 +1138,7 @@
 				18D662A41B9DDEAC000AA1E1 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */,
 				18DB9ED91B96EB09003D2EC2 /* ContactTableViewController.m in Sources */,
+				185634B31BA44AA800FF77C3 /* HelpCell.m in Sources */,
 				18D480311B9F248300A128D4 /* LostTableViewCell.m in Sources */,
 				18DA20261BA145D300A9CA90 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				18D662A51B9DDEAC000AA1E1 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
