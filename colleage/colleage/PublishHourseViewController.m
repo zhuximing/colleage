@@ -8,8 +8,13 @@
 
 #import "PublishHourseViewController.h"
 #import "QuartzCore/QuartzCore.h"
-
+#import "MLSelectPhotoAssets.h"
+#import "MLSelectPhotoPickerAssetsViewController.h"
+#import "MLSelectPhotoBrowserViewController.h"
 @interface PublishHourseViewController ()
+@property (weak,nonatomic) UITableView *tableView;
+@property (nonatomic , strong) NSMutableArray *assets;
+
 
 @end
 
@@ -23,6 +28,13 @@
     [self.sh_des.layer setCornerRadius:5.0];
     
 
+}
+#pragma mark -数组 存放图片
+- (NSMutableArray *)assets{
+    if (!_assets) {
+        _assets = [NSMutableArray array];
+    }
+    return _assets;
 }
 
 #pragma  mark - textfiled设置
@@ -161,13 +173,18 @@
 //打开本地相册
 -(void)LocalPhoto
 {
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    picker.delegate = self;
-    //设置选择后的图片可被编辑
-    picker.allowsEditing = YES;
-    [self presentModalViewController:picker animated:YES];
+    // 创建控制器
+    MLSelectPhotoPickerViewController *pickerVc = [[MLSelectPhotoPickerViewController alloc] init];
+    // 默认显示相册里面的内容SavePhotos
+    pickerVc.status = PickerViewShowStatusCameraRoll;
+    pickerVc.minCount = 9;
+    [pickerVc showPickerVc:self];
+    __weak typeof(self) weakSelf = self;
+    pickerVc.callBack = ^(NSArray *assets){
+        [weakSelf.assets addObjectsFromArray:assets];
+        NSLog(@"%@",assets);
+    };
+
    
 }
 
