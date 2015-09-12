@@ -8,6 +8,7 @@
 
 #import "PublishLost.h"
 #import "CommonUtil.h"
+#import <QuartzCore/QuartzCore.h>
 @interface PublishLost ()
 
 @end
@@ -23,13 +24,18 @@
     [_submit_brn setBackgroundImage:[UIImage imageNamed:@"login_btn"] forState:UIControlStateNormal];
     [_submit_brn setBackgroundImage:[UIImage imageNamed:@"login_btn_"] forState:UIControlStateHighlighted];
     //设置按钮开始为不可以点击
-    _submit_brn.enabled=NO;
+    _submit_brn.enabled=YES;
     
     //注册用户名和密码是否输入的通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldIsNull:) name:UITextFieldTextDidChangeNotification object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldIsNull:) name:UITextFieldTextDidChangeNotification object:nil];
     
     
     
+    
+    _lost_address.layer.borderColor=[UIColor grayColor].CGColor;
+    _lost_address.layer.borderWidth=1.0;
+    _lost_address.layer.cornerRadius=5.0;
+   
 }
 
 //通知回调
@@ -46,6 +52,17 @@
 
 //提交发布
 - (IBAction)publish_lost:(id)sender {
+    
+    if ([_lost_name.text length ]==0) {
+        [self showToast:@"请输入标题"];
+        return ;
+    }
+    if ([_lost_address.text length ]==0) {
+        [self showToast:@"请输入详情"];
+        return ;
+    }
+    
+    
     
     [self showProgressing:@"正在提交数据"];
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
@@ -77,6 +94,24 @@
     
     
     
+}
+
+
+#pragma mark -textfiled回车代理
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [_lost_name resignFirstResponder ];
+    
+    return YES;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+
+    if ([text isEqualToString:@"\n"]) {
+        [_lost_address resignFirstResponder];
+    }
+  
+    return YES;
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -22,7 +22,6 @@
 		18B4E3FE1BA2A74B00B6D5BB /* PublishLost.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3FD1BA2A74B00B6D5BB /* PublishLost.m */; };
 		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
 		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
-		18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */; };
 		18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E301B9FE3BD00E8E73C /* MarketViewController.m */; };
 		18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */; };
 		18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E351B9FE3F700E8E73C /* HomeCollectionViewCell.m */; };
@@ -129,6 +128,10 @@
 		18DCFA191B989D3E00D8D12A /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 18DCFA181B989D3E00D8D12A /* Pods.release.xcconfig */; };
 		18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */; };
 		18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */; };
+		18DF3CDA1BA3B41E007F9BE4 /* module.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DF3CD91BA3B41E007F9BE4 /* module.plist */; };
+		18DF3CDD1BA3E0F2007F9BE4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */; };
+		18DF3CE41BA41562007F9BE4 /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CE31BA41562007F9BE4 /* HelpCell.m */; };
+		18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */; };
 		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
 		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -175,8 +178,6 @@
 		18B69E271B9FE3A000E8E73C /* HourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseViewController.m; sourceTree = "<group>"; };
 		18B69E291B9FE3AA00E8E73C /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
 		18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
-		18B69E2C1B9FE3B400E8E73C /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
-		18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		18B69E2F1B9FE3BD00E8E73C /* MarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketViewController.h; sourceTree = "<group>"; };
 		18B69E301B9FE3BD00E8E73C /* MarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketViewController.m; sourceTree = "<group>"; };
 		18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
@@ -329,6 +330,13 @@
 		18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostTableViewController.m; sourceTree = "<group>"; };
 		18DDFB381B9ECBC7000995B1 /* NextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextTableViewController.h; sourceTree = "<group>"; };
 		18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextTableViewController.m; sourceTree = "<group>"; };
+		18DF3CD91BA3B41E007F9BE4 /* module.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = module.plist; sourceTree = "<group>"; };
+		18DF3CDB1BA3E0F2007F9BE4 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		18DF3CE21BA41562007F9BE4 /* HelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
+		18DF3CE31BA41562007F9BE4 /* HelpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCell.m; sourceTree = "<group>"; };
+		18DF3CE51BA41D07007F9BE4 /* PublishHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHelp.h; sourceTree = "<group>"; };
+		18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHelp.m; sourceTree = "<group>"; };
 		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
 		18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterLogin.m; sourceTree = "<group>"; };
 		18E4B7E21BA078C00059EF75 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -529,6 +537,7 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				18DF3CDE1BA410C5007F9BE4 /* 学生互助 */,
 				186CB5AE1BA10A5800891BAF /* 校园兼职 */,
 				18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */,
 				18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */,
@@ -564,6 +573,7 @@
 			children = (
 				18D5C5DD1B9329660074EEEC /* HomeViewController.h */,
 				18D5C5DE1B9329660074EEEC /* HomeViewController.m */,
+				18DF3CD91BA3B41E007F9BE4 /* module.plist */,
 			);
 			name = "首页";
 			sourceTree = "<group>";
@@ -655,8 +665,10 @@
 		18D5C5CA1B9323DC0074EEEC /* 学生互帮 */ = {
 			isa = PBXGroup;
 			children = (
-				18B69E2C1B9FE3B400E8E73C /* HelpViewController.h */,
-				18B69E2D1B9FE3B400E8E73C /* HelpViewController.m */,
+				18DF3CDB1BA3E0F2007F9BE4 /* HelpViewController.h */,
+				18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */,
+				18DF3CE51BA41D07007F9BE4 /* PublishHelp.h */,
+				18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */,
 			);
 			name = "学生互帮";
 			sourceTree = "<group>";
@@ -895,6 +907,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		18DF3CDE1BA410C5007F9BE4 /* 学生互助 */ = {
+			isa = PBXGroup;
+			children = (
+				18DF3CE21BA41562007F9BE4 /* HelpCell.h */,
+				18DF3CE31BA41562007F9BE4 /* HelpCell.m */,
+			);
+			name = "学生互助";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1011,6 +1032,7 @@
 				18DCFA0F1B9884B100D8D12A /* common_back_@2x.png in Resources */,
 				18DC31431B99A7EB00184151 /* chat_icon5_@2x.png in Resources */,
 				18DC314B1B99A7EB00184151 /* chat_db_bar@2x.png in Resources */,
+				18DF3CDA1BA3B41E007F9BE4 /* module.plist in Resources */,
 				18DCFA0D1B9884B100D8D12A /* message_icon@2x.png in Resources */,
 				18DB9EBB1B95CB26003D2EC2 /* login_key@2x.png in Resources */,
 				18DB9ECC1B96D1FF003D2EC2 /* contact_add_@2x.png in Resources */,
@@ -1043,7 +1065,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */,
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
+				18DF3CDD1BA3E0F2007F9BE4 /* HelpViewController.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */,
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,
@@ -1052,6 +1076,7 @@
 				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				18B4E3F91BA2859000B6D5BB /* TAAnimatedDotView.m in Sources */,
+				18DF3CE41BA41562007F9BE4 /* HelpCell.m in Sources */,
 				18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */,
 				18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */,
 				186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */,
@@ -1072,7 +1097,6 @@
 				18B4E3ED1BA284DB00B6D5BB /* UIView+SDExtension.m in Sources */,
 				18D662A61B9DDEAC000AA1E1 /* MKNetworkEngine.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
-				18B69E2E1B9FE3B400E8E73C /* HelpViewController.m in Sources */,
 				18DA20251BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				18B4E3EE1BA284DB00B6D5BB /* NSData+SDDataCache.m in Sources */,
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,

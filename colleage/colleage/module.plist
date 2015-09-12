@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>text</key>
+		<string>校园兼职</string>
+		<key>img</key>
+		<string>e</string>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>失物招领</string>
+		<key>img</key>
+		<string>f</string>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>学生合租</string>
+		<key>img</key>
+		<string>g</string>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>拼车回家</string>
+		<key>img</key>
+		<string>e</string>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>同学互帮</string>
+		<key>img</key>
+		<string>f</string>
+	</dict>
+	<dict>
+		<key>text</key>
+		<string>二手市场</string>
+		<key>img</key>
+		<string>g</string>
+	</dict>
+</array>
+</plist>
