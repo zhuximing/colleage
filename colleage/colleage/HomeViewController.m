@@ -128,7 +128,7 @@
         return CGSizeMake(80, 86);
     }else{
         
-        return CGSizeMake(100, 110);
+        return CGSizeMake(90, 100);
     }
 }
 
