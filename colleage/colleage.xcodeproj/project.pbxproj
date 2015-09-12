@@ -10,6 +10,8 @@
 		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
 		186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5AC1BA1062700891BAF /* JobTableViewController.m */; };
 		186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5B01BA10A9000891BAF /* JobTableViewCell.m */; };
+		187117B61BA2C4200061B9D5 /* HourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B51BA2C4200061B9D5 /* HourseTableViewCell.m */; };
+		187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B81BA2D8360061B9D5 /* PublishHourseViewController.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
 		18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E41BA284DB00B6D5BB /* SDCollectionViewCell.m */; };
 		18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E61BA284DB00B6D5BB /* SDCycleScrollView.m */; };
@@ -150,6 +152,10 @@
 		186CB5AC1BA1062700891BAF /* JobTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewController.m; sourceTree = "<group>"; };
 		186CB5AF1BA10A9000891BAF /* JobTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobTableViewCell.h; sourceTree = "<group>"; };
 		186CB5B01BA10A9000891BAF /* JobTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobTableViewCell.m; sourceTree = "<group>"; };
+		187117B41BA2C4200061B9D5 /* HourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourseTableViewCell.h; sourceTree = "<group>"; };
+		187117B51BA2C4200061B9D5 /* HourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseTableViewCell.m; sourceTree = "<group>"; };
+		187117B71BA2D8360061B9D5 /* PublishHourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHourseViewController.h; sourceTree = "<group>"; };
+		187117B81BA2D8360061B9D5 /* PublishHourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHourseViewController.m; sourceTree = "<group>"; };
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
@@ -374,6 +380,15 @@
 			name = "校园兼职";
 			sourceTree = "<group>";
 		};
+		187117B31BA2C3F50061B9D5 /* 校园合租 */ = {
+			isa = PBXGroup;
+			children = (
+				187117B41BA2C4200061B9D5 /* HourseTableViewCell.h */,
+				187117B51BA2C4200061B9D5 /* HourseTableViewCell.m */,
+			);
+			name = "校园合租";
+			sourceTree = "<group>";
+		};
 		187690891B93D958005791E0 /* util */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +544,7 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				187117B31BA2C3F50061B9D5 /* 校园合租 */,
 				186CB5AE1BA10A5800891BAF /* 校园兼职 */,
 				18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */,
 				18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */,
@@ -639,6 +655,8 @@
 			children = (
 				18B69E261B9FE3A000E8E73C /* HourseViewController.h */,
 				18B69E271B9FE3A000E8E73C /* HourseViewController.m */,
+				187117B71BA2D8360061B9D5 /* PublishHourseViewController.h */,
+				187117B81BA2D8360061B9D5 /* PublishHourseViewController.m */,
 			);
 			name = "学生合租";
 			sourceTree = "<group>";
@@ -1048,6 +1066,7 @@
 				18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */,
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,
 				18DC31191B99474100184151 /* BubbleTableViewCell.m in Sources */,
+				187117B61BA2C4200061B9D5 /* HourseTableViewCell.m in Sources */,
 				18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */,
 				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
@@ -1078,6 +1097,7 @@
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				18DC31541B99D30400184151 /* ContactTableViewCell.m in Sources */,
+				187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */,
 				18DC31511B99D29E00184151 /* SearchViewController.m in Sources */,
 				18D662A71B9DDEAC000AA1E1 /* MKNetworkOperation.m in Sources */,
 				18D662A01B9DDEAC000AA1E1 /* NSData+MKBase64.m in Sources */,

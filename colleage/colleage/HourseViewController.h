@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NextViewController.h"
+#import "NextTableViewController.h"
 
-@interface HourseViewController : NextViewController
-
+@interface HourseViewController : NextTableViewController
+{
+    NSMutableArray *hourseArr;
+    int pageNow;
+    int pageSize;
+}
 @end

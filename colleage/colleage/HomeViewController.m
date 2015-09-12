@@ -128,7 +128,7 @@
     }
     //学生合租
     if (cell.tag ==2) {
-        HourseViewController *hourseVC=[[HourseViewController alloc] init];
+        HourseViewController *hourseVC=[story instantiateViewControllerWithIdentifier:@"HourseViewController"];
         [self.navigationController pushViewController:hourseVC animated:YES];
     }
     //拼车回家
