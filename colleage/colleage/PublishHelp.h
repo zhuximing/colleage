@@ -8,6 +8,9 @@
 
 #import "NextViewController.h"
 
-@interface PublishHelp : NextViewController
+@interface PublishHelp : NextViewController<UITextViewDelegate,UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *help_title;
+@property (weak, nonatomic) IBOutlet UITextField *help_reward;
+@property (weak, nonatomic) IBOutlet UITextView *help_detail;
 
 @end
