@@ -16,9 +16,9 @@
 #import "HelpViewController.h"
 #import "MarketViewController.h"
 #import "SDCycleScrollView.h"
+#import "HelpViewController.h"
 @interface HomeViewController (){
-    NSArray *imgArr;
-    NSArray *textArr;
+   
 }
 @end
 
@@ -66,6 +66,23 @@
 }
 
 
+//九宫格数组的get方法
+-(NSMutableArray*)array{
+
+    if (_array==nil) {
+        NSString *plistPath=[[NSBundle mainBundle] pathForResource:@"module" ofType:@"plist"];
+        _array=[[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    }
+
+
+    return _array;
+
+}
+
+
+
+
+
 
 #pragma mark - UIScrollView
 
@@ -85,16 +102,16 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;
+    return self.array.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HomeCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor=[UIColor redColor];
-    NSString *imgPath=[imgArr objectAtIndex:indexPath.row];
+   // cell.backgroundColor=[UIColor redColor];
+    NSString *imgPath=[[_array objectAtIndex:indexPath.row] objectForKey:@"img"];
     cell.img.image=[UIImage imageNamed:imgPath];
-    cell.titlelbl.text=textArr[indexPath.row];
+    cell.titlelbl.text=[_array[indexPath.row] objectForKey:@"text"];
     cell.tag=indexPath.row;
     
     return  cell;
@@ -102,14 +119,31 @@
 //定义每个UICollectionViewCell 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(80, 80);
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    int width_int = (int) width;
+    
+    if(320 == width_int){
+        
+        return CGSizeMake(80, 86);
+    }else{
+        
+        return CGSizeMake(100, 110);
+    }
+}
+
+//定义每个UICollectionView 的 margin
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
+    
 }
 
 //选择了某个cell 跳转对应页面
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor greenColor]];
+   // [cell setBackgroundColor:[UIColor greenColor]];
     //获取故事版
     UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     //校园兼职
@@ -138,8 +172,10 @@
     }
     //同学互帮
     if (cell.tag ==4) {
-        HelpViewController *helpVC=[[HelpViewController alloc] init];
-        [self.navigationController pushViewController:helpVC animated:YES];
+        
+        HelpViewController *help=[story instantiateViewControllerWithIdentifier:@"HelpViewController"];
+        
+        [self.navigationController pushViewController:help animated:YES];
     }
     //二手市场
     if (cell.tag ==5) {
@@ -153,9 +189,14 @@
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor redColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
+   
 }
-
+//返回这个UICollectionView是否可以被选择
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+}
 
 /*
  #pragma mark - Navigation

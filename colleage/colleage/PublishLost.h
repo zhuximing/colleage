@@ -8,9 +8,11 @@
 
 #import "NextViewController.h"
 
-@interface PublishLost : NextViewController
+@interface PublishLost : NextViewController<UITextFieldDelegate,UITextViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *lost_address;
+@property (weak, nonatomic) IBOutlet UITextView *lost_address;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *submit_brn;
 @property (weak, nonatomic) IBOutlet UITextField *lost_name;
 
