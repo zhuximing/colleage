@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "NextViewController.h"
 
-@interface CarViewController : NextViewController
+@interface CarViewController : NextViewController<UITextFieldDelegate,UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *start_city;
+@property (weak, nonatomic) IBOutlet UITextField *end_city;
+
+
+
 
 @end

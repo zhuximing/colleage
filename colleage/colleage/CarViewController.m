@@ -7,7 +7,8 @@
 //
 
 #import "CarViewController.h"
-
+#import "CommonUtil.h"
+#import "CarList.h"
 @interface CarViewController ()
 
 @end
@@ -16,12 +17,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   self.title=@"拼车回家";
+    //标题
+    self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"查询路线"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+//执行搜索
+- (IBAction)search:(id)sender {
+    
+    CarList *cars=[self getViewController:@"CarList"];
+    cars.start_city=_start_city.text;
+    cars.end_city=_end_city.text;
+   
+    [self.navigationController pushViewController:cars animated:YES];
+}
+
+
+
+#pragma mark -textfiled回车代理
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder ];
+    
+    return YES;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+    }
+    
+    return YES;
+    
 }
 
 /*

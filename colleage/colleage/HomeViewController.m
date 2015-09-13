@@ -167,8 +167,10 @@
     }
     //拼车回家
     if (cell.tag ==3) {
-        CarViewController *carVC=[[CarViewController alloc] init];
-        [self.navigationController pushViewController:carVC animated:YES];
+       
+        CarViewController *car=[story instantiateViewControllerWithIdentifier:@"CarViewController"];
+        
+        [self.navigationController pushViewController:car animated:YES];
     }
     //同学互帮
     if (cell.tag ==4) {

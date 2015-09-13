@@ -154,6 +154,12 @@
 		18DF3CDA1BA3B41E007F9BE4 /* module.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18DF3CD91BA3B41E007F9BE4 /* module.plist */; };
 		18DF3CDD1BA3E0F2007F9BE4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */; };
 		18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */; };
+		18E12CCB1BA5156E00D1C509 /* CarList.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CCA1BA5156E00D1C509 /* CarList.m */; };
+		18E12CCF1BA517B400D1C509 /* CarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CCE1BA517B300D1C509 /* CarCell.m */; };
+		18E12CD61BA5231300D1C509 /* DOPDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CD21BA5231300D1C509 /* DOPDropDownMenu.m */; };
+		18E12CD71BA5231300D1C509 /* icon_chose_arrow_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CD31BA5231300D1C509 /* icon_chose_arrow_nor@2x.png */; };
+		18E12CD81BA5231300D1C509 /* icon_chose_arrow_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CD41BA5231300D1C509 /* icon_chose_arrow_sel@2x.png */; };
+		18E12CD91BA5231300D1C509 /* icon_chose_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CD51BA5231300D1C509 /* icon_chose_bottom@2x.png */; };
 		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
 		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -404,6 +410,15 @@
 		18DF3CDC1BA3E0F2007F9BE4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		18DF3CE51BA41D07007F9BE4 /* PublishHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishHelp.h; sourceTree = "<group>"; };
 		18DF3CE61BA41D07007F9BE4 /* PublishHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishHelp.m; sourceTree = "<group>"; };
+		18E12CC91BA5156E00D1C509 /* CarList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarList.h; sourceTree = "<group>"; };
+		18E12CCA1BA5156E00D1C509 /* CarList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarList.m; sourceTree = "<group>"; };
+		18E12CCD1BA517B300D1C509 /* CarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCell.h; sourceTree = "<group>"; };
+		18E12CCE1BA517B300D1C509 /* CarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCell.m; sourceTree = "<group>"; };
+		18E12CD11BA5231300D1C509 /* DOPDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPDropDownMenu.h; sourceTree = "<group>"; };
+		18E12CD21BA5231300D1C509 /* DOPDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPDropDownMenu.m; sourceTree = "<group>"; };
+		18E12CD31BA5231300D1C509 /* icon_chose_arrow_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chose_arrow_nor@2x.png"; sourceTree = "<group>"; };
+		18E12CD41BA5231300D1C509 /* icon_chose_arrow_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chose_arrow_sel@2x.png"; sourceTree = "<group>"; };
+		18E12CD51BA5231300D1C509 /* icon_chose_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chose_bottom@2x.png"; sourceTree = "<group>"; };
 		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
 		18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterLogin.m; sourceTree = "<group>"; };
 		18E4B7E21BA078C00059EF75 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -623,6 +638,7 @@
 		18D5C5901B930E6D0074EEEC /* colleage */ = {
 			isa = PBXGroup;
 			children = (
+				18E12CD01BA522D400D1C509 /* DOPDropDownMenu */,
 				185634F41BA4964A00FF77C3 /* MLSelectPhoto */,
 				18B4E3E21BA2848F00B6D5BB /* SDCycleScrollView */,
 				18DA201F1BA145BB00A9CA90 /* SVPullToRefresh */,
@@ -711,6 +727,7 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				18E12CCC1BA5177D00D1C509 /* 学生拼车 */,
 				185634B01BA44A6500FF77C3 /* 同学互帮 */,
 				187117B31BA2C3F50061B9D5 /* 校园合租 */,
 				186CB5AE1BA10A5800891BAF /* 校园兼职 */,
@@ -835,6 +852,8 @@
 			children = (
 				18B69E291B9FE3AA00E8E73C /* CarViewController.h */,
 				18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */,
+				18E12CC91BA5156E00D1C509 /* CarList.h */,
+				18E12CCA1BA5156E00D1C509 /* CarList.m */,
 			);
 			name = "拼车回家";
 			sourceTree = "<group>";
@@ -1084,6 +1103,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		18E12CCC1BA5177D00D1C509 /* 学生拼车 */ = {
+			isa = PBXGroup;
+			children = (
+				18E12CCD1BA517B300D1C509 /* CarCell.h */,
+				18E12CCE1BA517B300D1C509 /* CarCell.m */,
+			);
+			name = "学生拼车";
+			sourceTree = "<group>";
+		};
+		18E12CD01BA522D400D1C509 /* DOPDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18E12CD11BA5231300D1C509 /* DOPDropDownMenu.h */,
+				18E12CD21BA5231300D1C509 /* DOPDropDownMenu.m */,
+				18E12CD31BA5231300D1C509 /* icon_chose_arrow_nor@2x.png */,
+				18E12CD41BA5231300D1C509 /* icon_chose_arrow_sel@2x.png */,
+				18E12CD51BA5231300D1C509 /* icon_chose_bottom@2x.png */,
+			);
+			name = DOPDropDownMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1167,6 +1207,7 @@
 				18DC31401B99A7EB00184151 /* chat_icon3@2x.png in Resources */,
 				18DB9EB91B95CB26003D2EC2 /* login_admin@2x.png in Resources */,
 				18DC31411B99A7EB00184151 /* chat_icon4_@2x.png in Resources */,
+				18E12CD91BA5231300D1C509 /* icon_chose_bottom@2x.png in Resources */,
 				18DC313F1B99A7EB00184151 /* chat_icon3_@2x.png in Resources */,
 				18DCFA191B989D3E00D8D12A /* Pods.release.xcconfig in Resources */,
 				18DCFA0E1B9884B100D8D12A /* common_jt@2x.png in Resources */,
@@ -1174,6 +1215,7 @@
 				18DCFA171B989D3600D8D12A /* Pods.debug.xcconfig in Resources */,
 				18DC314C1B99A7EB00184151 /* chat_input@2x.png in Resources */,
 				18D5C5F71B93305C0074EEEC /* top_bar1@2x.png in Resources */,
+				18E12CD71BA5231300D1C509 /* icon_chose_arrow_nor@2x.png in Resources */,
 				18DB9EB81B95CB26003D2EC2 /* common_line@2x.png in Resources */,
 				18D5C5FC1B93305C0074EEEC /* tab_icon2@2x.png in Resources */,
 				18DC313D1B99A7EB00184151 /* chat_icon2_@2x.png in Resources */,
@@ -1204,6 +1246,7 @@
 				18DF3CDA1BA3B41E007F9BE4 /* module.plist in Resources */,
 				18DCFA0D1B9884B100D8D12A /* message_icon@2x.png in Resources */,
 				18DB9EBB1B95CB26003D2EC2 /* login_key@2x.png in Resources */,
+				18E12CD81BA5231300D1C509 /* icon_chose_arrow_sel@2x.png in Resources */,
 				18DB9ECC1B96D1FF003D2EC2 /* contact_add_@2x.png in Resources */,
 				18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */,
 				18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */,
@@ -1236,6 +1279,7 @@
 			files = (
 				18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */,
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
+				18E12CCF1BA517B400D1C509 /* CarCell.m in Sources */,
 				18DF3CDD1BA3E0F2007F9BE4 /* HelpViewController.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
 				18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */,
@@ -1272,6 +1316,7 @@
 				18DC31161B9946A800184151 /* NextViewController.m in Sources */,
 				18DAAAB21B95439500B659CB /* LoginViewController.m in Sources */,
 				185635311BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhotoView.m in Sources */,
+				18E12CD61BA5231300D1C509 /* DOPDropDownMenu.m in Sources */,
 				18B4E3ED1BA284DB00B6D5BB /* UIView+SDExtension.m in Sources */,
 				18D662A61B9DDEAC000AA1E1 /* MKNetworkEngine.m in Sources */,
 				18DC72C61B949817009E3A85 /* RecentTableViewCell.m in Sources */,
@@ -1304,6 +1349,7 @@
 				18DC31131B99461100184151 /* ChatViewController.m in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
 				1856352D1BA4964A00FF77C3 /* MLSelectPhotoPickerViewController.m in Sources */,
+				18E12CCB1BA5156E00D1C509 /* CarList.m in Sources */,
 				18D662A41B9DDEAC000AA1E1 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */,
 				18DB9ED91B96EB09003D2EC2 /* ContactTableViewController.m in Sources */,
