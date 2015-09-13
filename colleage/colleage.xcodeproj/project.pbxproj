@@ -162,6 +162,16 @@
 		18E12CD71BA5231300D1C509 /* icon_chose_arrow_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CD31BA5231300D1C509 /* icon_chose_arrow_nor@2x.png */; };
 		18E12CD81BA5231300D1C509 /* icon_chose_arrow_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CD41BA5231300D1C509 /* icon_chose_arrow_sel@2x.png */; };
 		18E12CD91BA5231300D1C509 /* icon_chose_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CD51BA5231300D1C509 /* icon_chose_bottom@2x.png */; };
+		18E12CDD1BA5858D00D1C509 /* XBScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CDC1BA5858D00D1C509 /* XBScrollPageController.m */; };
+		18E12CE11BA585CC00D1C509 /* XBTagTitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CE01BA585CC00D1C509 /* XBTagTitleModel.m */; };
+		18E12CE71BA5860F00D1C509 /* XBTagTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CE41BA5860F00D1C509 /* XBTagTitleCell.m */; };
+		18E12CE81BA5860F00D1C509 /* XBPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CE61BA5860F00D1C509 /* XBPageCell.m */; };
+		18E12CEB1BA586DC00D1C509 /* PublishCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CEA1BA586DC00D1C509 /* PublishCar.m */; };
+		18E12CF51BA58B5000D1C509 /* XBConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CF41BA58B5000D1C509 /* XBConst.m */; };
+		18E12CF91BA5912C00D1C509 /* IHasCarPublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CF71BA5912C00D1C509 /* IHasCarPublish.m */; };
+		18E12CFA1BA5912C00D1C509 /* IHasCarPublish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CF81BA5912C00D1C509 /* IHasCarPublish.xib */; };
+		18E12CFE1BA5946300D1C509 /* INeedCarPublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CFC1BA5946300D1C509 /* INeedCarPublish.m */; };
+		18E12CFF1BA5946300D1C509 /* INeedCarPublish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */; };
 		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
 		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -424,6 +434,24 @@
 		18E12CD31BA5231300D1C509 /* icon_chose_arrow_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chose_arrow_nor@2x.png"; sourceTree = "<group>"; };
 		18E12CD41BA5231300D1C509 /* icon_chose_arrow_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chose_arrow_sel@2x.png"; sourceTree = "<group>"; };
 		18E12CD51BA5231300D1C509 /* icon_chose_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_chose_bottom@2x.png"; sourceTree = "<group>"; };
+		18E12CDB1BA5858D00D1C509 /* XBScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBScrollPageController.h; sourceTree = "<group>"; };
+		18E12CDC1BA5858D00D1C509 /* XBScrollPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBScrollPageController.m; sourceTree = "<group>"; };
+		18E12CDF1BA585CC00D1C509 /* XBTagTitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTagTitleModel.h; sourceTree = "<group>"; };
+		18E12CE01BA585CC00D1C509 /* XBTagTitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTagTitleModel.m; sourceTree = "<group>"; };
+		18E12CE31BA5860F00D1C509 /* XBTagTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTagTitleCell.h; sourceTree = "<group>"; };
+		18E12CE41BA5860F00D1C509 /* XBTagTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTagTitleCell.m; sourceTree = "<group>"; };
+		18E12CE51BA5860F00D1C509 /* XBPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBPageCell.h; sourceTree = "<group>"; };
+		18E12CE61BA5860F00D1C509 /* XBPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBPageCell.m; sourceTree = "<group>"; };
+		18E12CE91BA586DC00D1C509 /* PublishCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishCar.h; sourceTree = "<group>"; };
+		18E12CEA1BA586DC00D1C509 /* PublishCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishCar.m; sourceTree = "<group>"; };
+		18E12CF31BA58B5000D1C509 /* XBConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBConst.h; sourceTree = "<group>"; };
+		18E12CF41BA58B5000D1C509 /* XBConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBConst.m; sourceTree = "<group>"; };
+		18E12CF61BA5912C00D1C509 /* IHasCarPublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHasCarPublish.h; sourceTree = "<group>"; };
+		18E12CF71BA5912C00D1C509 /* IHasCarPublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IHasCarPublish.m; sourceTree = "<group>"; };
+		18E12CF81BA5912C00D1C509 /* IHasCarPublish.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IHasCarPublish.xib; sourceTree = "<group>"; };
+		18E12CFB1BA5946300D1C509 /* INeedCarPublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INeedCarPublish.h; sourceTree = "<group>"; };
+		18E12CFC1BA5946300D1C509 /* INeedCarPublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INeedCarPublish.m; sourceTree = "<group>"; };
+		18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INeedCarPublish.xib; sourceTree = "<group>"; };
 		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
 		18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterLogin.m; sourceTree = "<group>"; };
 		18E4B7E21BA078C00059EF75 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -645,6 +673,7 @@
 		18D5C5901B930E6D0074EEEC /* colleage */ = {
 			isa = PBXGroup;
 			children = (
+				18E12CDA1BA5856000D1C509 /* 滑动页 */,
 				18E12CD01BA522D400D1C509 /* DOPDropDownMenu */,
 				185634F41BA4964A00FF77C3 /* MLSelectPhoto */,
 				18B4E3E21BA2848F00B6D5BB /* SDCycleScrollView */,
@@ -861,6 +890,14 @@
 				18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */,
 				18E12CC91BA5156E00D1C509 /* CarList.h */,
 				18E12CCA1BA5156E00D1C509 /* CarList.m */,
+				18E12CE91BA586DC00D1C509 /* PublishCar.h */,
+				18E12CEA1BA586DC00D1C509 /* PublishCar.m */,
+				18E12CF61BA5912C00D1C509 /* IHasCarPublish.h */,
+				18E12CF71BA5912C00D1C509 /* IHasCarPublish.m */,
+				18E12CF81BA5912C00D1C509 /* IHasCarPublish.xib */,
+				18E12CFB1BA5946300D1C509 /* INeedCarPublish.h */,
+				18E12CFC1BA5946300D1C509 /* INeedCarPublish.m */,
+				18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */,
 			);
 			name = "拼车回家";
 			sourceTree = "<group>";
@@ -1132,6 +1169,47 @@
 			name = DOPDropDownMenu;
 			sourceTree = "<group>";
 		};
+		18E12CDA1BA5856000D1C509 /* 滑动页 */ = {
+			isa = PBXGroup;
+			children = (
+				18E12CF21BA58B4000D1C509 /* XBConst */,
+				18E12CE21BA585F700D1C509 /* view */,
+				18E12CDE1BA585B200D1C509 /* model */,
+				18E12CDB1BA5858D00D1C509 /* XBScrollPageController.h */,
+				18E12CDC1BA5858D00D1C509 /* XBScrollPageController.m */,
+			);
+			name = "滑动页";
+			sourceTree = "<group>";
+		};
+		18E12CDE1BA585B200D1C509 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				18E12CDF1BA585CC00D1C509 /* XBTagTitleModel.h */,
+				18E12CE01BA585CC00D1C509 /* XBTagTitleModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		18E12CE21BA585F700D1C509 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				18E12CE31BA5860F00D1C509 /* XBTagTitleCell.h */,
+				18E12CE41BA5860F00D1C509 /* XBTagTitleCell.m */,
+				18E12CE51BA5860F00D1C509 /* XBPageCell.h */,
+				18E12CE61BA5860F00D1C509 /* XBPageCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		18E12CF21BA58B4000D1C509 /* XBConst */ = {
+			isa = PBXGroup;
+			children = (
+				18E12CF31BA58B5000D1C509 /* XBConst.h */,
+				18E12CF41BA58B5000D1C509 /* XBConst.m */,
+			);
+			name = XBConst;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1233,6 +1311,7 @@
 				18DC31461B99A7EB00184151 /* chat_icon6@2x.png in Resources */,
 				18DC314E1B99A7EB00184151 /* chat_self@2x.png in Resources */,
 				18DC314A1B99A7EB00184151 /* chat_bq_btn@2x.png in Resources */,
+				18E12CFA1BA5912C00D1C509 /* IHasCarPublish.xib in Resources */,
 				18D5C5A01B930E6D0074EEEC /* Main.storyboard in Resources */,
 				18DC31491B99A7EB00184151 /* chat_bq_btn_@2x.png in Resources */,
 				18D5C5FF1B93305C0074EEEC /* foot_bar@2x.png in Resources */,
@@ -1242,6 +1321,7 @@
 				18D5C5F91B93305C0074EEEC /* tab_icon1_@2x.png in Resources */,
 				185635361BA4964A00FF77C3 /* MLSelectPhoto.bundle in Resources */,
 				18D5C5FE1B93305C0074EEEC /* tab_icon3@2x.png in Resources */,
+				18E12CFF1BA5946300D1C509 /* INeedCarPublish.xib in Resources */,
 				18DC31451B99A7EB00184151 /* chat_icon6_@2x.png in Resources */,
 				18DABC7D1B9AC56A00CB792C /* logout_btn@2x.png in Resources */,
 				18D5C5A51B930E6E0074EEEC /* LaunchScreen.xib in Resources */,
@@ -1288,15 +1368,18 @@
 			files = (
 				18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */,
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
+				18E12CFE1BA5946300D1C509 /* INeedCarPublish.m in Sources */,
 				18E12CCF1BA517B400D1C509 /* CarCell.m in Sources */,
 				18DF3CDD1BA3E0F2007F9BE4 /* HelpViewController.m in Sources */,
 				18D5C5971B930E6D0074EEEC /* AppDelegate.m in Sources */,
+				18E12CE11BA585CC00D1C509 /* XBTagTitleModel.m in Sources */,
 				18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */,
 				18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */,
 				185635281BA4964A00FF77C3 /* MLSelectPhotoPickerGroup.m in Sources */,
 				18DC31191B99474100184151 /* BubbleTableViewCell.m in Sources */,
 				187117B61BA2C4200061B9D5 /* HourseTableViewCell.m in Sources */,
 				18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */,
+				18E12CF51BA58B5000D1C509 /* XBConst.m in Sources */,
 				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				185635321BA4964A00FF77C3 /* MLSelectPhotoPickerCollectionView.m in Sources */,
@@ -1309,6 +1392,7 @@
 				185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */,
 				18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
+				18E12CE81BA5860F00D1C509 /* XBPageCell.m in Sources */,
 				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
 				1856352E1BA4964A00FF77C3 /* MLPhotoPickerImageView.m in Sources */,
 				18D6D4D81BA50CCE0066CC25 /* PhotoCollectionViewCell.m in Sources */,
@@ -1335,10 +1419,12 @@
 				185635241BA4964A00FF77C3 /* UIView+MLExtension.m in Sources */,
 				185635341BA4964A00FF77C3 /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
+				18E12CEB1BA586DC00D1C509 /* PublishCar.m in Sources */,
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				185635251BA4964A00FF77C3 /* MLSelectPhotoAssets.m in Sources */,
 				18DC31541B99D30400184151 /* ContactTableViewCell.m in Sources */,
 				187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */,
+				18E12CE71BA5860F00D1C509 /* XBTagTitleCell.m in Sources */,
 				185635291BA4964A00FF77C3 /* MLSelectPhotoBrowserViewController.m in Sources */,
 				1856352A1BA4964A00FF77C3 /* MLSelectPhotoNavigationViewController.m in Sources */,
 				18DC31511B99D29E00184151 /* SearchViewController.m in Sources */,
@@ -1356,6 +1442,7 @@
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				185635301BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,
+				18E12CF91BA5912C00D1C509 /* IHasCarPublish.m in Sources */,
 				18DC31131B99461100184151 /* ChatViewController.m in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
 				1856352D1BA4964A00FF77C3 /* MLSelectPhotoPickerViewController.m in Sources */,
@@ -1370,6 +1457,7 @@
 				18D5C5DF1B9329660074EEEC /* HomeViewController.m in Sources */,
 				18544CE71B942F4100043D73 /* CommonUtil.m in Sources */,
 				18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */,
+				18E12CDD1BA5858D00D1C509 /* XBScrollPageController.m in Sources */,
 				1856352F1BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */,
 				18D5C5E21B9329BD0074EEEC /* StudyViewController.m in Sources */,
 			);

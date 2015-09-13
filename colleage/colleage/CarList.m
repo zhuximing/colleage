@@ -13,6 +13,7 @@
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "LostDetail.h"
+#import "PublishCar.h"
 @interface CarList ()
 
 @end
@@ -34,6 +35,16 @@
     if( IS_iOS7) {
         self.edgesForExtendedLayout= UIRectEdgeNone;
     }
+    
+    //右边的添加按钮
+    UIButton *rightBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame                         = CGRectMake(0, 0, 50, 44);
+    rightBtn.showsTouchWhenHighlighted     = YES;
+    [rightBtn addTarget:self action:@selector(addcar) forControlEvents:UIControlEventTouchUpInside];
+    //[rightBtn setImage:[UIImage imageNamed:@"common_back"] forState:UIControlStateNormal];
+    [rightBtn setTitle:@"发布" forState:UIControlStateNormal];
+    UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
     NSLog(@"start%@",self.start_city);
     NSLog(@"end%@",self.end_city);
@@ -158,8 +169,13 @@
     
     
 }
+//添加发布
+-(void)addcar{
+    PublishCar *publish=[[PublishCar alloc] init];
+    [self.navigationController pushViewController:publish animated:YES];
+    
 
-
+}
 //刷新
 -(void)refresh{
     
