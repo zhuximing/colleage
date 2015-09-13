@@ -8,7 +8,12 @@
 
 #import "NextViewController.h"
 
-@interface PublishHourseViewController: NextViewController<UITextFieldDelegate,UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+@interface PublishHourseViewController: NextViewController<UITextFieldDelegate,UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate>{
+    
+    UIActionSheet *myActionSheet;
+    //图片2进制路径
+    NSString* filePath;
+}
 @property (weak, nonatomic) IBOutlet UITextField *sh_title;
 @property (weak, nonatomic) IBOutlet UITextField *sh_address;
 @property (weak, nonatomic) IBOutlet UITextField *sh_limit;
