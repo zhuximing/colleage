@@ -83,6 +83,8 @@
 		18D662AA1B9DDEF3000AA1E1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D662A91B9DDEF3000AA1E1 /* CFNetwork.framework */; };
 		18D662AC1B9DDF08000AA1E1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D662AB1B9DDF08000AA1E1 /* SystemConfiguration.framework */; };
 		18D662AE1B9DDF16000AA1E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D662AD1B9DDF16000AA1E1 /* Security.framework */; };
+		18D6D4D81BA50CCE0066CC25 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D4D71BA50CCE0066CC25 /* PhotoCollectionViewCell.m */; };
+		18D6D4DA1BA515B20066CC25 /* delete-circular.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D6D4D91BA515B20066CC25 /* delete-circular.png */; };
 		18DA20251BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA20221BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m */; };
 		18DA20261BA145D300A9CA90 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA20241BA145D300A9CA90 /* UIScrollView+SVInfiniteScrolling.m */; };
 		18DA20281BA1464700A9CA90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DA20271BA1464700A9CA90 /* QuartzCore.framework */; };
@@ -310,6 +312,9 @@
 		18D662A91B9DDEF3000AA1E1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		18D662AB1B9DDF08000AA1E1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		18D662AD1B9DDF16000AA1E1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		18D6D4D61BA50CCE0066CC25 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		18D6D4D71BA50CCE0066CC25 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		18D6D4D91BA515B20066CC25 /* delete-circular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-circular.png"; sourceTree = "<group>"; };
 		18DA20201BA145D300A9CA90 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		18DA20211BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		18DA20221BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
@@ -542,6 +547,8 @@
 			children = (
 				186CB5AF1BA10A9000891BAF /* JobTableViewCell.h */,
 				186CB5B01BA10A9000891BAF /* JobTableViewCell.m */,
+				18D6D4D61BA50CCE0066CC25 /* PhotoCollectionViewCell.h */,
+				18D6D4D71BA50CCE0066CC25 /* PhotoCollectionViewCell.m */,
 			);
 			name = "校园兼职";
 			sourceTree = "<group>";
@@ -918,6 +925,7 @@
 		18D5C5EC1B93302E0074EEEC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				18D6D4D91BA515B20066CC25 /* delete-circular.png */,
 				18DABC7A1B9AC56A00CB792C /* logout_btn_@2x.png */,
 				18DABC7B1B9AC56A00CB792C /* logout_btn@2x.png */,
 				18DC31261B99A66200184151 /* chat */,
@@ -1207,6 +1215,7 @@
 				18DB9ECC1B96D1FF003D2EC2 /* contact_add_@2x.png in Resources */,
 				18DB9EBA1B95CB26003D2EC2 /* login_input@2x.png in Resources */,
 				18DB9EBC1B95CB26003D2EC2 /* log@2x.png in Resources */,
+				18D6D4DA1BA515B20066CC25 /* delete-circular.png in Resources */,
 				18DC31481B99A7EB00184151 /* chat_icon7@2x.png in Resources */,
 				18DC313E1B99A7EB00184151 /* chat_icon2@2x.png in Resources */,
 				18D5C5FB1B93305C0074EEEC /* tab_icon2_@2x.png in Resources */,
@@ -1258,6 +1267,7 @@
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
 				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
 				1856352E1BA4964A00FF77C3 /* MLPhotoPickerImageView.m in Sources */,
+				18D6D4D81BA50CCE0066CC25 /* PhotoCollectionViewCell.m in Sources */,
 				18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */,
 				18D662A11B9DDEAC000AA1E1 /* NSDate+RFC1123.m in Sources */,
 				185635331BA4964A00FF77C3 /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,

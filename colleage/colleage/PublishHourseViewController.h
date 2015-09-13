@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *sh_limit;
 @property (weak, nonatomic) IBOutlet UITextField *sh_price;
 @property (weak, nonatomic) IBOutlet UITextView *sh_des;
+
 - (IBAction)selectImgAction:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *imgCollection;
