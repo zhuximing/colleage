@@ -11,11 +11,9 @@
 #import "MLSelectPhotoAssets.h"
 #import "MLSelectPhotoPickerAssetsViewController.h"
 #import "MLSelectPhotoBrowserViewController.h"
+#import "PhotoCollectionViewCell.h"
 @interface PublishHourseViewController ()
-@property (weak,nonatomic) UITableView *tableView;
 @property (nonatomic , strong) NSMutableArray *assets;
-
-
 @end
 
 @implementation PublishHourseViewController
@@ -86,19 +84,48 @@
     return YES;
 }
 
-#pragma mark -UICollectionViewDataSource
+#pragma mark -UICollectionViewDataSource 显示图片的collectionview
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 1;
+    return self.assets.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellID=@"PhotoCell";
-    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    static NSString *cellID=@"PhotoCollectionViewCell";
+    PhotoCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+     MLSelectPhotoAssets *asset = self.assets[indexPath.row];
+    
+    cell.photoImg.image=[MLSelectPhotoPickerViewController getImageWithImageObj:asset];
+    cell.photoImg.tag=100;
+    cell.deleteImg.image=[UIImage imageNamed:@"delete-circular"];
+   
+    cell.deleteImg.userInteractionEnabled=YES;
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(delPhoto:)];
+    [cell.deleteImg addGestureRecognizer:singleTap];
+    
     return cell;
 }
 
-
+//删除collectionview中的图片
+- (void)delPhoto:(UIGestureRecognizer *)sender{
+    CGPoint initialPinchPoint = [sender locationInView:self.imgCollection];
+    NSIndexPath* tappedCellPath = [self.imgCollection indexPathForItemAtPoint:initialPinchPoint];
+    NSLog(@"nsindexpath========%ld",tappedCellPath.row);
+    //得到要删除的cell
+    UITableViewCell *cell=[self.imgCollection cellForItemAtIndexPath:tappedCellPath];
+    
+    NSLog(@"cell内容%@",cell);
+    //通过cell得到要删除的img
+    UIImageView *img=[cell viewWithTag:100];
+    //删除数组中选中的cell对应的img
+    [self.assets removeObjectAtIndex:tappedCellPath.row];
+    
+    //删除后重新加载数据
+    NSLog(@"删除后图片数量%d",self.assets.count);
+    [self.imgCollection reloadData];
+   
+   
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -182,6 +209,8 @@
     __weak typeof(self) weakSelf = self;
     pickerVc.callBack = ^(NSArray *assets){
         [weakSelf.assets addObjectsFromArray:assets];
+          NSLog(@"图片数量%d",self.assets.count);
+        [self.imgCollection reloadData];
         NSLog(@"%@",assets);
     };
 
