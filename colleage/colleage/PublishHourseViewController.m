@@ -314,9 +314,10 @@
     NSString *price=self.sh_price.text;
     NSString *des=self.sh_des.text;
     NSString *user_id=@"21";    //用户idNextViewController	NextViewController
-    NSArray *uiimages=self.assets; //图片数组
+   
     NSLog(@"图片＝＝＝＝＝＝＝%@",self.assets);
     
+   
     //获取数据
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
                              initWithHostName:BASEHOME
