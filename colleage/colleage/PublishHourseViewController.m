@@ -314,9 +314,10 @@
     NSString *price=self.sh_price.text;
     NSString *des=self.sh_des.text;
     NSString *user_id=@"21";    //用户idNextViewController	NextViewController
-    NSArray *uiimages=self.assets; //图片数组
+   
     NSLog(@"图片＝＝＝＝＝＝＝%@",self.assets);
     
+   
     //获取数据
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
                              initWithHostName:BASEHOME
@@ -329,10 +330,19 @@
                                      price,@"sh_price",
                                     des,@"sh_detail",
                                     user_id,@"user_id",
-                                    uiimages,@"_files",
                                      nil];
     //执行请求
     MKNetworkOperation *op=[engine operationWithPath:@"share_house/add_house" params:parames httpMethod:@"POST"];
+    
+    for (int i=0; i<self.assets.count; i++) {
+        //获取图片路径
+        MLSelectPhotoAssets *ml=self.assets[0];
+        ALAsset *al=ml.asset;
+        NSURL* url = [[al defaultRepresentation] url];
+         NSLog(@"图片路径%@",url.absoluteString);
+        NSString *k=[NSString stringWithFormat:@"image%d",i];
+        [op addFile:url.absoluteString forKey:k ];
+    }
     //请求回调
     [op onCompletion:^(MKNetworkOperation *completedOperation) {
         [self showToast:@"添加成功"];
