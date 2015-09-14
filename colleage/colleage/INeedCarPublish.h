@@ -12,4 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *start_city;
 @property (weak, nonatomic) IBOutlet UITextField *end_city;
 @property (weak, nonatomic) IBOutlet UITextField *person_count;
+
+@property (weak, nonatomic) IBOutlet UITextField *start_time;
+
 @end

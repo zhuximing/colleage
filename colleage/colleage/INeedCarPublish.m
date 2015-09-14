@@ -37,6 +37,20 @@
     
 }
 
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    if (textField==_start_time) {
+        //[self testCalView];
+        // [self performSegueWithIdentifier:@"calendarViewCtl" sender:self];
+        return NO;
+    }else{
+        return YES;
+    }
+
+
+}
+
+
+
 //对数字框进行限制
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
    
@@ -62,7 +76,6 @@
     }
     return res;
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
