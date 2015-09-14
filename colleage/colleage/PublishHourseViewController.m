@@ -12,6 +12,7 @@
 #import "MLSelectPhotoPickerAssetsViewController.h"
 #import "MLSelectPhotoBrowserViewController.h"
 #import "PhotoCollectionViewCell.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 @interface PublishHourseViewController ()
 @property (nonatomic , strong) NSMutableArray *assets;
 @end
@@ -105,22 +106,31 @@
     
     return cell;
 }
+//定义每个UICollectionView 的 margin
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(5, 5, 5, 5);
+}
 
 //删除collectionview中的图片
 - (void)delPhoto:(UIGestureRecognizer *)sender{
     CGPoint initialPinchPoint = [sender locationInView:self.imgCollection];
     NSIndexPath* tappedCellPath = [self.imgCollection indexPathForItemAtPoint:initialPinchPoint];
-    NSLog(@"nsindexpath========%ld",tappedCellPath.row);
+    /*
     //得到要删除的cell
     UITableViewCell *cell=[self.imgCollection cellForItemAtIndexPath:tappedCellPath];
     
     NSLog(@"cell内容%@",cell);
     //通过cell得到要删除的img
     UIImageView *img=[cell viewWithTag:100];
+   */
+   
+   
+
     //删除数组中选中的cell对应的img
     [self.assets removeObjectAtIndex:tappedCellPath.row];
     
-    //删除后重新加载数据
+        //删除后重新加载数据
     NSLog(@"删除后图片数量%d",self.assets.count);
     [self.imgCollection reloadData];
    
@@ -269,17 +279,6 @@
     
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    NSLog(@"您取消了选择图片");
-    [picker dismissModalViewControllerAnimated:YES];
-}
-
--(void)sendInfo
-{
-    NSLog(@"图片的路径是：%@", filePath);
-
-}
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -309,7 +308,48 @@
         [self showToast:@"描述信息不能为空"];
         return;
     }
+    NSString *title=self.sh_title.text;
+    NSString *address=self.sh_address.text;
+    NSString *limit=self.sh_limit.text;
+    NSString *price=self.sh_price.text;
+    NSString *des=self.sh_des.text;
+    NSString *user_id=@"21";    //用户idNextViewController	NextViewController
+    NSArray *uiimages=self.assets; //图片数组
+    NSLog(@"图片＝＝＝＝＝＝＝%@",self.assets);
+    
+    //获取数据
+    MKNetworkEngine *engine=[[MKNetworkEngine alloc]
+                             initWithHostName:BASEHOME
+                             customHeaderFields:nil];
+    
+    //请求参数
+    NSDictionary *parames=[NSDictionary  dictionaryWithObjectsAndKeys:title,@"sh_title",
+                                     address,@"sh_address",
+                                     limit,@"sh_limit",
+                                     price,@"sh_price",
+                                    des,@"sh_detail",
+                                    user_id,@"user_id",
+                                    uiimages,@"_files",
+                                     nil];
+    //执行请求
+    MKNetworkOperation *op=[engine operationWithPath:@"share_house/add_house" params:parames httpMethod:@"POST"];
+    //请求回调
+    [op onCompletion:^(MKNetworkOperation *completedOperation) {
+        [self showToast:@"添加成功"];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } onError:^(NSError *error) {
+        [self showToast:@"网络异常"];
+    }];
+    
+    [engine enqueueOperation:op];
     
     
+}
+
+
+-(void) viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:YES];
+  
 }
 @end

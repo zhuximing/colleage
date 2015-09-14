@@ -25,7 +25,7 @@
     [super viewDidLoad];
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"校园合租列表"];
     hourseArr=[[NSMutableArray alloc] init];
-    pageSize=10;
+    pageSize=4;
     
     //右边的添加按钮
     UIButton *rightBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -207,6 +207,16 @@
     lost.HttpPath=@"share_house/go_to_detail";
     [self.navigationController pushViewController:lost animated:YES];
 }
+
+
+
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadData:@"refresh"];
+
+}
+
 
 
 /*
