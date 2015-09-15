@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NextViewController.h"
+#import "CDPDatePicker.h"
+@interface INeedCarPublish : NextViewController<UITextFieldDelegate,UITextViewDelegate>{
+    CDPDatePicker *_datePicker;
 
-@interface INeedCarPublish : UIViewController<UITextFieldDelegate,UITextViewDelegate>
+}
 @property (weak, nonatomic) IBOutlet UITextField *start_city;
 @property (weak, nonatomic) IBOutlet UITextField *end_city;
 @property (weak, nonatomic) IBOutlet UITextField *person_count;
 
 @property (weak, nonatomic) IBOutlet UITextField *start_time;
+
 
 @end

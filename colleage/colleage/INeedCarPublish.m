@@ -16,9 +16,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+   
+    
+   _datePicker=[[CDPDatePicker alloc] initWithSelectTitle:nil viewOfDelegate:self.view delegate:self];
+    
+    
+    [_datePicker pushDatePicker];
 }
 
+- (IBAction)picker:(id)sender {
+    
+    
+   // NSDate *select  = [_datePicker date];
+   // NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //[dateFormatter setDateFormat:@"yy-MM-dd HH:mm:ss"];
+   //// NSString *dateAndTime = [dateFormatter stringFromDate:select];
+   // [self showToast:dateAndTime];
+    
+}
 
 //uitextfield代理方法
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{
@@ -38,13 +53,11 @@
 }
 
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (textField==_start_time) {
-        //[self testCalView];
-        // [self performSegueWithIdentifier:@"calendarViewCtl" sender:self];
-        return NO;
-    }else{
-        return YES;
-    }
+   
+      return YES;
+    
+    
+  
 
 
 }

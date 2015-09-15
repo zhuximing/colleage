@@ -9,7 +9,7 @@
                 <outlet property="end_city" destination="gzk-Jb-js4" id="jx4-oz-B9H"/>
                 <outlet property="person_count" destination="hkt-VO-mdl" id="Rdn-Hk-Ggb"/>
                 <outlet property="start_city" destination="Qbf-B1-0nk" id="yYH-13-hZW"/>
-                <outlet property="start_time" destination="gv1-Mk-W4C" id="Dif-TO-Q5i"/>
+                <outlet property="start_time" destination="nBI-RL-kEp" id="adv-oW-Xjx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -51,31 +51,28 @@
                         <outlet property="delegate" destination="-1" id="c8Q-Yk-xbK"/>
                     </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gv1-Mk-W4C">
-                    <rect key="frame" x="19" y="222" width="548" height="40"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="出发时间" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBI-RL-kEp">
+                    <rect key="frame" x="19" y="218" width="548" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="Fbe-Ey-kLa"/>
+                        <constraint firstAttribute="height" constant="40" id="Prz-6v-qd5"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="LVR-IL-jC0"/>
-                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="hkt-VO-mdl" secondAttribute="trailing" constant="10" id="08H-Db-jgJ"/>
                 <constraint firstAttribute="trailing" secondItem="gzk-Jb-js4" secondAttribute="trailing" constant="10" id="09M-yn-KLY"/>
+                <constraint firstAttribute="trailing" secondItem="nBI-RL-kEp" secondAttribute="trailing" constant="10" id="7tP-cE-V0q"/>
                 <constraint firstItem="Qbf-B1-0nk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="8pD-41-CF9"/>
                 <constraint firstItem="hkt-VO-mdl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Ces-Ue-1hL"/>
-                <constraint firstAttribute="trailing" secondItem="gv1-Mk-W4C" secondAttribute="trailing" constant="10" id="E0X-AY-1sF"/>
-                <constraint firstItem="gv1-Mk-W4C" firstAttribute="top" secondItem="hkt-VO-mdl" secondAttribute="bottom" constant="10" id="Kfq-cR-uF2"/>
                 <constraint firstItem="gzk-Jb-js4" firstAttribute="top" secondItem="Qbf-B1-0nk" secondAttribute="bottom" constant="10" id="LVP-R9-I1z"/>
                 <constraint firstItem="Qbf-B1-0nk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="MM4-rT-RKQ"/>
                 <constraint firstItem="gzk-Jb-js4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="QyD-qE-axt"/>
-                <constraint firstItem="gv1-Mk-W4C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="UUs-ir-z2V"/>
+                <constraint firstItem="nBI-RL-kEp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="SRV-Ch-jgN"/>
                 <constraint firstItem="hkt-VO-mdl" firstAttribute="top" secondItem="gzk-Jb-js4" secondAttribute="bottom" constant="10" id="YdU-9x-GVq"/>
+                <constraint firstItem="nBI-RL-kEp" firstAttribute="top" secondItem="hkt-VO-mdl" secondAttribute="bottom" constant="10" id="ZFi-hn-PLA"/>
                 <constraint firstAttribute="trailing" secondItem="Qbf-B1-0nk" secondAttribute="trailing" constant="10" id="rHD-l3-wGL"/>
             </constraints>
         </view>

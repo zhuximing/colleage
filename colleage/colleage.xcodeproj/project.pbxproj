@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181A7F981BA8128D00878635 /* CDPDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A7F971BA8128D00878635 /* CDPDatePicker.m */; };
 		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
 		185634B31BA44AA800FF77C3 /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185634B21BA44AA800FF77C3 /* HelpCell.m */; };
 		185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 185634F81BA4964A00FF77C3 /* UIImage+MLTint.m */; };
@@ -187,6 +188,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181A7F961BA8128D00878635 /* CDPDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPDatePicker.h; sourceTree = "<group>"; };
+		181A7F971BA8128D00878635 /* CDPDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPDatePicker.m; sourceTree = "<group>"; };
 		18544CE51B942F4100043D73 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
 		18544CE61B942F4100043D73 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
 		185634B11BA44AA800FF77C3 /* HelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
@@ -488,6 +491,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181A7F951BA8126700878635 /* 自定义的datapicker */ = {
+			isa = PBXGroup;
+			children = (
+				181A7F961BA8128D00878635 /* CDPDatePicker.h */,
+				181A7F971BA8128D00878635 /* CDPDatePicker.m */,
+			);
+			name = "自定义的datapicker";
+			sourceTree = "<group>";
+		};
 		185634B01BA44A6500FF77C3 /* 同学互帮 */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +685,7 @@
 		18D5C5901B930E6D0074EEEC /* colleage */ = {
 			isa = PBXGroup;
 			children = (
+				181A7F951BA8126700878635 /* 自定义的datapicker */,
 				18E12CDA1BA5856000D1C509 /* 滑动页 */,
 				18E12CD01BA522D400D1C509 /* DOPDropDownMenu */,
 				185634F41BA4964A00FF77C3 /* MLSelectPhoto */,
@@ -1387,6 +1400,7 @@
 				18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */,
 				18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */,
 				1856352B1BA4964A00FF77C3 /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
+				181A7F981BA8128D00878635 /* CDPDatePicker.m in Sources */,
 				186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */,
 				185635271BA4964A00FF77C3 /* MLSelectPhotoPickerDatas.m in Sources */,
 				185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */,
