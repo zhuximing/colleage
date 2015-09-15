@@ -340,7 +340,7 @@
         ALAsset *al=ml.asset;
         NSURL* url = [[al defaultRepresentation] url];
          NSLog(@"图片路径%@",url.absoluteString);
-        NSString *k=[NSString stringWithFormat:@"image%d",i];
+        NSString *k=[NSString stringWithFormat:@"pic%d",i];
         [op addFile:url.absoluteString forKey:k ];
     }
     //请求回调
