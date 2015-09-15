@@ -15,9 +15,14 @@
 }
 @property (weak, nonatomic) IBOutlet UITextField *start_city;
 @property (weak, nonatomic) IBOutlet UITextField *end_city;
-@property (weak, nonatomic) IBOutlet UITextField *person_count;
+@property (weak, nonatomic) IBOutlet UITextField *car_type;
+@property (weak, nonatomic) IBOutlet UITextField *car_kong;
 
-@property (weak, nonatomic) IBOutlet UITextField *start_time;
 
+@property (weak, nonatomic) IBOutlet UIButton *start_time;
+
+@property (weak, nonatomic) IBOutlet UITextField *car_fee;
+
+@property (weak, nonatomic) IBOutlet UITextView *car_detail;
 
 @end

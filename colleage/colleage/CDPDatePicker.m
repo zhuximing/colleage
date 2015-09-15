@@ -24,29 +24,31 @@
         _datePicker=[[UIDatePicker alloc]initWithFrame:CGRectMake(0,_view.bounds.size.height*0.07042,_view.bounds.size.width,0)];
         _datePicker.date =[NSDate date];
         
-        _datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        _datePicker.datePickerMode = UIDatePickerModeDate;
         [_datePicker setLocale:[[NSLocale alloc]initWithLocaleIdentifier:@"zh_Hans_CN"]];
         
         [_datePickerView addSubview:_datePicker];
         
-        _dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0,_view.bounds.size.width/2,_view.bounds.size.height*0.07042)];
+        _dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0,ScreenWidth/2,_view.bounds.size.height*0.07042)];
         if (title) {
             _dateLabel.text=title;
         }
         else{
-            _dateLabel.text=@"年月日";
+            _dateLabel.text=@"取消";
         }
         _dateLabel.textAlignment=NSTextAlignmentCenter;
         _dateLabel.textColor=[UIColor darkGrayColor];
         _dateLabel.backgroundColor=[UIColor whiteColor];
         [_datePickerView addSubview:_dateLabel];
         
-        _dateConfirmButton=[[UIButton alloc] initWithFrame:CGRectMake(_view.bounds.size.width/2,0,_view.bounds.size.width/2,_view.bounds.size.height*0.07042)];
+        _dateConfirmButton=[[UIButton alloc] initWithFrame:CGRectMake(ScreenWidth/2,0,ScreenWidth/2,_view.bounds.size.height*0.07042)];
         [_dateConfirmButton setTitle:@"确定" forState:UIControlStateNormal];
+      
         _dateConfirmButton.userInteractionEnabled=YES;
         [_dateConfirmButton addTarget:self action:@selector(dateConfirmClick) forControlEvents:UIControlEventTouchUpInside];
-        [_dateConfirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _dateConfirmButton.backgroundColor=[UIColor grayColor];
+        [_dateConfirmButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        _dateConfirmButton.contentHorizontalAlignment=UIControlContentHorizontalAlignmentCenter;
+        _dateConfirmButton.backgroundColor=[UIColor clearColor];
         [_datePickerView addSubview:_dateConfirmButton];
 
     }
@@ -55,13 +57,20 @@
 }
 //确定选择
 -(void)dateConfirmClick{
-
-    NSString *string=[NSString stringWithFormat:@"%@",[NSDate dateWithTimeInterval:3600*8 sinceDate:[_datePicker date]]];
+    //NSString *string=[NSString stringWithFormat:@"%@",[NSDate dateWithTimeInterval:3600*8 sinceDate:[_datePicker date]]];
     
-    [self.delegate CDPDatePickerDidConfirm:string];
+    NSDate *select  = [_datePicker date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateAndTime = [dateFormatter stringFromDate:select];
+    
+    
+    
+    [self.delegate CDPDatePickerDidConfirm:dateAndTime];
     
     [self popDatePicker];
     _datePicker.date =[NSDate date];
+
 
 
 }

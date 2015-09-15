@@ -42,6 +42,8 @@
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"线路发布"];
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
