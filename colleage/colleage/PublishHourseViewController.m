@@ -315,17 +315,12 @@
     NSString *des=self.sh_des.text;
     NSString *user_id=@"21";    //用户idNextViewController	NextViewController
    
-    NSLog(@"图片＝＝＝＝＝＝＝%@",self.assets);
     
    
     //获取数据
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
                              initWithHostName:BASEHOME
                              customHeaderFields:nil];
-    //获取library路径
-    NSArray * array1=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, TRUE);
-    NSString *docPath=(NSString*)[array1 objectAtIndex:0];
-    NSLog(@"path%@",docPath);
     
     //请求参数
     NSDictionary *parames=[NSDictionary  dictionaryWithObjectsAndKeys:title,@"sh_title",
@@ -334,27 +329,23 @@
                                      price,@"sh_price",
                                     des,@"sh_detail",
                                     user_id,@"user_id",
-                                   // [uiimages[0] originImage],@"pic0",
                                      nil];
    
-    
-   // [parames setValue:[uiimages[0] thumbImage] forKey:@"pic0"];
-    //for(int i=0;i<uiimages.count;i++){
-      //  NSString *key=[NSString stringWithFormat:@"pic%d",i];
-        
-        
-   // }
-    
-    
-    
     
     //执行请求
     MKNetworkOperation *op=[engine operationWithPath:@"share_house/add_house" params:parames httpMethod:@"POST"];
    
    
     
-     //[op addFile:[[[self.assets objectAtIndex:0] thumbImage]] forKey:<#(NSString *)#>];
-    //[op addData:[self.assets objectAtIndex:0] forKey:@"pic0"];
+    for (int i=0; i<self.assets.count; i++) {
+        //获取图片路径
+        MLSelectPhotoAssets *ml=self.assets[0];
+        ALAsset *al=ml.asset;
+        NSURL* url = [[al defaultRepresentation] url];
+         NSLog(@"图片路径%@",url.absoluteString);
+        NSString *k=[NSString stringWithFormat:@"image%d",i];
+        [op addFile:url.absoluteString forKey:k ];
+    }
     //请求回调
     [op onCompletion:^(MKNetworkOperation *completedOperation) {
         [self showToast:@"添加成功"];
