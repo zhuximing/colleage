@@ -72,7 +72,7 @@
     
     //请求参数
     NSDictionary *parames=[NSDictionary  dictionaryWithObjectsAndKeys:
-                           @"车主找人",@"pingche_who",
+                           @"人",@"pingche_who",
                            _start_city.text,@"pingche_start_city",
                            publisher,@"pingche_publisher",
                            _end_city.text,@"pingche_end_city",

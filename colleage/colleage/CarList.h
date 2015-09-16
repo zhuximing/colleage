@@ -13,10 +13,12 @@
     int pageNow;
     int pageSize;
     NSMutableArray *cars;
+    NSString *target_s;  //类别
+    NSString *time_s;   //出发时间
 
 }
-@property  NSString *start_city;//出发城市
-@property NSString *end_city;   //目的城市
+@property (nonatomic, strong) NSString *start_city;//出发城市
+@property (nonatomic, strong) NSString *end_city;   //目的城市
 
 @property (nonatomic, strong) NSArray *target;
 @property (nonatomic, strong) NSArray *time;

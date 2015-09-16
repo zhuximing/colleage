@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *path;
 @property (weak, nonatomic) IBOutlet UILabel *start_time;
 @property (weak, nonatomic) IBOutlet UILabel *publish_time;
+@property (weak, nonatomic) IBOutlet UILabel *flag;
+@property (weak, nonatomic) IBOutlet UILabel *persons;
 
 @end

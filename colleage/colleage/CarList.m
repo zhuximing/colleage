@@ -27,6 +27,11 @@
     cars=[[NSMutableArray alloc] init];
     //初始化每页显示的数量
     pageSize=4;
+    //初始化数据
+    target_s=@"";
+    time_s=@"";
+    
+    
     
     
     //标题
@@ -50,8 +55,8 @@
     NSLog(@"end%@",self.end_city);
     
     // 数据
-    self.target = @[@"类型",@"全部",@"车主找人",@"学生找车"];
-    self.time = @[@"出发时间",@"全部",@"今天"];
+    self.target = @[@"类型",@"车主找人",@"学生找车"];
+    self.time = @[@"出发时间",@"今天"];
     // 添加下拉菜单
     DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 0) andHeight:44];
     
@@ -111,10 +116,10 @@
         offset,@"offset",
         @"三峡大学",@"school",
         @"0",@"type",
-        @"",@"target_s",
-        @"",@"time_s",
-        @"",@"pingche_start_city",
-        @"",@"pingche_end_city",nil];
+        target_s,@"target_s",
+        time_s,@"time_s",
+        _start_city,@"pingche_start_city",
+        _end_city,@"pingche_end_city",nil];
     //执行请求
     MKNetworkOperation *op=[engine operationWithPath:@"pingche/getlist" params:parames httpMethod:@"POST"];
     //请求回调
@@ -150,11 +155,13 @@
         [self.carList reloadData];
         
         //隐藏动画
+        [self hide];
         [self.carList.pullToRefreshView stopAnimating ];
         [self.carList.infiniteScrollingView stopAnimating] ;
     } onError:^(NSError *error) {
         [self showToast:@"网络异常"];
         //隐藏动画
+        [self hide];
         [self.carList.pullToRefreshView stopAnimating ];
         [self.carList.infiniteScrollingView stopAnimating];
     }];
@@ -216,16 +223,24 @@
     }
     //赋值
     cell.path.text=[cars[indexPath.row] objectForKey:@"pingche_title"];
-    cell.start_time.text=[cars[indexPath.row] objectForKey:@"pingche_start_time"];
+    cell.start_time.text=[NSString stringWithFormat:@"出发时间:%@",[cars[indexPath.row] objectForKey:@"pingche_start_time"]];
     cell.publish_time.text=[cars[indexPath.row] objectForKey:@"pingche_publish_time"];
+    
+    NSString *pingche_who=[cars[indexPath.row] objectForKey:@"pingche_who"];
+    if ([pingche_who isEqualToString:@"车"]) {
+        cell.persons.text=[NSString stringWithFormat:@"还有空位:%@",[cars[indexPath.row] objectForKey:@"pingche_persons"]];
+        cell.flag.text=@"我是车主";
+    }else{
+        cell.persons.text=[NSString stringWithFormat:@"%@人要拼车",[cars[indexPath.row] objectForKey:@"pingche_persons"]];
+        cell.flag.text=@"我是乘客";
+    }
     
     return cell;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"!!!!!!!!!!");
-     //获取故事版
+    //获取故事版
      UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
      LostDetail *lost=[story instantiateViewControllerWithIdentifier:@"LostDetail"];
     
@@ -272,10 +287,32 @@
 
 - (void)menu:(DOPDropDownMenu *)menu didSelectRowAtIndexPath:(DOPIndexPath *)indexPath
 {
-    if (indexPath.item >= 0) {
-        NSLog(@"点击了 %ld - %ld - %ld 项目",indexPath.column,indexPath.row,indexPath.item);
-    }else {
-        NSLog(@"点击了 %ld - %ld 项目",indexPath.column,indexPath.row);
+//    if (indexPath.item >= 0) {
+//        NSLog(@"点击了 %ld - %ld - %ld 项目",indexPath.column,indexPath.row,indexPath.item);
+//    }else {
+//        NSLog(@"点击了 %ld - %ld 项目",indexPath.column,indexPath.row);
+//    }
+    //菊花
+    [self showProgressing:@"正在加载"];
+    
+    if (indexPath.column==0) {
+        target_s=self.target[indexPath.row];
+        if ([target_s isEqualToString:@"类型"]) {
+            target_s=@"";
+        }else if([target_s isEqualToString:@"学生找车"]){
+            target_s=@"车";
+        }else if([target_s isEqualToString:@"车主找人"]){
+            target_s=@"人";
+        }
+        
+        [self loadData:@"refresh"];
+    }
+    if (indexPath.column==1) {
+        time_s=self.time[indexPath.row];
+        if ([time_s isEqualToString:@"出发时间"]) {
+            time_s=@"";
+        }
+        [self loadData:@"refresh"];
     }
 }
 
