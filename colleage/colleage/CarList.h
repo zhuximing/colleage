@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSString *end_city;   //目的城市
 
 @property (nonatomic, strong) NSArray *target;
-@property (nonatomic, strong) NSArray *time;
+@property (nonatomic, strong) NSMutableArray *time;
 
 @property (weak, nonatomic) IBOutlet UITableView *carList;
 

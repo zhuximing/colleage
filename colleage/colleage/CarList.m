@@ -25,6 +25,7 @@
     
     //初始化数组
     cars=[[NSMutableArray alloc] init];
+    self.time=[[NSMutableArray alloc] init];
     //初始化每页显示的数量
     pageSize=4;
     //初始化数据
@@ -56,7 +57,9 @@
     
     // 数据
     self.target = @[@"类型",@"车主找人",@"学生找车"];
-    self.time = @[@"出发时间",@"今天"];
+   
+    //时间补充未来一周的时间数据
+    [self getWeekDate];
     // 添加下拉菜单
     DOPDropDownMenu *menu = [[DOPDropDownMenu alloc] initWithOrigin:CGPointMake(0, 0) andHeight:44];
     
@@ -87,6 +90,26 @@
     
     
 }
+
+//获取未来一周的时间，并生成数组
+-(void) getWeekDate{
+
+    NSDate *today=[NSDate date];
+    [self.time addObject:@"出发时间"];
+    NSDateFormatter *format1=[[NSDateFormatter alloc]init];
+    [format1 setDateFormat:@"yyyy-MM-dd"];
+    for(int i=0;i<7;i++){
+        NSDate *item=[NSDate dateWithTimeInterval:-60 * 60 * 24*i sinceDate:today];
+        NSString *itemString=[format1 stringFromDate:item];
+        [self.time addObject:itemString];
+    
+    }
+    
+}
+
+
+
+
 //加载数据 flag参数是告诉它是下啦加载数据还是上拉加载数据
 -(void)loadData:(NSString*)flag{
     if ([@"refresh" isEqualToString:flag]) {
