@@ -107,7 +107,7 @@
         
         
         //选择性开启上拉加载
-        if (losts.count<pageSize) {
+        if (array.count<pageSize) {
             //如果加载的数据小于于pageSize条 不让他可以上拉加载
             self.tableView.showsInfiniteScrolling=NO;
         }else{

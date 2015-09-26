@@ -38,7 +38,7 @@
     
     [_wb loadRequest:request];
     
-   // self.hidesBottomBarWhenPushed
+    //self.hidesBottomBarWhenPushed=YES;
 }
 
 

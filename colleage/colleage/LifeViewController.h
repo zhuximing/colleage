@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+@interface LifeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
 
-@interface LifeViewController : UIViewController
+    NSMutableArray *yues;
+     MBProgressHUD *hud;
+
+}
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

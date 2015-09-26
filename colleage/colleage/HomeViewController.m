@@ -108,7 +108,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HomeCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-   // cell.backgroundColor=[UIColor redColor];
+    // cell.backgroundColor=[UIColor redColor];
     NSString *imgPath=[[_array objectAtIndex:indexPath.row] objectForKey:@"img"];
     cell.img.image=[UIImage imageNamed:imgPath];
     cell.titlelbl.text=[_array[indexPath.row] objectForKey:@"text"];

@@ -66,9 +66,9 @@
     
     [self.tabBar setHidden:NO];
     
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 4; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(ScreenWidth/5*i, 0, ScreenWidth/5, 49);
+        btn.frame = CGRectMake(ScreenWidth/4*i, 0, ScreenWidth/4, 49);
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon1"]] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"tab_icon_1"]] forState:UIControlStateSelected];
         btn.tag = i+100;
@@ -95,7 +95,7 @@
 
 -(void)didTapTabbar:(UIButton * )sender{
 
-    for (int i= 0; i<5; i++) {
+    for (int i= 0; i<4; i++) {
         UIButton  *btn = (UIButton*)[self.tabBar viewWithTag:100+i];
         btn.selected = NO;
         btn.userInteractionEnabled = YES;
@@ -209,7 +209,6 @@
 
    
    
-    NSLog(@"####");
     
     
    

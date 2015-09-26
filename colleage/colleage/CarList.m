@@ -51,9 +51,7 @@
     [rightBtn setTitle:@"发布" forState:UIControlStateNormal];
     UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
-    
-    NSLog(@"start%@",self.start_city);
-    NSLog(@"end%@",self.end_city);
+   
     
     // 数据
     self.target = @[@"类型",@"车主找人",@"学生找车"];
@@ -167,7 +165,7 @@
         
         
         //选择性开启上拉加载
-        if (cars.count<pageSize) {
+        if (array.count<pageSize) {
             //如果加载的数据小于于pageSize条 不让他可以上拉加载
             self.carList.showsInfiniteScrolling=NO;
         }else{
