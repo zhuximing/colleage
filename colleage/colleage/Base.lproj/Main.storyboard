@@ -1350,25 +1350,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入标题" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zgT-ji-26M">
-                                <rect key="frame" x="16" y="0.0" width="568" height="47"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入标题" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zgT-ji-26M">
+                                <rect key="frame" x="16" y="8" width="568" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="39B-L6-zWa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7ur-aW-paj" id="Lm1-qR-suR"/>
+                                </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="about_mid_bg.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="8FN-oU-wXj">
-                                <rect key="frame" x="16" y="62" width="568" height="53"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Wnx-PN-gfG"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="register_bottom_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="OT8-kn-hEO">
-                                <rect key="frame" x="543" y="78" width="23" height="21"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsK-NG-xQ3">
-                                <rect key="frame" x="30" y="78" width="62" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="选择地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrQ-4q-cg8">
+                                <rect key="frame" x="16" y="70" width="568" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choose_address:" destination="7ur-aW-paj" eventType="touchDown" id="Wba-eb-MIj"/>
+                                    <outlet property="delegate" destination="7ur-aW-paj" id="1f9-Si-c5y"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择时间" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOG-0K-ccP">
+                                <rect key="frame" x="16" y="128" width="568" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choose_time:" destination="7ur-aW-paj" eventType="touchDown" id="BUJ-rD-7kG"/>
+                                    <outlet property="delegate" destination="7ur-aW-paj" id="HLR-eZ-rCi"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="买单方式" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5s-vD-Pw1">
+                                <rect key="frame" x="16" y="255" width="568" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choose_fee:" destination="7ur-aW-paj" eventType="touchDown" id="YVz-bm-CoT"/>
+                                    <outlet property="delegate" destination="7ur-aW-paj" id="YAf-rB-7J0"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rHa-ip-14s">
+                                <rect key="frame" x="16" y="318" width="568" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7ur-aW-paj" id="SHq-fx-OAa"/>
+                                </connections>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择对象" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DV5-bm-hcw">
+                                <rect key="frame" x="16" y="192" width="568" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choose_target:" destination="7ur-aW-paj" eventType="touchDown" id="j8E-kt-gwv"/>
+                                    <outlet property="delegate" destination="7ur-aW-paj" id="HHf-VK-cjk"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="例如：本人负责接送,您可以带一名闺蜜，我们在学生公寓1栋楼下见...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5g-7s-xMN">
+                                <rect key="frame" x="16" y="396" width="568" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -1376,25 +1415,78 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="OT8-kn-hEO" firstAttribute="centerY" secondItem="8FN-oU-wXj" secondAttribute="centerY" id="0az-Vk-qnR"/>
-                            <constraint firstAttribute="trailing" secondItem="OT8-kn-hEO" secondAttribute="trailing" constant="14" id="2rV-H0-prV"/>
-                            <constraint firstItem="8FN-oU-wXj" firstAttribute="top" secondItem="zgT-ji-26M" secondAttribute="bottom" constant="15" id="Ev8-2z-Dy1"/>
-                            <constraint firstItem="OT8-kn-hEO" firstAttribute="top" secondItem="8FN-oU-wXj" secondAttribute="bottom" constant="-37" id="XOF-H5-9dR"/>
-                            <constraint firstItem="8FN-oU-wXj" firstAttribute="centerY" secondItem="zsK-NG-xQ3" secondAttribute="centerY" id="g2S-dv-6Kr"/>
+                            <constraint firstItem="f5s-vD-Pw1" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="1IA-1e-F7O"/>
+                            <constraint firstAttribute="trailing" secondItem="zgT-ji-26M" secondAttribute="trailing" constant="8" id="1Zz-P1-avm"/>
+                            <constraint firstItem="DV5-bm-hcw" firstAttribute="height" secondItem="f5s-vD-Pw1" secondAttribute="height" id="8L4-5t-YBm"/>
+                            <constraint firstAttribute="trailing" secondItem="x5g-7s-xMN" secondAttribute="trailing" constant="8" id="CAf-dT-PcU"/>
+                            <constraint firstItem="zgT-ji-26M" firstAttribute="top" secondItem="LVs-m6-9vj" secondAttribute="top" constant="4" id="IPX-rs-dLL"/>
+                            <constraint firstItem="DV5-bm-hcw" firstAttribute="height" secondItem="VOG-0K-ccP" secondAttribute="height" id="KKz-cd-S1H"/>
+                            <constraint firstItem="DV5-bm-hcw" firstAttribute="height" secondItem="zgT-ji-26M" secondAttribute="height" id="LBI-vi-Niz"/>
+                            <constraint firstItem="DV5-bm-hcw" firstAttribute="height" secondItem="VrQ-4q-cg8" secondAttribute="height" id="NMV-O4-fsb"/>
+                            <constraint firstAttribute="trailing" secondItem="rHa-ip-14s" secondAttribute="trailing" constant="8" id="PV2-js-uF1"/>
+                            <constraint firstAttribute="trailing" secondItem="VrQ-4q-cg8" secondAttribute="trailing" constant="8" id="Xa9-3p-HQS"/>
+                            <constraint firstItem="DV5-bm-hcw" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="ZfB-Mh-msI"/>
+                            <constraint firstItem="rHa-ip-14s" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="duI-bp-iOF"/>
+                            <constraint firstAttribute="trailing" secondItem="f5s-vD-Pw1" secondAttribute="trailing" constant="8" id="efS-JO-IHM"/>
+                            <constraint firstItem="zgT-ji-26M" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="hMn-3J-8jd"/>
+                            <constraint firstItem="VrQ-4q-cg8" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="iKw-1f-HFS"/>
+                            <constraint firstAttribute="trailing" secondItem="DV5-bm-hcw" secondAttribute="trailing" constant="8" id="kmy-vW-798"/>
+                            <constraint firstItem="x5g-7s-xMN" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="uxh-MC-HzP"/>
+                            <constraint firstAttribute="trailing" secondItem="VOG-0K-ccP" secondAttribute="trailing" constant="8" id="vZo-6D-BJQ"/>
+                            <constraint firstItem="VOG-0K-ccP" firstAttribute="leading" secondItem="LVs-m6-9vj" secondAttribute="leading" constant="8" id="xN4-84-IGj"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="XOF-H5-9dR"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="address" destination="8FN-oU-wXj" id="NTG-Ln-dhT"/>
+                        <outlet property="address" destination="VrQ-4q-cg8" id="tz5-cu-1L7"/>
+                        <outlet property="detail" destination="rHa-ip-14s" id="4UD-2H-LxG"/>
+                        <outlet property="fee" destination="f5s-vD-Pw1" id="QWm-Q8-9eW"/>
+                        <outlet property="target" destination="DV5-bm-hcw" id="dfh-rs-Ux8"/>
+                        <outlet property="time" destination="VOG-0K-ccP" id="8YO-wl-z98"/>
+                        <outlet property="yue_title" destination="zgT-ji-26M" id="Nja-gN-lv6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9N-oI-D53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3067" y="1089"/>
+        </scene>
+        <!--Choose Text-->
+        <scene sceneID="hEu-2H-9ge">
+            <objects>
+                <viewController storyboardIdentifier="ChooseText" id="N8v-Ih-kAT" customClass="ChooseText" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="huI-Bf-S0s"/>
+                        <viewControllerLayoutGuide type="bottom" id="WkW-sL-fZY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rPH-mz-wmO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FRa-Bc-CYj">
+                                <rect key="frame" x="41" y="20" width="518" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lzh-16-2Sy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="N8v-Ih-kAT" id="LcM-1m-oZs"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FRa-Bc-CYj" firstAttribute="leading" secondItem="rPH-mz-wmO" secondAttribute="leading" constant="10" id="4M3-fD-6I8"/>
+                            <constraint firstAttribute="trailing" secondItem="FRa-Bc-CYj" secondAttribute="trailing" constant="10" id="6jc-22-VQ2"/>
+                            <constraint firstItem="FRa-Bc-CYj" firstAttribute="top" secondItem="rPH-mz-wmO" secondAttribute="top" constant="4" id="iGw-OW-uKW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="FRa-Bc-CYj" id="f2L-n6-rEa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wx1-YO-qSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3675" y="1091"/>
         </scene>
         <!--Hourse View Controller-->
         <scene sceneID="UPF-93-78X">
@@ -1965,11 +2057,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="about_mid_bg.9.png" width="432" height="47"/>
         <image name="log.png" width="130" height="27"/>
         <image name="login_btn.png" width="294" height="44"/>
         <image name="logout_btn.png" width="294" height="44"/>
-        <image name="register_bottom_arrow.png" width="17" height="29"/>
         <image name="setting_head.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -81,7 +81,7 @@
     hud.mode = MBProgressHUDModeText;
     hud.labelText = info;
     [hud show:YES];
-    [hud hide:YES afterDelay:0.7f];
+    [hud hide:YES afterDelay:1.0f];
 }
 
 //隐藏

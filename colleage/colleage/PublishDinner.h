@@ -7,8 +7,17 @@
 //
 
 #import "NextViewController.h"
+#import "PassValue.h"
+@interface PublishDinner : NextViewController<UITextFieldDelegate,UITextViewDelegate,PassValue>
 
-@interface PublishDinner : NextViewController
-@property (weak, nonatomic) IBOutlet UIImageView *address;
+@property (weak, nonatomic) IBOutlet UITextField *address;
+@property (weak, nonatomic) IBOutlet UITextField *time;
+@property (weak, nonatomic) IBOutlet UITextField *target;
+@property (weak, nonatomic) IBOutlet UITextField *fee;
+
+@property (weak, nonatomic) IBOutlet UITextView *detail;
+
+@property (weak, nonatomic) IBOutlet UITextField *yue_title;
+
 
 @end

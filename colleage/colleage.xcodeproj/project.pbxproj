@@ -105,6 +105,7 @@
 		18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */; };
 		18DABC7C1B9AC56A00CB792C /* logout_btn_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DABC7A1B9AC56A00CB792C /* logout_btn_@2x.png */; };
 		18DABC7D1B9AC56A00CB792C /* logout_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DABC7B1B9AC56A00CB792C /* logout_btn@2x.png */; };
+		18DB39AF1BBFAC9000D4FCB7 /* ChooseText.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB39AE1BBFAC9000D4FCB7 /* ChooseText.m */; };
 		18DB9EB61B95CB26003D2EC2 /* login_btn_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */; };
 		18DB9EB71B95CB26003D2EC2 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */; };
 		18DB9EB81B95CB26003D2EC2 /* common_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */; };
@@ -392,6 +393,9 @@
 		18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterNoLogin.m; sourceTree = "<group>"; };
 		18DABC7A1B9AC56A00CB792C /* logout_btn_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout_btn_@2x.png"; sourceTree = "<group>"; };
 		18DABC7B1B9AC56A00CB792C /* logout_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout_btn@2x.png"; sourceTree = "<group>"; };
+		18DB39AD1BBFAC9000D4FCB7 /* ChooseText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseText.h; sourceTree = "<group>"; };
+		18DB39AE1BBFAC9000D4FCB7 /* ChooseText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseText.m; sourceTree = "<group>"; };
+		18DB39B11BBFC2D000D4FCB7 /* PassValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassValue.h; sourceTree = "<group>"; };
 		18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn_@2x.png"; sourceTree = "<group>"; };
 		18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@2x.png"; sourceTree = "<group>"; };
 		18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_line@2x.png"; sourceTree = "<group>"; };
@@ -1253,6 +1257,9 @@
 				18DC5E221BB3E81100FBF69E /* CommonCell.m */,
 				18D390A01BB6D57200FC99B2 /* PublishDinner.h */,
 				18D390A11BB6D57200FC99B2 /* PublishDinner.m */,
+				18DB39AD1BBFAC9000D4FCB7 /* ChooseText.h */,
+				18DB39AE1BBFAC9000D4FCB7 /* ChooseText.m */,
+				18DB39B11BBFC2D000D4FCB7 /* PassValue.h */,
 			);
 			name = "约共同的界面";
 			sourceTree = "<group>";
@@ -1616,6 +1623,7 @@
 				18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */,
 				18DB9ED91B96EB09003D2EC2 /* ContactTableViewController.m in Sources */,
 				185634B31BA44AA800FF77C3 /* HelpCell.m in Sources */,
+				18DB39AF1BBFAC9000D4FCB7 /* ChooseText.m in Sources */,
 				18D480311B9F248300A128D4 /* LostTableViewCell.m in Sources */,
 				18DA20261BA145D300A9CA90 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				18DC15741BBED3F4007D5FF8 /* MJRefreshFooter.m in Sources */,
