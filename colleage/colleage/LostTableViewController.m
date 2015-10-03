@@ -10,9 +10,9 @@
 #import "CommonUtil.h"
 #import "LostTableViewCell.h"
 #import "LostDetail.h"
-#import "UIScrollView+SVPullToRefresh.h"
-#import "UIScrollView+SVInfiniteScrolling.h"
 #import "PublishLost.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
 @implementation LostTableViewController
 
 - (void)viewDidLoad {
@@ -20,7 +20,7 @@
     //初始化数组
     losts=[[NSMutableArray alloc] init];
     //初始化每页显示的数量
-    pageSize=4;
+    pageSize=10;
     
     
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"失物招领"];
@@ -36,28 +36,51 @@
     UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
-    
-    //弱引用
-    __weak LostTableViewController *weakSelf = self;
-    
-    // 设置下拉刷新
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        [weakSelf refresh];
-    }];
-    
-    // 设置上拉加载
-    [self.tableView addInfiniteScrollingWithActionHandler:^{
-        [weakSelf load];
-    }];
-    
-    //刚开始隐藏上拉加载，因为不知道能加载到多少条
-    self.tableView.showsInfiniteScrolling = NO;
-    //self.tableView.showsPullToRefresh = NO;
-    //进入该视图控制器自动下拉刷新
-    [self.tableView triggerPullToRefresh];
+    [self setUpTableView];
+  
     
     
 }
+-(void)setUpTableView{
+    //添加下拉的动画图片
+    //设置下拉刷新回调
+    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    
+    //设置普通状态的动画图片
+    NSMutableArray *idleImages = [NSMutableArray array];
+    for (NSUInteger i = 1; i<=60; ++i) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
+        [idleImages addObject:image];
+    }
+    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+    
+    //设置即将刷新状态的动画图片
+    NSMutableArray *refreshingImages = [NSMutableArray array];
+    for (NSInteger i = 1; i<=3; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
+        [refreshingImages addObject:image];
+    }
+    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+    
+    //设置正在刷新是的动画图片
+    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+    
+    //马上进入刷新状态
+    [self.tableView.gifHeader beginRefreshing];
+    
+    
+    //上拉刷新
+    [self.tableView addGifFooterWithRefreshingTarget:self refreshingAction:@selector(load)];
+    
+    //隐藏状态文字
+    //    self.tableView.footer.stateHidden = YES;
+    //设置正在刷新的动画
+    self.tableView.gifFooter.refreshingImages = refreshingImages;
+    
+     self.tableView.footer.hidden=YES;
+    
+}
+
 //加载数据 flag参数是告诉它是下啦加载数据还是上拉加载数据
 -(void)loadData:(NSString*)flag{
     if ([@"refresh" isEqualToString:flag]) {
@@ -109,22 +132,24 @@
         //选择性开启上拉加载
         if (array.count<pageSize) {
             //如果加载的数据小于于pageSize条 不让他可以上拉加载
-            self.tableView.showsInfiniteScrolling=NO;
+            self.tableView.footer.hidden=YES;
         }else{
             //如果加载的数据大于pageSize条 让他可以上拉加载
-            self.tableView.showsInfiniteScrolling=YES;
+            self.tableView.footer.hidden=NO;
         }
         //数据刷新到表格里面去
         [self.tableView reloadData];
-        
         //隐藏动画
-        [self.tableView.pullToRefreshView stopAnimating ];
-        [self.tableView.infiniteScrollingView stopAnimating] ;
+        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
+
+       
     } onError:^(NSError *error) {
          [self showToast:@"网络异常"];
          //隐藏动画
-         [self.tableView.pullToRefreshView stopAnimating ];
-         [self.tableView.infiniteScrollingView stopAnimating];
+        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
+
     }];
     
     [engine enqueueOperation:op];

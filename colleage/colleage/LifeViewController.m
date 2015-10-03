@@ -10,10 +10,10 @@
 #import "CommonUtil.h"
 #import "YueBaHeader.h"
 #import "YueCell.h"
-#import "UIScrollView+SVPullToRefresh.h"
-#import "UIScrollView+SVInfiniteScrolling.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "LostDetail.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
 @interface LifeViewController ()
 
 @end
@@ -43,24 +43,54 @@
     
     
     
-    //弱引用
-    __weak LifeViewController *weakSelf = self;
-    
-    // 设置下拉刷新
-    [self.tableView addPullToRefreshWithActionHandler:^{
-        [weakSelf refresh];
-    }];
-    //进入该视图控制器自动下拉刷新
-    [self.tableView triggerPullToRefresh];
-
     
     //初始化加载器
     hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
     
-    //self.tableView.separatorStyle=UITableViewCellSeparatorStyleNone;
+    [self setUpTableView];
     
 }
+-(void)setUpTableView{
+    //添加下拉的动画图片
+    //设置下拉刷新回调
+    [self.tableView addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    
+    //设置普通状态的动画图片
+    NSMutableArray *idleImages = [NSMutableArray array];
+    for (NSUInteger i = 1; i<=60; ++i) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
+        [idleImages addObject:image];
+    }
+    [self.tableView.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+    
+    //设置即将刷新状态的动画图片
+    NSMutableArray *refreshingImages = [NSMutableArray array];
+    for (NSInteger i = 1; i<=3; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
+        [refreshingImages addObject:image];
+    }
+    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+    
+    //设置正在刷新是的动画图片
+    [self.tableView.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+    
+    //马上进入刷新状态
+    [self.tableView.gifHeader beginRefreshing];
+    
+    
+    //上拉刷新
+   // [self.tableView addGifFooterWithRefreshingTarget:self refreshingAction:@selector(load)];
+    
+    //隐藏状态文字
+    //    self.tableView.footer.stateHidden = YES;
+    //设置正在刷新的动画
+    //self.tableView.gifFooter.refreshingImages = refreshingImages;
+    
+    //self.tableView.footer.hidden=YES;
+    
+}
+
 
 -(void)loadData{
     
@@ -89,13 +119,13 @@
         [self.tableView reloadData];
         
         //隐藏动画
-        [self.tableView.pullToRefreshView stopAnimating ];
-        [self.tableView.infiniteScrollingView stopAnimating] ;
+        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
     } onError:^(NSError *error) {
         [self showToast:@"网络异常"];
         //隐藏动画
-        [self.tableView.pullToRefreshView stopAnimating ];
-        [self.tableView.infiniteScrollingView stopAnimating];
+        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
     
     }];
     
