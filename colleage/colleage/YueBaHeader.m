@@ -124,9 +124,9 @@
         [self.nav pushViewController:commonList animated:YES];
         
     }
-    if (cell.tag==2) {
+    if (cell.tag==4) {
         CommonList  *commonList=[story instantiateViewControllerWithIdentifier:@"CommonList"];
-        commonList.type=@"movie";
+        commonList.type=@"sport";
         [self.nav pushViewController:commonList animated:YES];
         
     }

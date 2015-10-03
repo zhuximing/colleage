@@ -1338,6 +1338,64 @@
             </objects>
             <point key="canvasLocation" x="2444" y="1089"/>
         </scene>
+        <!--Publish Dinner-->
+        <scene sceneID="rLL-bp-6Vd">
+            <objects>
+                <viewController storyboardIdentifier="PublishDinner" id="7ur-aW-paj" customClass="PublishDinner" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Onc-up-r2i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xhl-bt-dA7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LVs-m6-9vj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入标题" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zgT-ji-26M">
+                                <rect key="frame" x="16" y="0.0" width="568" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="39B-L6-zWa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="about_mid_bg.9.png" translatesAutoresizingMaskIntoConstraints="NO" id="8FN-oU-wXj">
+                                <rect key="frame" x="16" y="62" width="568" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Wnx-PN-gfG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="register_bottom_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="OT8-kn-hEO">
+                                <rect key="frame" x="543" y="78" width="23" height="21"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsK-NG-xQ3">
+                                <rect key="frame" x="30" y="78" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OT8-kn-hEO" firstAttribute="centerY" secondItem="8FN-oU-wXj" secondAttribute="centerY" id="0az-Vk-qnR"/>
+                            <constraint firstAttribute="trailing" secondItem="OT8-kn-hEO" secondAttribute="trailing" constant="14" id="2rV-H0-prV"/>
+                            <constraint firstItem="8FN-oU-wXj" firstAttribute="top" secondItem="zgT-ji-26M" secondAttribute="bottom" constant="15" id="Ev8-2z-Dy1"/>
+                            <constraint firstItem="OT8-kn-hEO" firstAttribute="top" secondItem="8FN-oU-wXj" secondAttribute="bottom" constant="-37" id="XOF-H5-9dR"/>
+                            <constraint firstItem="8FN-oU-wXj" firstAttribute="centerY" secondItem="zsK-NG-xQ3" secondAttribute="centerY" id="g2S-dv-6Kr"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XOF-H5-9dR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="address" destination="8FN-oU-wXj" id="NTG-Ln-dhT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9N-oI-D53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3067" y="1089"/>
+        </scene>
         <!--Hourse View Controller-->
         <scene sceneID="UPF-93-78X">
             <objects>
@@ -1907,9 +1965,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about_mid_bg.9.png" width="432" height="47"/>
         <image name="log.png" width="130" height="27"/>
         <image name="login_btn.png" width="294" height="44"/>
         <image name="logout_btn.png" width="294" height="44"/>
+        <image name="register_bottom_arrow.png" width="17" height="29"/>
         <image name="setting_head.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>

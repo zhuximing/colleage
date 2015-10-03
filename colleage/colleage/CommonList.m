@@ -14,6 +14,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CommonUtil.h"
 #import "LostDetail.h"
+#import "PublishDinner.h"
 @interface CommonList (){
     NSDictionary *parames;//请求参数
     NSString *url;        //请求地址
@@ -81,9 +82,29 @@
     //self.tableView.showsPullToRefresh = NO;
     //进入该视图控制器自动下拉刷新
     [self.yueList triggerPullToRefresh];
-
+    
+    
+    
+    //发布
+    UIButton *rightBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
+    rightBtn.frame                         = CGRectMake(0, 0, 50, 44);
+    rightBtn.showsTouchWhenHighlighted     = YES;
+    [rightBtn addTarget:self action:@selector(publish) forControlEvents:UIControlEventTouchUpInside];
+    //[rightBtn setImage:[UIImage imageNamed:@"common_back"] forState:UIControlStateNormal];
+    [rightBtn setTitle:@"发布" forState:UIControlStateNormal];
+    UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 
 }
+
+//发布
+-(void)publish{
+    PublishDinner *yue=[self getViewController:@"PublishDinner"];
+    [self.navigationController pushViewController:yue animated:YES];
+
+}
+
+
 //获取未来一周的时间，并生成数组
 -(void) getWeekDate{
     
@@ -512,7 +533,7 @@
         
         
         id json=[completedOperation responseJSON];
-        NSLog(@"%@",json);
+        //NSLog(@"%@",json);
         //加载到的数据
         NSArray *array=(NSArray*)json;
         //处理数据
