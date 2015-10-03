@@ -8,8 +8,8 @@
 
 #import "CommonList.h"
 #import "DOPDropDownMenu.h"
-#import "UIScrollView+SVPullToRefresh.h"
-#import "UIScrollView+SVInfiniteScrolling.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
 #import "CommonCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CommonUtil.h"
@@ -64,26 +64,6 @@
     menu.dataSource = self;
     [self.view addSubview:menu];
     
-    //弱引用
-    __weak CommonList *weakSelf = self;
-    
-    // 设置下拉刷新
-    [self.yueList addPullToRefreshWithActionHandler:^{
-        [weakSelf refresh];
-    }];
-    
-    // 设置上拉加载
-    [self.yueList addInfiniteScrollingWithActionHandler:^{
-        [weakSelf load];
-    }];
-    
-    //刚开始隐藏上拉加载，因为不知道能加载到多少条
-    self.yueList.showsInfiniteScrolling = NO;
-    //self.tableView.showsPullToRefresh = NO;
-    //进入该视图控制器自动下拉刷新
-    [self.yueList triggerPullToRefresh];
-    
-    
     
     //发布
     UIButton *rightBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -94,6 +74,9 @@
     [rightBtn setTitle:@"发布" forState:UIControlStateNormal];
     UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    
+    //设置下拉刷新喝上啦加载
+    [self setUpTableView];
 
 }
 
@@ -552,24 +535,26 @@
         //选择性开启上拉加载
         if (array.count<pageSize) {
             //如果加载的数据小于于pageSize条 不让他可以上拉加载
-            self.yueList.showsInfiniteScrolling=NO;
+            self.yueList.footer.hidden=YES;
         }else{
             //如果加载的数据大于pageSize条 让他可以上拉加载
-            self.yueList.showsInfiniteScrolling=YES;
+             self.yueList.footer.hidden=NO;
         }
         //数据刷新到表格里面去
         [self.yueList reloadData];
         
         //隐藏动画
         [self hide];
-        [self.yueList.pullToRefreshView stopAnimating ];
-        [self.yueList.infiniteScrollingView stopAnimating] ;
+        //隐藏动画
+        [self.yueList.header endRefreshing];
+        [self.yueList.footer endRefreshing];
     } onError:^(NSError *error) {
         [self showToast:@"网络异常"];
         //隐藏动画
         [self hide];
-        [self.yueList.pullToRefreshView stopAnimating ];
-        [self.yueList.infiniteScrollingView stopAnimating];
+        //隐藏动画
+        [self.yueList.header endRefreshing];
+        [self.yueList.footer endRefreshing];
     }];
     
     [engine enqueueOperation:op];
@@ -579,6 +564,45 @@
     
 }
 
+-(void)setUpTableView{
+    //添加下拉的动画图片
+    //设置下拉刷新回调
+    [self.yueList addGifHeaderWithRefreshingTarget:self refreshingAction:@selector(refresh)];
+    
+    //设置普通状态的动画图片
+    NSMutableArray *idleImages = [NSMutableArray array];
+    for (NSUInteger i = 1; i<=60; ++i) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_anim__000%zd",i]];
+        [idleImages addObject:image];
+    }
+    [self.yueList.gifHeader setImages:idleImages forState:MJRefreshHeaderStateIdle];
+    
+    //设置即将刷新状态的动画图片
+    NSMutableArray *refreshingImages = [NSMutableArray array];
+    for (NSInteger i = 1; i<=3; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"dropdown_loading_0%zd",i]];
+        [refreshingImages addObject:image];
+    }
+    [self.yueList.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStatePulling];
+    
+    //设置正在刷新是的动画图片
+    [self.yueList.gifHeader setImages:refreshingImages forState:MJRefreshHeaderStateRefreshing];
+    
+    //马上进入刷新状态
+    [self.yueList.gifHeader beginRefreshing];
+    
+    
+    //上拉刷新
+    [self.yueList addGifFooterWithRefreshingTarget:self refreshingAction:@selector(load)];
+    
+    //隐藏状态文字
+    //    self.tableView.footer.stateHidden = YES;
+    //设置正在刷新的动画
+    self.yueList.gifFooter.refreshingImages = refreshingImages;
+    
+    self.yueList.footer.hidden=YES;
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

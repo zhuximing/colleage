@@ -110,7 +110,7 @@
 
 
 //datePicker回调
-//回调，字符串可自行进行截取
+
 -(void)CDPDatePickerDidConfirm:(NSString *)confirmString{
     //[self showToast:confirmString];
     
