@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "NextViewController.h"
 
-@interface MarketViewController : NextViewController
+@interface MarketViewController : NextViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property (nonatomic,strong) NSMutableArray *arr;
 
 @end
