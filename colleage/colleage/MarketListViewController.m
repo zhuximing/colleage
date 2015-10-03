@@ -13,6 +13,7 @@
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "NSDate+TimeAgo.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "LostDetail.h"
 @interface MarketListViewController ()
 
 @end
@@ -168,15 +169,32 @@
     
     NSString *time=[[marketArr objectAtIndex:indexPath.row] objectForKey:@"sale_publish_time"];
     cell.time.text=[CommonUtil getTimeAgo:time];
+    
     NSString *s=[[marketArr objectAtIndex:indexPath.row] objectForKey:@"user_school"];
     cell.school.text=[NSString stringWithFormat:@"学校：%@",s];
     
     NSString *p=[[marketArr objectAtIndex:indexPath.row] objectForKey:@"sale_sale_price"];
     cell.price.text=[NSString stringWithFormat:@"价格：¥%@",p];
+    
     NSString *imgPath=[[marketArr objectAtIndex:indexPath.row] objectForKey:@"sale_brief_pic"];
+    
+   
     
     [cell.img sd_setImageWithURL:[NSURL URLWithString:imgPath] placeholderImage:[UIImage imageNamed:@"setting_head"]];
     return cell;
+}
+
+//详情页面
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //获取故事版
+    UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //获取登陆后的个人中心的视图控制器
+    LostDetail *lost=[story instantiateViewControllerWithIdentifier:@"LostDetail"];
+    
+    lost.lost_id=[marketArr[indexPath.row] objectForKey:@"sale_id"];
+    lost.user_phone=[marketArr[indexPath.row] objectForKey:@"user_phone"];
+    lost.HttpPath=@"sale/sale_detail";
+    [self.navigationController pushViewController:lost animated:YES];
 }
 
 

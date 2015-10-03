@@ -68,18 +68,29 @@
     
     if(320 == width_int){
         
-        return CGSizeMake(60, 80);
+        return CGSizeMake(76, 90);
     }else{
         
-        return CGSizeMake(70, 90);
+        return CGSizeMake(76, 100);
     }
 }
 
 //定义每个UICollectionView 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(5, 15, 15, 15);
     
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    int width_int = (int) width;
+    
+    if(320 == width_int){
+        
+        return UIEdgeInsetsMake(5, 8, 10, 8);
+    }else{
+        
+        return UIEdgeInsetsMake(10, 15, 20, 15);
+    }
+ 
 }
 
 //选择了某个cell 跳转对应页面
