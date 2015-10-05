@@ -182,6 +182,13 @@
 		18DCFA141B989C7B00D8D12A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DCFA131B989C7B00D8D12A /* ImageIO.framework */; };
 		18DCFA171B989D3600D8D12A /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 18DCFA161B989D3600D8D12A /* Pods.debug.xcconfig */; };
 		18DCFA191B989D3E00D8D12A /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 18DCFA181B989D3E00D8D12A /* Pods.release.xcconfig */; };
+		18DD9F071BC0D05A007F9544 /* SelectMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F061BC0D05A007F9544 /* SelectMovie.m */; };
+		18DD9F0B1BC0DA27007F9544 /* HotMovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F0A1BC0DA27007F9544 /* HotMovieCell.m */; };
+		18DD9F0F1BC0F61E007F9544 /* PublishSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F0E1BC0F61E007F9544 /* PublishSport.m */; };
+		18DD9F121BC104CD007F9544 /* SelectSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F111BC104CD007F9544 /* SelectSport.m */; };
+		18DD9F151BC11D69007F9544 /* GameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F141BC11D69007F9544 /* GameCell.m */; };
+		18DD9F191BC13B29007F9544 /* PublishTour.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F181BC13B29007F9544 /* PublishTour.m */; };
+		18DD9F201BC166C2007F9544 /* PublishTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD9F1F1BC166C2007F9544 /* PublishTheme.m */; };
 		18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */; };
 		18DDFB3A1B9ECBC7000995B1 /* NextTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */; };
 		18DEEEBE1BB000630093C7F8 /* YueBaHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DEEEBD1BB000630093C7F8 /* YueBaHeader.m */; };
@@ -205,6 +212,7 @@
 		18E12CFE1BA5946300D1C509 /* INeedCarPublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CFC1BA5946300D1C509 /* INeedCarPublish.m */; };
 		18E12CFF1BA5946300D1C509 /* INeedCarPublish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */; };
 		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
+		18E2FB121BC0B2AA007157F2 /* PublishMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2FB111BC0B2AA007157F2 /* PublishMovie.m */; };
 		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -509,6 +517,20 @@
 		18DCFA131B989C7B00D8D12A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		18DCFA161B989D3600D8D12A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
 		18DCFA181B989D3E00D8D12A /* Pods.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		18DD9F051BC0D05A007F9544 /* SelectMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectMovie.h; sourceTree = "<group>"; };
+		18DD9F061BC0D05A007F9544 /* SelectMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectMovie.m; sourceTree = "<group>"; };
+		18DD9F091BC0DA27007F9544 /* HotMovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotMovieCell.h; sourceTree = "<group>"; };
+		18DD9F0A1BC0DA27007F9544 /* HotMovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotMovieCell.m; sourceTree = "<group>"; };
+		18DD9F0D1BC0F61E007F9544 /* PublishSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishSport.h; sourceTree = "<group>"; };
+		18DD9F0E1BC0F61E007F9544 /* PublishSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishSport.m; sourceTree = "<group>"; };
+		18DD9F101BC104CD007F9544 /* SelectSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSport.h; sourceTree = "<group>"; };
+		18DD9F111BC104CD007F9544 /* SelectSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSport.m; sourceTree = "<group>"; };
+		18DD9F131BC11D69007F9544 /* GameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCell.h; sourceTree = "<group>"; };
+		18DD9F141BC11D69007F9544 /* GameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCell.m; sourceTree = "<group>"; };
+		18DD9F171BC13B29007F9544 /* PublishTour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishTour.h; sourceTree = "<group>"; };
+		18DD9F181BC13B29007F9544 /* PublishTour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishTour.m; sourceTree = "<group>"; };
+		18DD9F1E1BC166C2007F9544 /* PublishTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishTheme.h; sourceTree = "<group>"; };
+		18DD9F1F1BC166C2007F9544 /* PublishTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishTheme.m; sourceTree = "<group>"; };
 		18DDFB351B9ECB4B000995B1 /* LostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostTableViewController.h; sourceTree = "<group>"; };
 		18DDFB361B9ECB4B000995B1 /* LostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostTableViewController.m; sourceTree = "<group>"; };
 		18DDFB381B9ECBC7000995B1 /* NextTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextTableViewController.h; sourceTree = "<group>"; };
@@ -549,6 +571,8 @@
 		18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INeedCarPublish.xib; sourceTree = "<group>"; };
 		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
 		18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterLogin.m; sourceTree = "<group>"; };
+		18E2FB101BC0B2AA007157F2 /* PublishMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishMovie.h; sourceTree = "<group>"; };
+		18E2FB111BC0B2AA007157F2 /* PublishMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishMovie.m; sourceTree = "<group>"; };
 		18E4B7E21BA078C00059EF75 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -833,6 +857,10 @@
 		18D5C5BD1B9321890074EEEC /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				18DD9F1D1BC16697007F9544 /* 主题约会 */,
+				18DD9F161BC13AFB007F9544 /* 约会旅游 */,
+				18DD9F0C1BC0F5E3007F9544 /* 约体育项目 */,
+				18DD9F081BC0D9B7007F9544 /* 约看电影 */,
 				18DC5E1D1BB3A11F00FBF69E /* 约共同的界面 */,
 				18DC31141B9946A800184151 /* NextViewController.h */,
 				18DC31151B9946A800184151 /* NextViewController.m */,
@@ -1273,6 +1301,50 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		18DD9F081BC0D9B7007F9544 /* 约看电影 */ = {
+			isa = PBXGroup;
+			children = (
+				18E2FB101BC0B2AA007157F2 /* PublishMovie.h */,
+				18E2FB111BC0B2AA007157F2 /* PublishMovie.m */,
+				18DD9F051BC0D05A007F9544 /* SelectMovie.h */,
+				18DD9F061BC0D05A007F9544 /* SelectMovie.m */,
+				18DD9F091BC0DA27007F9544 /* HotMovieCell.h */,
+				18DD9F0A1BC0DA27007F9544 /* HotMovieCell.m */,
+			);
+			name = "约看电影";
+			sourceTree = "<group>";
+		};
+		18DD9F0C1BC0F5E3007F9544 /* 约体育项目 */ = {
+			isa = PBXGroup;
+			children = (
+				18DD9F0D1BC0F61E007F9544 /* PublishSport.h */,
+				18DD9F0E1BC0F61E007F9544 /* PublishSport.m */,
+				18DD9F101BC104CD007F9544 /* SelectSport.h */,
+				18DD9F111BC104CD007F9544 /* SelectSport.m */,
+				18DD9F131BC11D69007F9544 /* GameCell.h */,
+				18DD9F141BC11D69007F9544 /* GameCell.m */,
+			);
+			name = "约体育项目";
+			sourceTree = "<group>";
+		};
+		18DD9F161BC13AFB007F9544 /* 约会旅游 */ = {
+			isa = PBXGroup;
+			children = (
+				18DD9F171BC13B29007F9544 /* PublishTour.h */,
+				18DD9F181BC13B29007F9544 /* PublishTour.m */,
+			);
+			name = "约会旅游";
+			sourceTree = "<group>";
+		};
+		18DD9F1D1BC16697007F9544 /* 主题约会 */ = {
+			isa = PBXGroup;
+			children = (
+				18DD9F1E1BC166C2007F9544 /* PublishTheme.h */,
+				18DD9F1F1BC166C2007F9544 /* PublishTheme.m */,
+			);
+			name = "主题约会";
+			sourceTree = "<group>";
+		};
 		18DEEEBB1BAFFFFE0093C7F8 /* 约吧 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,6 +1615,7 @@
 				181A7F981BA8128D00878635 /* CDPDatePicker.m in Sources */,
 				18DEEEBE1BB000630093C7F8 /* YueBaHeader.m in Sources */,
 				186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */,
+				18DD9F151BC11D69007F9544 /* GameCell.m in Sources */,
 				185635271BA4964A00FF77C3 /* MLSelectPhotoPickerDatas.m in Sources */,
 				185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */,
 				18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */,
@@ -1551,6 +1624,7 @@
 				18DC15771BBED3F4007D5FF8 /* MJRefreshHeader.m in Sources */,
 				18DC157A1BBED3F4007D5FF8 /* UIScrollView+MJExtension.m in Sources */,
 				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
+				18E2FB121BC0B2AA007157F2 /* PublishMovie.m in Sources */,
 				1856352E1BA4964A00FF77C3 /* MLPhotoPickerImageView.m in Sources */,
 				18D6D4D81BA50CCE0066CC25 /* PhotoCollectionViewCell.m in Sources */,
 				18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */,
@@ -1565,6 +1639,7 @@
 				185635351BA4964A00FF77C3 /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */,
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18D662A21B9DDEAC000AA1E1 /* NSDictionary+RequestEncoding.m in Sources */,
+				18DD9F201BC166C2007F9544 /* PublishTheme.m in Sources */,
 				18DC157C1BBED3F4007D5FF8 /* UIView+MJExtension.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
 				18DC31161B9946A800184151 /* NextViewController.m in Sources */,
@@ -1586,11 +1661,13 @@
 				185635341BA4964A00FF77C3 /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
 				18DC15521BBED369007D5FF8 /* MJConst.m in Sources */,
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
+				18DD9F0F1BC0F61E007F9544 /* PublishSport.m in Sources */,
 				18D983DB1BB0381100003800 /* YueCell.m in Sources */,
 				18E12CEB1BA586DC00D1C509 /* PublishCar.m in Sources */,
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
 				185635251BA4964A00FF77C3 /* MLSelectPhotoAssets.m in Sources */,
 				18D390A21BB6D57200FC99B2 /* PublishDinner.m in Sources */,
+				18DD9F071BC0D05A007F9544 /* SelectMovie.m in Sources */,
 				18DC31541B99D30400184151 /* ContactTableViewCell.m in Sources */,
 				187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */,
 				18E12CE71BA5860F00D1C509 /* XBTagTitleCell.m in Sources */,
@@ -1607,17 +1684,20 @@
 				18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */,
 				18DB9EC51B969D14003D2EC2 /* UserService.m in Sources */,
 				185635261BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
+				18DD9F191BC13B29007F9544 /* PublishTour.m in Sources */,
 				1856352C1BA4964A00FF77C3 /* MLSelectPhotoPickerGroupViewController.m in Sources */,
 				18DC83181B9FF3760072B35C /* LostDetail.m in Sources */,
 				18B4E3FE1BA2A74B00B6D5BB /* PublishLost.m in Sources */,
 				18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				185635301BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
+				18DD9F121BC104CD007F9544 /* SelectSport.m in Sources */,
 				1876908F1B93E01C005791E0 /* RootViewController.m in Sources */,
 				18E12CF91BA5912C00D1C509 /* IHasCarPublish.m in Sources */,
 				18DC31131B99461100184151 /* ChatViewController.m in Sources */,
 				18D5C5E81B9329FC0074EEEC /* FriendViewController.m in Sources */,
 				1856352D1BA4964A00FF77C3 /* MLSelectPhotoPickerViewController.m in Sources */,
+				18DD9F0B1BC0DA27007F9544 /* HotMovieCell.m in Sources */,
 				18E12CCB1BA5156E00D1C509 /* CarList.m in Sources */,
 				18D662A41B9DDEAC000AA1E1 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */,
