@@ -57,6 +57,7 @@
 		187117B61BA2C4200061B9D5 /* HourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B51BA2C4200061B9D5 /* HourseTableViewCell.m */; };
 		187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B81BA2D8360061B9D5 /* PublishHourseViewController.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
+		18843A6F1BC5004600E5F306 /* PublishMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18843A6E1BC5004600E5F306 /* PublishMarketViewController.m */; };
 		189ED9C11BBBC60B002790B0 /* MarketCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9BE1BBBC60B002790B0 /* MarketCollectionViewCell.m */; };
 		189ED9C21BBBC60B002790B0 /* MarketListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9C01BBBC60B002790B0 /* MarketListTableViewCell.m */; };
 		189ED9C81BBBC63F002790B0 /* MarketListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9C41BBBC63F002790B0 /* MarketListViewController.m */; };
@@ -300,6 +301,8 @@
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
+		18843A6D1BC5004600E5F306 /* PublishMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishMarketViewController.h; sourceTree = "<group>"; };
+		18843A6E1BC5004600E5F306 /* PublishMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishMarketViewController.m; sourceTree = "<group>"; };
 		189ED9BD1BBBC60B002790B0 /* MarketCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCollectionViewCell.h; sourceTree = "<group>"; };
 		189ED9BE1BBBC60B002790B0 /* MarketCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCollectionViewCell.m; sourceTree = "<group>"; };
 		189ED9BF1BBBC60B002790B0 /* MarketListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketListTableViewCell.h; sourceTree = "<group>"; };
@@ -1056,6 +1059,8 @@
 				189ED9C51BBBC63F002790B0 /* MarketPlist.plist */,
 				189ED9C61BBBC63F002790B0 /* MarketViewController.h */,
 				189ED9C71BBBC63F002790B0 /* MarketViewController.m */,
+				18843A6D1BC5004600E5F306 /* PublishMarketViewController.h */,
+				18843A6E1BC5004600E5F306 /* PublishMarketViewController.m */,
 			);
 			name = "二手市场";
 			sourceTree = "<group>";
@@ -1638,6 +1643,7 @@
 				18D5C59D1B930E6D0074EEEC /* ViewController.m in Sources */,
 				18D662A21B9DDEAC000AA1E1 /* NSDictionary+RequestEncoding.m in Sources */,
 				18DC157C1BBED3F4007D5FF8 /* UIView+MJExtension.m in Sources */,
+				18843A6F1BC5004600E5F306 /* PublishMarketViewController.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
 				18DC31161B9946A800184151 /* NextViewController.m in Sources */,
 				18D3909C1BB6914800FC99B2 /* YueGameCell.m in Sources */,

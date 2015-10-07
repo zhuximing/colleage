@@ -10,6 +10,7 @@
 #import "CommonUtil.h"
 #import "MarketCollectionViewCell.h"
 #import "MarketListViewController.h"
+#import "PublishMarketViewController.h"
 
 @interface MarketViewController ()
 @end
@@ -23,7 +24,7 @@
     UIButton *rightBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame                         = CGRectMake(0, 0, 50, 44);
     rightBtn.showsTouchWhenHighlighted     = YES;
-    [rightBtn addTarget:self action:@selector(addHourse) forControlEvents:UIControlEventTouchUpInside];
+    [rightBtn addTarget:self action:@selector(addMarket) forControlEvents:UIControlEventTouchUpInside];
     //[rightBtn setImage:[UIImage imageNamed:@"common_back"] forState:UIControlStateNormal];
     [rightBtn setTitle:@"发布" forState:UIControlStateNormal];
     UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
@@ -39,6 +40,12 @@
     return _arr;
 }
 
+#pragma  mark -addMarket二手市场发布
+-(void) addMarket{
+    PublishMarketViewController *publish =[self getViewController:@"PublishMarket"];
+    [self.navigationController pushViewController:publish animated:YES];
+
+}
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
