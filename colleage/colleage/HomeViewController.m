@@ -181,7 +181,7 @@
     }
     //二手市场
     if (cell.tag ==5) {
-        MarketViewController *marketVC=[[MarketViewController alloc] init];
+        MarketViewController *marketVC=[story instantiateViewControllerWithIdentifier:@"MarketViewController"];
         [self.navigationController pushViewController:marketVC animated:YES];
     }
     

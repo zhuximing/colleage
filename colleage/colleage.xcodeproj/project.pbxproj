@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		181A7F981BA8128D00878635 /* CDPDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 181A7F971BA8128D00878635 /* CDPDatePicker.m */; };
-		18544CE71B942F4100043D73 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 18544CE61B942F4100043D73 /* CommonUtil.m */; };
 		185634B31BA44AA800FF77C3 /* HelpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185634B21BA44AA800FF77C3 /* HelpCell.m */; };
 		185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 185634F81BA4964A00FF77C3 /* UIImage+MLTint.m */; };
 		185635241BA4964A00FF77C3 /* UIView+MLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 185634FA1BA4964A00FF77C3 /* UIView+MLExtension.m */; };
@@ -30,11 +29,41 @@
 		185635341BA4964A00FF77C3 /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856351F1BA4964A00FF77C3 /* MLSelectPhotoPickerFooterCollectionReusableView.m */; };
 		185635351BA4964A00FF77C3 /* MLSelectPhotoPickerGroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185635211BA4964A00FF77C3 /* MLSelectPhotoPickerGroupTableViewCell.m */; };
 		185635361BA4964A00FF77C3 /* MLSelectPhoto.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185635221BA4964A00FF77C3 /* MLSelectPhoto.bundle */; };
+		18566A2B1BBFBC2500E84D9E /* MJRefresh.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC155B1BBED3F4007D5FF8 /* MJRefresh.h */; };
+		18566A2C1BBFBC2500E84D9E /* MJRefreshComponent.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC155C1BBED3F4007D5FF8 /* MJRefreshComponent.h */; };
+		18566A2D1BBFBC2500E84D9E /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC155D1BBED3F4007D5FF8 /* MJRefreshComponent.m */; };
+		18566A2E1BBFBC2500E84D9E /* MJRefreshConst.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC155E1BBED3F4007D5FF8 /* MJRefreshConst.h */; };
+		18566A2F1BBFBC2500E84D9E /* MJRefreshFooter.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15601BBED3F4007D5FF8 /* MJRefreshFooter.h */; };
+		18566A301BBFBC2500E84D9E /* MJRefreshGifFooter.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15621BBED3F4007D5FF8 /* MJRefreshGifFooter.h */; };
+		18566A311BBFBC2500E84D9E /* MJRefreshGifHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15641BBED3F4007D5FF8 /* MJRefreshGifHeader.h */; };
+		18566A321BBFBC2500E84D9E /* MJRefreshHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15661BBED3F4007D5FF8 /* MJRefreshHeader.h */; };
+		18566A331BBFBC2500E84D9E /* MJRefreshLegendFooter.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15681BBED3F4007D5FF8 /* MJRefreshLegendFooter.h */; };
+		18566A341BBFBC2500E84D9E /* MJRefreshLegendFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15691BBED3F4007D5FF8 /* MJRefreshLegendFooter.m */; };
+		18566A351BBFBC2500E84D9E /* MJRefreshLegendHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC156A1BBED3F4007D5FF8 /* MJRefreshLegendHeader.h */; };
+		18566A361BBFBC2500E84D9E /* UIScrollView+MJExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC156C1BBED3F4007D5FF8 /* UIScrollView+MJExtension.h */; };
+		18566A371BBFBC2500E84D9E /* UIScrollView+MJRefresh.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC156E1BBED3F4007D5FF8 /* UIScrollView+MJRefresh.h */; };
+		18566A381BBFBC2500E84D9E /* UIView+MJExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15701BBED3F4007D5FF8 /* UIView+MJExtension.h */; };
+		18566A391BBFBC3A00E84D9E /* MJConst.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15411BBED369007D5FF8 /* MJConst.h */; };
+		18566A3A1BBFBC3A00E84D9E /* MJExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15431BBED369007D5FF8 /* MJExtension.h */; };
+		18566A3B1BBFBC3A00E84D9E /* MJFoundation.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15441BBED369007D5FF8 /* MJFoundation.h */; };
+		18566A3C1BBFBC3A00E84D9E /* MJProperty.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15461BBED369007D5FF8 /* MJProperty.h */; };
+		18566A3D1BBFBC3A00E84D9E /* MJType.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15481BBED369007D5FF8 /* MJType.h */; };
+		18566A3E1BBFBC3A00E84D9E /* NSObject+MJCoding.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC154A1BBED369007D5FF8 /* NSObject+MJCoding.h */; };
+		18566A3F1BBFBC3A00E84D9E /* NSObject+MJKeyValue.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC154C1BBED369007D5FF8 /* NSObject+MJKeyValue.h */; };
+		18566A401BBFBC3A00E84D9E /* NSObject+MJProperty.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC154E1BBED369007D5FF8 /* NSObject+MJProperty.h */; };
+		18566A411BBFBC3A00E84D9E /* NSString+MJExtension.h in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15501BBED369007D5FF8 /* NSString+MJExtension.h */; };
 		186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5AC1BA1062700891BAF /* JobTableViewController.m */; };
 		186CB5B11BA10A9000891BAF /* JobTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186CB5B01BA10A9000891BAF /* JobTableViewCell.m */; };
 		187117B61BA2C4200061B9D5 /* HourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B51BA2C4200061B9D5 /* HourseTableViewCell.m */; };
 		187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187117B81BA2D8360061B9D5 /* PublishHourseViewController.m */; };
 		1876908F1B93E01C005791E0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876908E1B93E01C005791E0 /* RootViewController.m */; };
+		18843A6F1BC5004600E5F306 /* PublishMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18843A6E1BC5004600E5F306 /* PublishMarketViewController.m */; };
+		189ED9C11BBBC60B002790B0 /* MarketCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9BE1BBBC60B002790B0 /* MarketCollectionViewCell.m */; };
+		189ED9C21BBBC60B002790B0 /* MarketListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9C01BBBC60B002790B0 /* MarketListTableViewCell.m */; };
+		189ED9C81BBBC63F002790B0 /* MarketListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9C41BBBC63F002790B0 /* MarketListViewController.m */; };
+		189ED9C91BBBC63F002790B0 /* MarketPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 189ED9C51BBBC63F002790B0 /* MarketPlist.plist */; };
+		189ED9CA1BBBC63F002790B0 /* MarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9C71BBBC63F002790B0 /* MarketViewController.m */; };
+		189ED9CD1BBBC978002790B0 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 189ED9CC1BBBC978002790B0 /* CommonUtil.m */; };
 		18B4E3EB1BA284DB00B6D5BB /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E41BA284DB00B6D5BB /* SDCollectionViewCell.m */; };
 		18B4E3EC1BA284DB00B6D5BB /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E61BA284DB00B6D5BB /* SDCycleScrollView.m */; };
 		18B4E3ED1BA284DB00B6D5BB /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3E81BA284DB00B6D5BB /* UIView+SDExtension.m */; };
@@ -46,7 +75,6 @@
 		18B4E3FE1BA2A74B00B6D5BB /* PublishLost.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4E3FD1BA2A74B00B6D5BB /* PublishLost.m */; };
 		18B69E281B9FE3A000E8E73C /* HourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E271B9FE3A000E8E73C /* HourseViewController.m */; };
 		18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */; };
-		18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E301B9FE3BD00E8E73C /* MarketViewController.m */; };
 		18B69E361B9FE3F700E8E73C /* CustomCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */; };
 		18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E351B9FE3F700E8E73C /* HomeCollectionViewCell.m */; };
 		18D339E61BB2752800C0A483 /* YueHeaderCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D339E41BB2752800C0A483 /* YueHeaderCC.m */; };
@@ -130,13 +158,11 @@
 		18DC15571BBED369007D5FF8 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC154D1BBED369007D5FF8 /* NSObject+MJKeyValue.m */; };
 		18DC15581BBED369007D5FF8 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC154F1BBED369007D5FF8 /* NSObject+MJProperty.m */; };
 		18DC15591BBED369007D5FF8 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15511BBED369007D5FF8 /* NSString+MJExtension.m */; };
-		18DC15721BBED3F4007D5FF8 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC155D1BBED3F4007D5FF8 /* MJRefreshComponent.m */; };
 		18DC15731BBED3F4007D5FF8 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC155F1BBED3F4007D5FF8 /* MJRefreshConst.m */; };
 		18DC15741BBED3F4007D5FF8 /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15611BBED3F4007D5FF8 /* MJRefreshFooter.m */; };
 		18DC15751BBED3F4007D5FF8 /* MJRefreshGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15631BBED3F4007D5FF8 /* MJRefreshGifFooter.m */; };
 		18DC15761BBED3F4007D5FF8 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15651BBED3F4007D5FF8 /* MJRefreshGifHeader.m */; };
 		18DC15771BBED3F4007D5FF8 /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15671BBED3F4007D5FF8 /* MJRefreshHeader.m */; };
-		18DC15781BBED3F4007D5FF8 /* MJRefreshLegendFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC15691BBED3F4007D5FF8 /* MJRefreshLegendFooter.m */; };
 		18DC15791BBED3F4007D5FF8 /* MJRefreshLegendHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC156B1BBED3F4007D5FF8 /* MJRefreshLegendHeader.m */; };
 		18DC157A1BBED3F4007D5FF8 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC156D1BBED3F4007D5FF8 /* UIScrollView+MJExtension.m */; };
 		18DC157B1BBED3F4007D5FF8 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DC156F1BBED3F4007D5FF8 /* UIScrollView+MJRefresh.m */; };
@@ -229,8 +255,6 @@
 /* Begin PBXFileReference section */
 		181A7F961BA8128D00878635 /* CDPDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPDatePicker.h; sourceTree = "<group>"; };
 		181A7F971BA8128D00878635 /* CDPDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPDatePicker.m; sourceTree = "<group>"; };
-		18544CE51B942F4100043D73 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
-		18544CE61B942F4100043D73 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
 		185634B11BA44AA800FF77C3 /* HelpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpCell.h; sourceTree = "<group>"; };
 		185634B21BA44AA800FF77C3 /* HelpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpCell.m; sourceTree = "<group>"; };
 		185634F71BA4964A00FF77C3 /* UIImage+MLTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MLTint.h"; sourceTree = "<group>"; };
@@ -285,6 +309,19 @@
 		1876908D1B93E01C005791E0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		1876908E1B93E01C005791E0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		187690931B93E876005791E0 /* colleage-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "colleage-PrefixHeader.pch"; sourceTree = "<group>"; };
+		18843A6D1BC5004600E5F306 /* PublishMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishMarketViewController.h; sourceTree = "<group>"; };
+		18843A6E1BC5004600E5F306 /* PublishMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishMarketViewController.m; sourceTree = "<group>"; };
+		189ED9BD1BBBC60B002790B0 /* MarketCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketCollectionViewCell.h; sourceTree = "<group>"; };
+		189ED9BE1BBBC60B002790B0 /* MarketCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketCollectionViewCell.m; sourceTree = "<group>"; };
+		189ED9BF1BBBC60B002790B0 /* MarketListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketListTableViewCell.h; sourceTree = "<group>"; };
+		189ED9C01BBBC60B002790B0 /* MarketListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketListTableViewCell.m; sourceTree = "<group>"; };
+		189ED9C31BBBC63F002790B0 /* MarketListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketListViewController.h; sourceTree = "<group>"; };
+		189ED9C41BBBC63F002790B0 /* MarketListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketListViewController.m; sourceTree = "<group>"; };
+		189ED9C51BBBC63F002790B0 /* MarketPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MarketPlist.plist; sourceTree = "<group>"; };
+		189ED9C61BBBC63F002790B0 /* MarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketViewController.h; sourceTree = "<group>"; };
+		189ED9C71BBBC63F002790B0 /* MarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketViewController.m; sourceTree = "<group>"; };
+		189ED9CB1BBBC978002790B0 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		189ED9CC1BBBC978002790B0 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
 		18B4E3E31BA284DB00B6D5BB /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
 		18B4E3E41BA284DB00B6D5BB /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
 		18B4E3E51BA284DB00B6D5BB /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
@@ -307,8 +344,6 @@
 		18B69E271B9FE3A000E8E73C /* HourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourseViewController.m; sourceTree = "<group>"; };
 		18B69E291B9FE3AA00E8E73C /* CarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarViewController.h; sourceTree = "<group>"; };
 		18B69E2A1B9FE3AA00E8E73C /* CarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarViewController.m; sourceTree = "<group>"; };
-		18B69E2F1B9FE3BD00E8E73C /* MarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketViewController.h; sourceTree = "<group>"; };
-		18B69E301B9FE3BD00E8E73C /* MarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketViewController.m; sourceTree = "<group>"; };
 		18B69E321B9FE3F700E8E73C /* CustomCellBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellBackground.h; sourceTree = "<group>"; };
 		18B69E331B9FE3F700E8E73C /* CustomCellBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellBackground.m; sourceTree = "<group>"; };
 		18B69E341B9FE3F700E8E73C /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
@@ -739,12 +774,23 @@
 				18DC311A1B999A8200184151 /* NSDate+timeage */,
 				18DB9EC31B969D14003D2EC2 /* UserService.h */,
 				18DB9EC41B969D14003D2EC2 /* UserService.m */,
+				189ED9CB1BBBC978002790B0 /* CommonUtil.h */,
+				189ED9CC1BBBC978002790B0 /* CommonUtil.m */,
 				18DB9EBD1B968EA3003D2EC2 /* MBProgressHUD.h */,
 				18DB9EBE1B968EA3003D2EC2 /* MBProgressHUD.m */,
-				18544CE51B942F4100043D73 /* CommonUtil.h */,
-				18544CE61B942F4100043D73 /* CommonUtil.m */,
 			);
 			name = util;
+			sourceTree = "<group>";
+		};
+		189ED9BC1BBBC5D8002790B0 /* 二手市场 */ = {
+			isa = PBXGroup;
+			children = (
+				189ED9BD1BBBC60B002790B0 /* MarketCollectionViewCell.h */,
+				189ED9BE1BBBC60B002790B0 /* MarketCollectionViewCell.m */,
+				189ED9BF1BBBC60B002790B0 /* MarketListTableViewCell.h */,
+				189ED9C01BBBC60B002790B0 /* MarketListTableViewCell.m */,
+			);
+			name = "二手市场";
 			sourceTree = "<group>";
 		};
 		18B4E3E21BA2848F00B6D5BB /* SDCycleScrollView */ = {
@@ -888,6 +934,7 @@
 		18D5C5BE1B93219E0074EEEC /* view */ = {
 			isa = PBXGroup;
 			children = (
+				189ED9BC1BBBC5D8002790B0 /* 二手市场 */,
 				18DEEEBB1BAFFFFE0093C7F8 /* 约吧 */,
 				18E12CCC1BA5177D00D1C509 /* 学生拼车 */,
 				185634B01BA44A6500FF77C3 /* 同学互帮 */,
@@ -1031,8 +1078,13 @@
 		18D5C5CB1B9323E40074EEEC /* 二手市场 */ = {
 			isa = PBXGroup;
 			children = (
-				18B69E2F1B9FE3BD00E8E73C /* MarketViewController.h */,
-				18B69E301B9FE3BD00E8E73C /* MarketViewController.m */,
+				189ED9C31BBBC63F002790B0 /* MarketListViewController.h */,
+				189ED9C41BBBC63F002790B0 /* MarketListViewController.m */,
+				189ED9C51BBBC63F002790B0 /* MarketPlist.plist */,
+				189ED9C61BBBC63F002790B0 /* MarketViewController.h */,
+				189ED9C71BBBC63F002790B0 /* MarketViewController.m */,
+				18843A6D1BC5004600E5F306 /* PublishMarketViewController.h */,
+				18843A6E1BC5004600E5F306 /* PublishMarketViewController.m */,
 			);
 			name = "二手市场";
 			sourceTree = "<group>";
@@ -1513,6 +1565,7 @@
 				18DCFA191B989D3E00D8D12A /* Pods.release.xcconfig in Resources */,
 				18DCFA0E1B9884B100D8D12A /* common_jt@2x.png in Resources */,
 				18D5C5F81B93305C0074EEEC /* top_bar@2x.png in Resources */,
+				189ED9C91BBBC63F002790B0 /* MarketPlist.plist in Resources */,
 				18DCFA171B989D3600D8D12A /* Pods.debug.xcconfig in Resources */,
 				18DC314C1B99A7EB00184151 /* chat_input@2x.png in Resources */,
 				18D5C5F71B93305C0074EEEC /* top_bar1@2x.png in Resources */,
@@ -1584,6 +1637,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18566A391BBFBC3A00E84D9E /* MJConst.h in Sources */,
+				18566A3A1BBFBC3A00E84D9E /* MJExtension.h in Sources */,
+				18566A3B1BBFBC3A00E84D9E /* MJFoundation.h in Sources */,
+				18566A3C1BBFBC3A00E84D9E /* MJProperty.h in Sources */,
+				18566A3D1BBFBC3A00E84D9E /* MJType.h in Sources */,
+				18566A3E1BBFBC3A00E84D9E /* NSObject+MJCoding.h in Sources */,
+				18566A3F1BBFBC3A00E84D9E /* NSObject+MJKeyValue.h in Sources */,
+				18566A401BBFBC3A00E84D9E /* NSObject+MJProperty.h in Sources */,
+				18566A411BBFBC3A00E84D9E /* NSString+MJExtension.h in Sources */,
+				18566A2B1BBFBC2500E84D9E /* MJRefresh.h in Sources */,
+				18566A2C1BBFBC2500E84D9E /* MJRefreshComponent.h in Sources */,
+				18566A2D1BBFBC2500E84D9E /* MJRefreshComponent.m in Sources */,
+				18566A2E1BBFBC2500E84D9E /* MJRefreshConst.h in Sources */,
+				18566A2F1BBFBC2500E84D9E /* MJRefreshFooter.h in Sources */,
+				18566A301BBFBC2500E84D9E /* MJRefreshGifFooter.h in Sources */,
+				18566A311BBFBC2500E84D9E /* MJRefreshGifHeader.h in Sources */,
+				18566A321BBFBC2500E84D9E /* MJRefreshHeader.h in Sources */,
+				18566A331BBFBC2500E84D9E /* MJRefreshLegendFooter.h in Sources */,
+				18566A341BBFBC2500E84D9E /* MJRefreshLegendFooter.m in Sources */,
+				18566A351BBFBC2500E84D9E /* MJRefreshLegendHeader.h in Sources */,
+				18566A361BBFBC2500E84D9E /* UIScrollView+MJExtension.h in Sources */,
+				18566A371BBFBC2500E84D9E /* UIScrollView+MJRefresh.h in Sources */,
+				18566A381BBFBC2500E84D9E /* UIView+MJExtension.h in Sources */,
 				18DF3CE71BA41D07007F9BE4 /* PublishHelp.m in Sources */,
 				18DC31221B999AE100184151 /* EmojiView.m in Sources */,
 				18DC15751BBED3F4007D5FF8 /* MJRefreshGifFooter.m in Sources */,
@@ -1603,7 +1679,7 @@
 				18DDFB371B9ECB4B000995B1 /* LostTableViewController.m in Sources */,
 				18E12CF51BA58B5000D1C509 /* XBConst.m in Sources */,
 				186CB5AD1BA1062700891BAF /* JobTableViewController.m in Sources */,
-				18DC15781BBED3F4007D5FF8 /* MJRefreshLegendFooter.m in Sources */,
+				189ED9C11BBBC60B002790B0 /* MarketCollectionViewCell.m in Sources */,
 				18D662A31B9DDEAC000AA1E1 /* NSString+MKNetworkKitAdditions.m in Sources */,
 				185635321BA4964A00FF77C3 /* MLSelectPhotoPickerCollectionView.m in Sources */,
 				18DC15561BBED369007D5FF8 /* NSObject+MJCoding.m in Sources */,
@@ -1618,6 +1694,7 @@
 				185635271BA4964A00FF77C3 /* MLSelectPhotoPickerDatas.m in Sources */,
 				185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
+				189ED9CD1BBBC978002790B0 /* CommonUtil.m in Sources */,
 				18E12CE81BA5860F00D1C509 /* XBPageCell.m in Sources */,
 				18DC15771BBED3F4007D5FF8 /* MJRefreshHeader.m in Sources */,
 				18D8A04B1BC4E3C400B7FCF9 /* PublishGame.m in Sources */,
@@ -1626,9 +1703,9 @@
 				18E2FB121BC0B2AA007157F2 /* PublishMovie.m in Sources */,
 				1856352E1BA4964A00FF77C3 /* MLPhotoPickerImageView.m in Sources */,
 				18D6D4D81BA50CCE0066CC25 /* PhotoCollectionViewCell.m in Sources */,
-				18B69E311B9FE3BD00E8E73C /* MarketViewController.m in Sources */,
 				18D662A11B9DDEAC000AA1E1 /* NSDate+RFC1123.m in Sources */,
 				185635331BA4964A00FF77C3 /* MLSelectPhotoPickerCollectionViewCell.m in Sources */,
+				189ED9C81BBBC63F002790B0 /* MarketListViewController.m in Sources */,
 				18D662A81B9DDEAC000AA1E1 /* Reachability.m in Sources */,
 				18D5C5941B930E6D0074EEEC /* main.m in Sources */,
 				18DC15571BBED369007D5FF8 /* NSObject+MJKeyValue.m in Sources */,
@@ -1640,6 +1717,7 @@
 				18D662A21B9DDEAC000AA1E1 /* NSDictionary+RequestEncoding.m in Sources */,
 				18DD9F201BC166C2007F9544 /* PublishTheme.m in Sources */,
 				18DC157C1BBED3F4007D5FF8 /* UIView+MJExtension.m in Sources */,
+				18843A6F1BC5004600E5F306 /* PublishMarketViewController.m in Sources */,
 				18DCFA081B9881BC00D8D12A /* ContactHeaderView.m in Sources */,
 				18DC31161B9946A800184151 /* NextViewController.m in Sources */,
 				18D3909C1BB6914800FC99B2 /* YueGameCell.m in Sources */,
@@ -1661,7 +1739,7 @@
 				18DB844B1BC3BA7F0070B394 /* UserCenterVC.m in Sources */,
 				18DC15521BBED369007D5FF8 /* MJConst.m in Sources */,
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
-				18DD9F0F1BC0F61E007F9544 /* PublishSport.m in Sources */,
+				189ED9CA1BBBC63F002790B0 /* MarketViewController.m in Sources */,
 				18D983DB1BB0381100003800 /* YueCell.m in Sources */,
 				18E12CEB1BA586DC00D1C509 /* PublishCar.m in Sources */,
 				18DC311E1B999AB600184151 /* NSDate+TimeAgo.m in Sources */,
@@ -1672,7 +1750,7 @@
 				187117B91BA2D8360061B9D5 /* PublishHourseViewController.m in Sources */,
 				18E12CE71BA5860F00D1C509 /* XBTagTitleCell.m in Sources */,
 				185635291BA4964A00FF77C3 /* MLSelectPhotoBrowserViewController.m in Sources */,
-				18DC15721BBED3F4007D5FF8 /* MJRefreshComponent.m in Sources */,
+				189ED9C21BBBC60B002790B0 /* MarketListTableViewCell.m in Sources */,
 				1856352A1BA4964A00FF77C3 /* MLSelectPhotoNavigationViewController.m in Sources */,
 				18DC31511B99D29E00184151 /* SearchViewController.m in Sources */,
 				18D662A71B9DDEAC000AA1E1 /* MKNetworkOperation.m in Sources */,
@@ -1708,7 +1786,6 @@
 				18DC15741BBED3F4007D5FF8 /* MJRefreshFooter.m in Sources */,
 				18D662A51B9DDEAC000AA1E1 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				18D5C5DF1B9329660074EEEC /* HomeViewController.m in Sources */,
-				18544CE71B942F4100043D73 /* CommonUtil.m in Sources */,
 				18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */,
 				18E12CDD1BA5858D00D1C509 /* XBScrollPageController.m in Sources */,
 				18DC15551BBED369007D5FF8 /* MJType.m in Sources */,

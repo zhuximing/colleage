@@ -241,4 +241,37 @@
     NSData *data = UIImageJPEGRepresentation(image, 0.9f);
     return  [data writeToFile:path atomically:YES ];
 }
+//得到给的时间和现在时间的差值，返回格式几分钟／小时／天／月前
++(NSString *)getTimeAgo:(NSString *)oldTime{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *date = [dateFormatter dateFromString:oldTime];
+    NSDate *curDate = [NSDate date];
+    NSTimeInterval time = -[date timeIntervalSinceDate:curDate];
+    NSTimeInterval retTime = 1.0;
+   //小于一小时 返回分钟
+    if (time<3600) {
+        retTime = time / 60;
+        retTime = retTime <= 0.0 ? 1.0 : retTime;
+        return [NSString stringWithFormat:@"%.0f分钟前", retTime];
+    }
+    //小于一天 今天 返回小时
+    else if(time<86400){
+        retTime = time / 3600;
+        retTime = retTime <= 0.0 ? 1.0 : retTime;
+        return [NSString stringWithFormat:@"%.0f小时前", retTime];
+    }
+    //小于30天 返回天
+    else if(time<2592000){
+        retTime = time / 86400;
+        retTime = retTime <= 0.0 ? 1.0 : retTime;
+        return [NSString stringWithFormat:@"%.0f天前", retTime];
+    }
+    else{
+        return @"很久以前";
+    }
+  
+}
+
 @end
