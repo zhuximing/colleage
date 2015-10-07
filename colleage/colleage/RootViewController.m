@@ -150,52 +150,9 @@
 
 
 }
-
+/**
 -(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
-    NSLog(@"!!!!!");
-    //if(viewController==self.viewControllers[4])
-    
-    if ([viewController.tabBarItem.title isEqualToString:@"个人中心"]) {
-        
-        BmobUser *user = [BmobUser getCurrentUser];
-        
-        NSLog(@">>>>%@",user);
-        if (!user) {//未登陆
-//            //获取故事版
-//            UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//            
-//            
-//            
-//            //  获取登陆后的个人中心的视图控制器
-//            //UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
-//            //  获取没有登陆的个人中心的视图控制器
-//            UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
-//            
-//            
-//            [(UINavigationController *)tabBarController.selectedViewController pushViewController:notlogin animated:NO];
-            return YES;
-
-          
-        }else{//已经登陆
-            //获取故事版
-            UIStoryboard *story=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            
-            
-            
-            //  获取登陆后的个人中心的视图控制器
-            UIViewController *login=[story instantiateViewControllerWithIdentifier:@"loginvc"];
-            //  获取没有登陆的个人中心的视图控制器
-            // UIViewController *notlogin=[story instantiateViewControllerWithIdentifier:@"notloginvc"];
-
-            
-            [(UINavigationController *)tabBarController.selectedViewController pushViewController:login animated:NO];
-            return NO;
-        }
-        
-    }else{
-    
-        return YES;
-    }
+ 
     
     
     
@@ -203,7 +160,7 @@
     
 }
 
-
+*/
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
 
