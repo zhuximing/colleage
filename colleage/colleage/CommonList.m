@@ -79,7 +79,7 @@
     UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
     
-    //设置下拉刷新喝上啦加载
+    //设置下拉刷新和上啦加载
     [self setUpTableView];
 
 }

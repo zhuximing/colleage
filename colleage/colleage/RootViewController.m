@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 #import <BmobIM/BmobIM.h>
-#import "UsercenterLogin.h"
+
 
 
 

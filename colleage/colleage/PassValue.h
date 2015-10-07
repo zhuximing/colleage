@@ -16,6 +16,8 @@
 -(void) getValue:(NSString *)value;
 -(void) getMovie:(NSString *)value;
 -(void) getSport:(NSString *)value;
+-(void) getGame:(NSString *)value;
+-(void) setImgAndNameAndPhone; //登陆完成后刷新 个人中心的数据
 @end
 
 #endif

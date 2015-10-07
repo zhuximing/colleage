@@ -51,7 +51,6 @@
 		18B69E371B9FE3F700E8E73C /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69E351B9FE3F700E8E73C /* HomeCollectionViewCell.m */; };
 		18D339E61BB2752800C0A483 /* YueHeaderCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D339E41BB2752800C0A483 /* YueHeaderCC.m */; };
 		18D339E71BB2752800C0A483 /* YueHeaderCC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D339E51BB2752800C0A483 /* YueHeaderCC.xib */; };
-		18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D358E81B9D864D0012ADF9 /* UsercenterNavViewController.m */; };
 		18D390991BB6810700FC99B2 /* YueGameList.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D390981BB6810700FC99B2 /* YueGameList.m */; };
 		18D3909C1BB6914800FC99B2 /* YueGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D3909B1BB6914800FC99B2 /* YueGameCell.m */; };
 		18D390A21BB6D57200FC99B2 /* PublishDinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D390A11BB6D57200FC99B2 /* PublishDinner.m */; };
@@ -90,6 +89,8 @@
 		18D662AE1B9DDF16000AA1E1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D662AD1B9DDF16000AA1E1 /* Security.framework */; };
 		18D6D4D81BA50CCE0066CC25 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D4D71BA50CCE0066CC25 /* PhotoCollectionViewCell.m */; };
 		18D6D4DA1BA515B20066CC25 /* delete-circular.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D6D4D91BA515B20066CC25 /* delete-circular.png */; };
+		18D8A04B1BC4E3C400B7FCF9 /* PublishGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A04A1BC4E3C400B7FCF9 /* PublishGame.m */; };
+		18D8A04E1BC4FC5300B7FCF9 /* SelectGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8A04D1BC4FC5300B7FCF9 /* SelectGame.m */; };
 		18D983D71BB0341E00003800 /* yue_module.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18D983D61BB0341E00003800 /* yue_module.plist */; };
 		18D983DB1BB0381100003800 /* YueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D983DA1BB0381100003800 /* YueCell.m */; };
 		18DA20251BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DA20221BA145D300A9CA90 /* UIScrollView+SVPullToRefresh.m */; };
@@ -102,10 +103,10 @@
 		18DAAABB1B95551C00B659CB /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABA1B95551C00B659CB /* BmobSDK.framework */; };
 		18DAAABD1B9567E500B659CB /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */; };
 		18DAAABF1B95684500B659CB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DAAABE1B95684500B659CB /* libicucore.dylib */; };
-		18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */; };
 		18DABC7C1B9AC56A00CB792C /* logout_btn_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DABC7A1B9AC56A00CB792C /* logout_btn_@2x.png */; };
 		18DABC7D1B9AC56A00CB792C /* logout_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DABC7B1B9AC56A00CB792C /* logout_btn@2x.png */; };
 		18DB39AF1BBFAC9000D4FCB7 /* ChooseText.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB39AE1BBFAC9000D4FCB7 /* ChooseText.m */; };
+		18DB844B1BC3BA7F0070B394 /* UserCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB844A1BC3BA7F0070B394 /* UserCenterVC.m */; };
 		18DB9EB61B95CB26003D2EC2 /* login_btn_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */; };
 		18DB9EB71B95CB26003D2EC2 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */; };
 		18DB9EB81B95CB26003D2EC2 /* common_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */; };
@@ -211,7 +212,6 @@
 		18E12CFA1BA5912C00D1C509 /* IHasCarPublish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CF81BA5912C00D1C509 /* IHasCarPublish.xib */; };
 		18E12CFE1BA5946300D1C509 /* INeedCarPublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E12CFC1BA5946300D1C509 /* INeedCarPublish.m */; };
 		18E12CFF1BA5946300D1C509 /* INeedCarPublish.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */; };
-		18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */; };
 		18E2FB121BC0B2AA007157F2 /* PublishMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2FB111BC0B2AA007157F2 /* PublishMovie.m */; };
 		18E4B7E31BA078C00059EF75 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4B7E21BA078C00059EF75 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -316,8 +316,6 @@
 		18D339E31BB2752800C0A483 /* YueHeaderCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YueHeaderCC.h; sourceTree = "<group>"; };
 		18D339E41BB2752800C0A483 /* YueHeaderCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YueHeaderCC.m; sourceTree = "<group>"; };
 		18D339E51BB2752800C0A483 /* YueHeaderCC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YueHeaderCC.xib; sourceTree = "<group>"; };
-		18D358E71B9D864D0012ADF9 /* UsercenterNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterNavViewController.h; sourceTree = "<group>"; };
-		18D358E81B9D864D0012ADF9 /* UsercenterNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterNavViewController.m; sourceTree = "<group>"; };
 		18D390971BB6810700FC99B2 /* YueGameList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YueGameList.h; sourceTree = "<group>"; };
 		18D390981BB6810700FC99B2 /* YueGameList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YueGameList.m; sourceTree = "<group>"; };
 		18D3909A1BB6914800FC99B2 /* YueGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YueGameCell.h; sourceTree = "<group>"; };
@@ -380,6 +378,10 @@
 		18D6D4D61BA50CCE0066CC25 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		18D6D4D71BA50CCE0066CC25 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		18D6D4D91BA515B20066CC25 /* delete-circular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-circular.png"; sourceTree = "<group>"; };
+		18D8A0491BC4E3C400B7FCF9 /* PublishGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishGame.h; sourceTree = "<group>"; };
+		18D8A04A1BC4E3C400B7FCF9 /* PublishGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishGame.m; sourceTree = "<group>"; };
+		18D8A04C1BC4FC5300B7FCF9 /* SelectGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectGame.h; sourceTree = "<group>"; };
+		18D8A04D1BC4FC5300B7FCF9 /* SelectGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectGame.m; sourceTree = "<group>"; };
 		18D983D61BB0341E00003800 /* yue_module.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = yue_module.plist; sourceTree = "<group>"; };
 		18D983D91BB0381100003800 /* YueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YueCell.h; sourceTree = "<group>"; };
 		18D983DA1BB0381100003800 /* YueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YueCell.m; sourceTree = "<group>"; };
@@ -397,13 +399,13 @@
 		18DAAABA1B95551C00B659CB /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		18DAAABC1B9567E500B659CB /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		18DAAABE1B95684500B659CB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
-		18DABC771B9AB85400CB792C /* UsercenterNoLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterNoLogin.h; sourceTree = "<group>"; };
-		18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterNoLogin.m; sourceTree = "<group>"; };
 		18DABC7A1B9AC56A00CB792C /* logout_btn_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout_btn_@2x.png"; sourceTree = "<group>"; };
 		18DABC7B1B9AC56A00CB792C /* logout_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout_btn@2x.png"; sourceTree = "<group>"; };
 		18DB39AD1BBFAC9000D4FCB7 /* ChooseText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseText.h; sourceTree = "<group>"; };
 		18DB39AE1BBFAC9000D4FCB7 /* ChooseText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseText.m; sourceTree = "<group>"; };
 		18DB39B11BBFC2D000D4FCB7 /* PassValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassValue.h; sourceTree = "<group>"; };
+		18DB84491BC3BA7F0070B394 /* UserCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterVC.h; sourceTree = "<group>"; };
+		18DB844A1BC3BA7F0070B394 /* UserCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterVC.m; sourceTree = "<group>"; };
 		18DB9EAF1B95CB26003D2EC2 /* login_btn_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn_@2x.png"; sourceTree = "<group>"; };
 		18DB9EB01B95CB26003D2EC2 /* login_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@2x.png"; sourceTree = "<group>"; };
 		18DB9EB11B95CB26003D2EC2 /* common_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_line@2x.png"; sourceTree = "<group>"; };
@@ -569,8 +571,6 @@
 		18E12CFB1BA5946300D1C509 /* INeedCarPublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INeedCarPublish.h; sourceTree = "<group>"; };
 		18E12CFC1BA5946300D1C509 /* INeedCarPublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INeedCarPublish.m; sourceTree = "<group>"; };
 		18E12CFD1BA5946300D1C509 /* INeedCarPublish.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = INeedCarPublish.xib; sourceTree = "<group>"; };
-		18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsercenterLogin.h; sourceTree = "<group>"; };
-		18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsercenterLogin.m; sourceTree = "<group>"; };
 		18E2FB101BC0B2AA007157F2 /* PublishMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishMovie.h; sourceTree = "<group>"; };
 		18E2FB111BC0B2AA007157F2 /* PublishMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishMovie.m; sourceTree = "<group>"; };
 		18E4B7E21BA078C00059EF75 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -857,21 +857,19 @@
 		18D5C5BD1B9321890074EEEC /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				18DD9F1D1BC16697007F9544 /* 主题约会 */,
-				18DD9F161BC13AFB007F9544 /* 约会旅游 */,
-				18DD9F0C1BC0F5E3007F9544 /* 约体育项目 */,
-				18DD9F081BC0D9B7007F9544 /* 约看电影 */,
-				18DC5E1D1BB3A11F00FBF69E /* 约共同的界面 */,
 				18DC31141B9946A800184151 /* NextViewController.h */,
 				18DC31151B9946A800184151 /* NextViewController.m */,
 				1876908D1B93E01C005791E0 /* RootViewController.h */,
 				1876908E1B93E01C005791E0 /* RootViewController.m */,
 				18DAAAB01B95439500B659CB /* LoginViewController.h */,
 				18DAAAB11B95439500B659CB /* LoginViewController.m */,
-				18D358E71B9D864D0012ADF9 /* UsercenterNavViewController.h */,
-				18D358E81B9D864D0012ADF9 /* UsercenterNavViewController.m */,
 				18DDFB381B9ECBC7000995B1 /* NextTableViewController.h */,
 				18DDFB391B9ECBC7000995B1 /* NextTableViewController.m */,
+				18DD9F1D1BC16697007F9544 /* 主题约会 */,
+				18DD9F161BC13AFB007F9544 /* 约会旅游 */,
+				18DD9F0C1BC0F5E3007F9544 /* 约体育项目 */,
+				18DD9F081BC0D9B7007F9544 /* 约看电影 */,
+				18DC5E1D1BB3A11F00FBF69E /* 约共同的界面 */,
 				18D5C5D31B93250B0074EEEC /* 约游戏竞技 */,
 				18D5C5CB1B9323E40074EEEC /* 二手市场 */,
 				18D5C5CA1B9323DC0074EEEC /* 学生互帮 */,
@@ -961,10 +959,8 @@
 		18D5C5C41B9322750074EEEC /* 用户中心 */ = {
 			isa = PBXGroup;
 			children = (
-				18DABC771B9AB85400CB792C /* UsercenterNoLogin.h */,
-				18DABC781B9AB85400CB792C /* UsercenterNoLogin.m */,
-				18E165D71B9B321D0037C7B4 /* UsercenterLogin.h */,
-				18E165D81B9B321D0037C7B4 /* UsercenterLogin.m */,
+				18DB84491BC3BA7F0070B394 /* UserCenterVC.h */,
+				18DB844A1BC3BA7F0070B394 /* UserCenterVC.m */,
 			);
 			name = "用户中心";
 			sourceTree = "<group>";
@@ -1044,6 +1040,10 @@
 		18D5C5D31B93250B0074EEEC /* 约游戏竞技 */ = {
 			isa = PBXGroup;
 			children = (
+				18D8A0491BC4E3C400B7FCF9 /* PublishGame.h */,
+				18D8A04A1BC4E3C400B7FCF9 /* PublishGame.m */,
+				18D8A04C1BC4FC5300B7FCF9 /* SelectGame.h */,
+				18D8A04D1BC4FC5300B7FCF9 /* SelectGame.m */,
 				18D390971BB6810700FC99B2 /* YueGameList.h */,
 				18D390981BB6810700FC99B2 /* YueGameList.m */,
 			);
@@ -1608,7 +1608,6 @@
 				185635321BA4964A00FF77C3 /* MLSelectPhotoPickerCollectionView.m in Sources */,
 				18DC15561BBED369007D5FF8 /* NSObject+MJCoding.m in Sources */,
 				18B4E3F91BA2859000B6D5BB /* TAAnimatedDotView.m in Sources */,
-				18E165D91B9B321D0037C7B4 /* UsercenterLogin.m in Sources */,
 				18B4E3FA1BA2859000B6D5BB /* TADotView.m in Sources */,
 				1856352B1BA4964A00FF77C3 /* MLSelectPhotoPickerAssetsViewController.m in Sources */,
 				18DC15731BBED3F4007D5FF8 /* MJRefreshConst.m in Sources */,
@@ -1618,10 +1617,10 @@
 				18DD9F151BC11D69007F9544 /* GameCell.m in Sources */,
 				185635271BA4964A00FF77C3 /* MLSelectPhotoPickerDatas.m in Sources */,
 				185635231BA4964A00FF77C3 /* UIImage+MLTint.m in Sources */,
-				18D358E91B9D864D0012ADF9 /* UsercenterNavViewController.m in Sources */,
 				18D5C5E51B9329DF0074EEEC /* LifeViewController.m in Sources */,
 				18E12CE81BA5860F00D1C509 /* XBPageCell.m in Sources */,
 				18DC15771BBED3F4007D5FF8 /* MJRefreshHeader.m in Sources */,
+				18D8A04B1BC4E3C400B7FCF9 /* PublishGame.m in Sources */,
 				18DC157A1BBED3F4007D5FF8 /* UIScrollView+MJExtension.m in Sources */,
 				18DC31251B999B1A00184151 /* ChatFootbarView.m in Sources */,
 				18E2FB121BC0B2AA007157F2 /* PublishMovie.m in Sources */,
@@ -1659,6 +1658,7 @@
 				18DC157B1BBED3F4007D5FF8 /* UIScrollView+MJRefresh.m in Sources */,
 				18DC15541BBED369007D5FF8 /* MJProperty.m in Sources */,
 				185635341BA4964A00FF77C3 /* MLSelectPhotoPickerFooterCollectionReusableView.m in Sources */,
+				18DB844B1BC3BA7F0070B394 /* UserCenterVC.m in Sources */,
 				18DC15521BBED369007D5FF8 /* MJConst.m in Sources */,
 				18B69E2B1B9FE3AA00E8E73C /* CarViewController.m in Sources */,
 				18DD9F0F1BC0F61E007F9544 /* PublishSport.m in Sources */,
@@ -1688,7 +1688,6 @@
 				1856352C1BA4964A00FF77C3 /* MLSelectPhotoPickerGroupViewController.m in Sources */,
 				18DC83181B9FF3760072B35C /* LostDetail.m in Sources */,
 				18B4E3FE1BA2A74B00B6D5BB /* PublishLost.m in Sources */,
-				18DABC791B9AB85400CB792C /* UsercenterNoLogin.m in Sources */,
 				18D5C59A1B930E6D0074EEEC /* colleage.xcdatamodeld in Sources */,
 				185635301BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				18DD9F121BC104CD007F9544 /* SelectSport.m in Sources */,
@@ -1714,6 +1713,7 @@
 				18E12CDD1BA5858D00D1C509 /* XBScrollPageController.m in Sources */,
 				18DC15551BBED369007D5FF8 /* MJType.m in Sources */,
 				1856352F1BA4964A00FF77C3 /* MLSelectPhotoPickerBrowserPhotoImageView.m in Sources */,
+				18D8A04E1BC4FC5300B7FCF9 /* SelectGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

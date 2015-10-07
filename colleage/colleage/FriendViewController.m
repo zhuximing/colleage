@@ -81,7 +81,7 @@
     
     
     if (!user) {//没有登录
-        [CommonUtil needLoginWithViewController:self animated:YES];
+        //[CommonUtil needLoginWithViewController:self animated:YES];
    
     
     }else{     //已经登陆

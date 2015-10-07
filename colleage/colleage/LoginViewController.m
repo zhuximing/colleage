@@ -28,6 +28,7 @@
     //用户名输入框的左边图片
     UIImage *image=[UIImage imageNamed:@"login_admin"];
     UIImageView *imageView=[[UIImageView alloc ] initWithImage:image];
+    //imageView.frame=CGRectMake(8, 2, 20, 20);
     _loginTf.leftView=imageView;
     _loginTf.leftViewMode=UITextFieldViewModeAlways;
     
@@ -37,11 +38,6 @@
     _pwdTf.leftView=imageView1;
     _pwdTf.leftViewMode=UITextFieldViewModeAlways;
     
-    
-    //菊花残初始化
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
-    hud.tag = kMBProgressTag;
-    [self.view addSubview:hud];
     
     
     //登陆按钮的状态enable和disable的背景图片不一样
@@ -58,11 +54,8 @@
 
 //登陆事件
 - (IBAction)login:(id)sender {
-    MBProgressHUD *hud = (MBProgressHUD *)[self.view viewWithTag:kMBProgressTag];
-    hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = @"登陆中...";
-    [hud show:YES];
-    [hud hide:YES afterDelay:10.0f];
+  
+    [self showProgressing:@"正在登陆中...."];
     
     
     //异步登陆验证用户名和密码是否合法
@@ -70,24 +63,15 @@
     [UserService logInWithUsernameInBackground:_loginTf.text password:_pwdTf.text block:^(BmobUser *user, NSError *error) {
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                hud.labelText = @"用户名或者密码输入错误";
-                hud.mode = MBProgressHUDModeText;
-                [hud show:YES];
-                [hud hide:YES afterDelay:0.7f];
+                
+                [self showToast:@"用户名或者密码输入错误"];
             });
             
         }else{
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [hud hide:YES];
-                
-            });
             //获取好友列表
             [UserService saveFriendsList];
-            //推出改页面
-            [self dismissViewControllerAnimated:YES completion:^{
-                
-            }];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"changeRoot" object:nil];
+            //再到自己的服务器做再一步验证
+            [self checkUserInfo];
         }
     }];
     
@@ -107,5 +91,74 @@
         _loginbtn.enabled = YES;
     }
 }
+
+
+//自己的服务器上验证登陆
+-(void)checkUserInfo{
+    MKNetworkEngine *engine=[[MKNetworkEngine alloc]
+                             initWithHostName:BASEHOME
+                             customHeaderFields:nil];
+    
+   
+    
+    //请求参数
+    NSDictionary *parames=[NSDictionary  dictionaryWithObjectsAndKeys:_loginTf.text,@"user_phone",
+        _pwdTf.text,@"user_password", nil];
+    //执行请求
+    MKNetworkOperation *op=[engine operationWithPath:@"welcome/login" params:parames httpMethod:@"POST"];
+    //请求回调
+    [op onCompletion:^(MKNetworkOperation *completedOperation) {
+        [self hide];
+        
+        id json=[completedOperation responseJSON];
+        //加载到的数据
+        NSDictionary *array=(NSDictionary*)json;
+        //保存用户信息
+        [self saveUserInfo:array];
+        
+        //回调
+        [self.delegate setImgAndNameAndPhone];
+        
+        //退出该页面
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        
+    } onError:^(NSError *error) {
+        
+        [self showToast:@"用户名或者密码输入错误"];
+    }];
+    
+    [engine enqueueOperation:op];
+
+
+
+}
+
+//保存用户信息
+-(void) saveUserInfo:(NSDictionary*)user{
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setObject:[user objectForKey:@"user_id"] forKey:@"user_id"];
+    [defaults setObject:[user objectForKey:@"user_name"] forKey:@"user_name"];
+    [defaults setObject:[user objectForKey:@"user_phone"] forKey:@"user_phone"];
+    [defaults setObject:[user objectForKey:@"user_school"] forKey:@"user_school"];
+   
+    
+    //是否登陆的标记
+    [defaults setObject:@"yes" forKey:@"islogin"];
+
+    
+}
+
+
+
+
+//回车隐藏键盘 代理
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+    
+}
+
+
+
 
 @end
