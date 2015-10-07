@@ -15,6 +15,10 @@
 #import "CommonUtil.h"
 #import "LostDetail.h"
 #import "PublishDinner.h"
+#import "PublishMovie.h"
+#import "PublishSport.h"
+#import "PublishTour.h"
+#import "PublishTheme.h"
 @interface CommonList (){
     NSDictionary *parames;//请求参数
     NSString *url;        //请求地址
@@ -82,8 +86,34 @@
 
 //发布
 -(void)publish{
-    PublishDinner *yue=[self getViewController:@"PublishDinner"];
-    [self.navigationController pushViewController:yue animated:YES];
+    if ([self.type isEqualToString:@"dinner"]) {
+        PublishDinner *yue=[self getViewController:@"PublishDinner"];
+        yue.type=@"dinner";
+        yue.biaoti=@"发布一起吃饭";
+        [self.navigationController pushViewController:yue animated:YES];
+    }else if([self.type isEqualToString:@"ktv"]){
+        PublishDinner *yue=[self getViewController:@"PublishDinner"];
+         yue.type=@"ktv";
+        yue.biaoti=@"发布一起唱歌";
+        [self.navigationController pushViewController:yue animated:YES];
+    }else if([self.type isEqualToString:@"movie"]){
+        PublishMovie *movie=[self getViewController:@"PublishMovie"];
+        [self.navigationController pushViewController:movie animated:YES];
+        
+    }else if([self.type isEqualToString:@"sport"]){
+        PublishSport *ps=[self getViewController:@"PublishSport"];
+        [self.navigationController pushViewController:ps animated:YES];
+       
+    }else if([self.type isEqualToString:@"tour"]){
+        PublishTour *pt=[self getViewController:@"PublishTour"];
+        [self.navigationController pushViewController:pt animated:YES];
+        
+    }else if([self.type isEqualToString:@"theme"]){
+        PublishTheme *ptt=[self getViewController:@"PublishTheme"];
+        [self.navigationController pushViewController:ptt animated:YES];
+    }
+
+   
 
 }
 

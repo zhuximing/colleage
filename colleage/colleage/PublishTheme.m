@@ -1,35 +1,29 @@
 //
-//  PublishDinner.m
+//  PublishTheme.m
 //  colleage
 //
-//  Created by Apple on 15/9/26.
+//  Created by Apple on 15/10/4.
 //  Copyright (c) 2015年 Apple. All rights reserved.
 //
 
-#import "PublishDinner.h"
-#import "CommonUtil.h"
+#import "PublishTheme.h"
 #import "CDPDatePicker.h"
-#import "ChooseText.h"
-@interface PublishDinner (){
-
+#import "SelectSport.h"
+#import "CommonUtil.h"
+@interface PublishTheme (){
     CDPDatePicker *_datePicker;
-    UIActionSheet *address_action;
     UIActionSheet *time_action;
     UIActionSheet *target_action;
-    UIActionSheet *fee_action;
-    UIActionSheet *ktv_action;
 }
 
 @end
 
-@implementation PublishDinner
+@implementation PublishTheme
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     //标题
-    self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:_biaoti];
+    self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"发布主题约会"];
     
     //指定时间选择器的代理 和对象
     _datePicker=[[CDPDatePicker alloc] initWithSelectTitle:nil viewOfDelegate:self.view delegate:self];
@@ -45,39 +39,21 @@
     [rightBtn setTitle:@"提交" forState:UIControlStateNormal];
     UIBarButtonItem *rightBarButtonItem    = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
-
-    
-    
-    //下划线
-    //UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 45, ScreenWidth, 0.5)];
-    //lineView.backgroundColor =[UIColor grayColor];
-    
-    
-    //点击选择地址的事件
-    // UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(choose_address)];
-    
-    // _address.userInteractionEnabled=YES;
-    //[_address addGestureRecognizer:singleTap];
-    // [_address addSubview:lineView];
     
     [self setUpTextField];
-    
 }
-
 -(void) setUpTextField{
     UIImage *image=[UIImage imageNamed:@"register_bottom_arrow"];
     
-    UIImageView *imageView=[[UIImageView alloc ] initWithImage:image];
-    _address.rightView=imageView;
-    _address.rightViewMode=UITextFieldViewModeAlways;
-   
+    
+    
     UIImageView *imageView2=[[UIImageView alloc ] initWithImage:image];
     _time.rightView=imageView2;
     _time.rightViewMode=UITextFieldViewModeAlways;
     
     UIImageView *imageView3=[[UIImageView alloc ] initWithImage:image];
-    _fee.rightView=imageView3;
-    _fee.rightViewMode=UITextFieldViewModeAlways;
+    _theme.rightView=imageView3;
+    _theme.rightViewMode=UITextFieldViewModeAlways;
     
     UIImageView *imageView4=[[UIImageView alloc ] initWithImage:image];
     _target.rightView=imageView4;
@@ -88,94 +64,45 @@
     _detail.layer.borderWidth=1.0;
     _detail.layer.cornerRadius=4.0;
 }
-
-
-
-//选择地址
-- (IBAction)choose_address:(id)sender {
-    if ([_type isEqualToString:@"dinner"]) {
-        address_action = [[UIActionSheet alloc]
-                          initWithTitle:nil
-                          delegate:self
-                          cancelButtonTitle:@"取消"
-                          destructiveButtonTitle:nil
-                          otherButtonTitles: @"指定餐厅", @"大概地址",nil];
-        
-        [address_action showInView:self.view];
-
-    }else if ([_type isEqualToString:@"ktv"]){
-        ktv_action = [[UIActionSheet alloc]
-                          initWithTitle:nil
-                          delegate:self
-                          cancelButtonTitle:@"取消"
-                          destructiveButtonTitle:nil
-                          otherButtonTitles: @"指定ktv", @"大概地址",nil];
-        
-        [ktv_action showInView:self.view];
-
-    }
-
-
-}
-
-//选择时间
 - (IBAction)choose_time:(id)sender {
     time_action = [[UIActionSheet alloc]
-                      initWithTitle:nil
-                      delegate:self
-                      cancelButtonTitle:@"取消"
-                      destructiveButtonTitle:nil
-                      otherButtonTitles: @"任意时间", @"周末",@"指定时间",nil];
+                   initWithTitle:nil
+                   delegate:self
+                   cancelButtonTitle:@"取消"
+                   destructiveButtonTitle:nil
+                   otherButtonTitles: @"任意时间", @"周末",@"指定时间",nil];
     
     [time_action showInView:self.view];
     
     
 }
-//选择对象
 - (IBAction)choose_target:(id)sender {
     target_action = [[UIActionSheet alloc]
-                   initWithTitle:nil
-                   delegate:self
-                   cancelButtonTitle:@"取消"
-                   destructiveButtonTitle:nil
-                   otherButtonTitles: @"仅限男生", @"仅限女生",@"男女不限",nil];
+                     initWithTitle:nil
+                     delegate:self
+                     cancelButtonTitle:@"取消"
+                     destructiveButtonTitle:nil
+                     otherButtonTitles: @"仅限男生", @"仅限女生",@"男女不限",nil];
     
     [target_action showInView:self.view];
-
 }
-
-
-//选择付费方式
-- (IBAction)choose_fee:(id)sender {
-    fee_action = [[UIActionSheet alloc]
-                      initWithTitle:nil
-                      delegate:self
-                      cancelButtonTitle:@"取消"
-                      destructiveButtonTitle:nil
-                      otherButtonTitles: @"AA制", @"我请客",nil];
+- (IBAction)choose_theme:(id)sender {
+    SelectSport *ss=[self getViewController:@"SelectSport"];
+    ss.delegate=self;
+    ss.type=@"theme";
+    ss.toast=@"请选择主题";
+    ss.biaoti=@"选择主题";
+    ss.tishi=@"热门主题";
+    ss.placeHolder=@"请输入主题";
+    [self.navigationController pushViewController:ss animated:YES];
     
-    [fee_action showInView:self.view];
+    
 }
-
-
 
 //actionsheet代理点击选择事件
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (actionSheet==address_action) {
-        switch (buttonIndex) {
-            case 0:
-                [self showToast:@"暂时不支持,你可以指定地址"];
-                break;
-            case 1:
-               
-                [self the_address_dinner];
-                
-                break;
-            default:
-                break;
-        }
-    }else if (actionSheet==time_action){
+    if (actionSheet==time_action){
         switch (buttonIndex) {
             case 0:
                 _time.text=@"任意时间";
@@ -205,72 +132,20 @@
                 break;
         }
         
-    }else if (actionSheet==fee_action){
-        switch (buttonIndex) {
-            case 0:
-                _fee.text=@"AA制";
-                break;
-            case 1:
-                _fee.text=@"我请客";
-                break;
-            default:
-                break;
-        }
-    }else if (actionSheet==ktv_action){
-    
-        switch (buttonIndex) {
-            case 0:
-                [self showToast:@"暂时不支持,你可以指定地址"];
-                break;
-            case 1:
-                
-                [self the_address_ktv];
-                
-                break;
-            default:
-                break;
-        }
-    
-    
-    }
-    
+    }    
     
 }
-//指定地址
--(void) the_address_dinner{
-    ChooseText *text=[self getViewController:@"ChooseText"];
-    text.delegate=self;
-    text.biaoti=@"请输入餐馆地址";
-    text.errorInfo=@"地址不能为空";
-    [self.navigationController pushViewController:text animated:YES];
+//主题回调
+-(void)getSport:(NSString *)value{
 
-}
-//指定地址
--(void) the_address_ktv{
-    ChooseText *text=[self getViewController:@"ChooseText"];
-    text.delegate=self;
-    text.biaoti=@"请输入ktv地址";
-    text.errorInfo=@"地址不能为空";
-    [self.navigationController pushViewController:text animated:YES];
-    
-}
-//地址回调
--(void)getValue:(NSString *)value{
-
-    _address.text=value;
+    _theme.text=value;
 }
 //指定时间
 -(void) the_time{
-
-   [_datePicker pushDatePicker];
-
+    
+    [_datePicker pushDatePicker];
+    
 }
-
-
-
-
-
-
 //日历的代理
 -(void)CDPDatePickerDidConfirm:(NSString *)confirmString{
     //[self showToast:confirmString];
@@ -283,7 +158,7 @@
 
 //被本类代理的textfield无法输入内容，只能响应点击事件
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if(textField==_yue_title){
+    if(textField==_yue_title||textField==_yue_address){
         return YES;
     }else{
         return NO;
@@ -312,7 +187,7 @@
         [self showToast:@"请输入标题"];
         return;
     }
-    if (_address.text.length==0) {
+    if (_yue_address.text.length==0) {
         [self showToast:@"请选择地址"];
         return;
     }
@@ -324,15 +199,15 @@
         [self showToast:@"请选择对象"];
         return;
     }
-    if (_fee.text.length==0) {
-        [self showToast:@"请选择付费方式"];
+    if (_theme.text.length==0) {
+        [self showToast:@"请选择约会主题"];
         return;
     }
     if (_detail.text.length==0) {
         [self showToast:@"请写点详情"];
         return;
     }
-
+    
     [self showProgressing:@"正在提交数据"];
     MKNetworkEngine *engine=[[MKNetworkEngine alloc]
                              initWithHostName:BASEHOME
@@ -343,21 +218,21 @@
     
     //请求参数
     NSDictionary *parames=[NSDictionary  dictionaryWithObjectsAndKeys:_yue_title.text,@"yue_title",
-        _address.text,@"yue_address",
-        _time.text,@"yue_time",
-        _target.text,@"yue_target",
-        _fee.text,@"yue_fee_type",
-        _detail.text,@"yue_shuoming",
-        publisher,@"yue_publisher",
-        _type,@"yue_type",
-        @"",@"yue_game",
-        @"",@"yue_sport",
-        @"",@"yue_movie",
-        @"",@"yue_start_city",
-        @"",@"yue_way",
-        @"",@"yue_male_count",
-        @"",@"yue_female_count",
-        @"",@"yue_theme",nil];
+                           _yue_address.text,@"yue_address",
+                           _time.text,@"yue_time",
+                           _target.text,@"yue_target",
+                           @"",@"yue_fee_type",
+                           _detail.text,@"yue_shuoming",
+                           publisher,@"yue_publisher",
+                           @"theme",@"yue_type",
+                           @"",@"yue_game",
+                           @"",@"yue_sport",
+                           @"",@"yue_movie",
+                           @"",@"yue_start_city",
+                           @"",@"yue_way",
+                           @"",@"yue_male_count",
+                           @"",@"yue_female_count",
+                           _theme.text,@"yue_theme",nil];
     //执行请求
     MKNetworkOperation *op=[engine operationWithPath:@"yueba/publish_yue" params:parames httpMethod:@"POST"];
     //请求回调
@@ -372,11 +247,17 @@
     }];
     
     [engine enqueueOperation:op];
-
-
-
-
+    
+    
+    
+    
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 /*
 #pragma mark - Navigation
 

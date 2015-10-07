@@ -14,7 +14,8 @@
 @protocol PassValue <NSObject>
 
 -(void) getValue:(NSString *)value;
-
+-(void) getMovie:(NSString *)value;
+-(void) getSport:(NSString *)value;
 @end
 
 #endif
