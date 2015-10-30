@@ -35,8 +35,7 @@
     [super viewDidLoad];
     //头部标题
     self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"朋友"];
-    //tab标题
-    self.title=@"朋友";
+    
     
     
     
@@ -63,6 +62,7 @@
     _chatTableView.delegate       = self;
     _chatTableView.rowHeight      = 80;
     _chatTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _chatTableView.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:_chatTableView];
     
     //在登陆的情况下异步加载消息

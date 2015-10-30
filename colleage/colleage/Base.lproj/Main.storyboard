@@ -5,22 +5,16 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="nJ7-Ql-vql">
             <objects>
-                <tabBarController id="bQ4-tN-yXK" customClass="RootViewController" sceneMemberID="viewController">
+                <tabBarController id="bQ4-tN-yXK" customClass="MainTabBarViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="glh-2b-4jh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="b5c-Fw-HgK" kind="relationship" relationship="viewControllers" id="vCK-ht-bPJ"/>
-                        <segue destination="AEE-0O-Epq" kind="relationship" relationship="viewControllers" id="5Bq-3i-bJt"/>
-                        <segue destination="pw2-GB-r6c" kind="relationship" relationship="viewControllers" id="kVw-8L-FK6"/>
-                        <segue destination="OM1-GD-RqT" kind="relationship" relationship="viewControllers" id="qhT-oL-LLm"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsm-3z-6Gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +23,7 @@
         <!--Item-->
         <scene sceneID="XmZ-wU-HNp">
             <objects>
-                <navigationController id="b5c-Fw-HgK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeNav" id="b5c-Fw-HgK" customClass="MainNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="udk-HH-ezd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NC2-1k-tMk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2809,7 +2803,7 @@
         <!--Item-->
         <scene sceneID="Cbw-KR-JQq">
             <objects>
-                <navigationController id="pw2-GB-r6c" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="xiaoxiNav" id="pw2-GB-r6c" customClass="MainNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="AKS-Wg-v9C"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjB-OA-1HE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2827,7 +2821,7 @@
         <!--Item-->
         <scene sceneID="wHg-jy-JGR">
             <objects>
-                <navigationController id="AEE-0O-Epq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="yueNav" id="AEE-0O-Epq" customClass="MainNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Ol5-8Z-Ujq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="I9x-Qm-gWD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2840,7 +2834,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjd-LC-frY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="1073"/>
+            <point key="canvasLocation" x="-171" y="1046"/>
         </scene>
         <!--Life View Controller-->
         <scene sceneID="gf3-nq-hVi">
@@ -3093,7 +3087,7 @@
         <!--Item-->
         <scene sceneID="3SC-Fx-bQF">
             <objects>
-                <navigationController storyboardIdentifier="usercenternav" id="OM1-GD-RqT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="centerNav" id="OM1-GD-RqT" customClass="MainNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="bWt-bm-bQp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9UE-v4-VFz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -3105,7 +3099,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tko-E2-9Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-92" y="3700"/>
+            <point key="canvasLocation" x="-171" y="3588"/>
         </scene>
     </scenes>
     <resources>

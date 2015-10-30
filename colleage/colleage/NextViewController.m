@@ -40,6 +40,7 @@
     
     //自定义返回按钮
     self.navigationItem.hidesBackButton   = YES;
+    self.hidesBottomBarWhenPushed = YES;
     UIButton *leftBtn                     = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame                         = CGRectMake(0, 0, 50, 44);
     leftBtn.showsTouchWhenHighlighted     = YES;
@@ -55,7 +56,7 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     
-    self.hidesBottomBarWhenPushed = YES;
+    
     //NavigationBar与UIViewController 重叠的问题
     if( IS_iOS7) {
         self.edgesForExtendedLayout= UIRectEdgeNone;

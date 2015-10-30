@@ -22,9 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.title=@"约起来";
-    self.view.backgroundColor=[UIColor grayColor];
-    self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"约吧"];
+    //self.view.backgroundColor=[UIColor grayColor];
+    self.navigationItem.titleView = [CommonUtil navigationTitleViewWithTitle:@"约起来"];
     
     //NavigationBar与UIViewController 重叠的问题
     if( IS_iOS7) {

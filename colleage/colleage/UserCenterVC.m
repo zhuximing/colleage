@@ -22,8 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.title=@"用户中心";
-    
+
     //标题
     self.navigationItem.titleView=[CommonUtil navigationTitleViewWithTitle:@"用户中心"];
     
